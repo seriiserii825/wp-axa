@@ -16,7 +16,8 @@ if ( ! function_exists( 'bs_axa_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'bs-axa' ),
+			'menu-top' => esc_html__( 'Menu top', 'bs-axa' ),
+			'menu-main' => esc_html__( 'Menu main', 'bs-axa' ),
 		) );
 
 		add_theme_support( 'html5', array(

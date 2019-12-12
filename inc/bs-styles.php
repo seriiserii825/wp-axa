@@ -15,6 +15,7 @@ function bs_axa_scripts() {
 	wp_enqueue_style( 'bs-axa-owl.carousel.min-css', get_stylesheet_directory_uri().'/assets/css/owl.carousel.min.css' );
 	wp_enqueue_style( 'bs-axa-owl.theme.default.min-css', get_stylesheet_directory_uri().'/assets/css/owl.theme.default.min.css' );
 	wp_enqueue_style( 'bs-axa-colorbox-css', get_stylesheet_directory_uri().'/assets/css/colorbox.css' );
+	wp_enqueue_style( 'bs-axa-slick-css', get_stylesheet_directory_uri().'/assets/libs/slick.css' );
 	wp_enqueue_style( 'bs-axa-style-css', get_stylesheet_directory_uri().'/assets/css/my.css' );
 	wp_enqueue_style( 'bs-axa-responsive-css', get_stylesheet_directory_uri().'/assets/css/responsive.css' );
 
@@ -26,6 +27,7 @@ function bs_axa_scripts() {
 	wp_enqueue_script( 'bs-axa-contactme/bootstrap-datepicker.min', get_template_directory_uri() . '/assets/js/contactme/bootstrap-datepicker.min.js', array('jquery'), null, true );
 	wp_enqueue_script( 'bs-axa-contactme/bootstrap-datepicker-lang/en', get_template_directory_uri() . '/assets/js/contactme/bootstrap-datepicker-lang/en.js', array('jquery'), null, true );
 	wp_enqueue_script( 'bs-axa-contactme/jquery.timepicker.min', get_template_directory_uri() . '/assets/js/contactme/jquery.timepicker.min.js', array('jquery'), null, true );
+	wp_enqueue_script( 'bs-axa-slick.min', get_template_directory_uri() . '/assets/libs/slick.min.js', array('jquery'), null, true );
 	wp_enqueue_script( 'bs-axa-custom', get_template_directory_uri() . '/assets/js/custom.js', array('jquery'), null, true );
 
 

@@ -28,36 +28,48 @@
 <div <?php body_class('body-inner'); ?>>
     <div id="top-bar" class="topbar-transparent border-down">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-7 col-mf-12 text-md-center text-lg-left">
-                    <ul class="top-menu unstyled ">
-                        <li><a href="index-3.html#">Why Us</a></li>
-                        <li><a href="index-3.html#">Locations</a></li>
-                        <li><a href="index-3.html#">Services</a></li>
-                        <li><a href="index-3.html#">Solution Center</a></li>
-                    </ul>
+            <div class="header-top">
+                <div class="header-top__item">
+                    <?php wp_nav_menu( [
+                    	'theme_location'  => 'menu-top',
+                    	'menu'            => '',
+                    	'container'       => '',
+                    	'container_class' => '',
+                    	'container_id'    => '',
+                    	'menu_class'      => 'top-menu unstyled ',
+                    	'menu_id'         => '',
+                    	'echo'            => true,
+                    	'fallback_cb'     => 'wp_page_menu',
+                    	'before'          => '',
+                    	'after'           => '',
+                    	'link_before'     => '',
+                    	'link_after'      => '',
+                    	'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                    	'depth'           => 0,
+                    	'walker'          => '',
+                    ] ); ?>
                 </div><!--/ Top info end -->
 
-                <div class="col-lg-5 col-mf-12 text-md-center text-lg-right">
-                    <ul class="top-social">
-                        <li>
-                            <a title="Facebook" href="index-3.html#">
-                                <span class="social-icon"><i class="fa fa-facebook"></i></span>
-                            </a>
-                            <a title="Twitter" href="index-3.html#">
-                                <span class="social-icon"><i class="fa fa-twitter"></i></span>
-                            </a>
-                            <a title="Google+" href="index-3.html#">
-                                <span class="social-icon"><i class="fa fa-google-plus"></i></span>
-                            </a>
-                            <a title="Linkdin" href="index-3.html#">
-                                <span class="social-icon"><i class="fa fa-linkedin"></i></span>
-                            </a>
-                            <a title="Skype" href="index-3.html#">
-                                <span class="social-icon"><i class="fa fa-instagram"></i></span>
-                            </a>
-                        </li>
-                    </ul>
+                <div class="header-top__item">
+                    <div class="language-widget">
+                        <?php if(!dynamic_sidebar('language')): ?>
+                        <h2>Language widget</h2>
+                        <?php endif; ?>
+                    </div>
+
+                    <?php $socials = carbon_get_theme_option('crb_socials'); ?>
+                    <?php if($socials): ?>
+                        <ul class="top-social">
+                            <li>
+	                            <?php foreach($socials as $social): ?>
+                                    <a href="<?php echo $social['link']; ?>">
+                                        <span class="social-icon"><i class="fa fa-<?php echo $social['icon']; ?>"></i></span>
+                                    </a>
+	                            <?php endforeach; ?>
+                            </li>
+                        </ul>
+                    <?php endif; ?>
+
                 </div><!--/ Top social end -->
             </div><!--/ Content row end -->
         </div><!--/ Container end -->
@@ -67,41 +79,36 @@
     <header id="header" class="header navdown-boxed-transparent">
         <div class="container">
             <div class="row">
-                <div class="logo-area clearfix">
-                    <div class="col-lg-2 col-md-12 logo">
-                        <a href="index.html">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logos/logo-light.png" alt="">
-                        </a>
-                    </div><!-- logo end -->
+                <div class="logo-area">
+                        <?php the_custom_logo(); ?>
 
-                    <div class="col-lg-9 col-md-12 pull-right ml-lg-auto">
                         <ul class="top-info unstyled">
                             <li>
                                 <span class="info-icon"><i class="icon icon-phone3"></i></span>
                                 <div class="info-wrapper">
-                                    <p class="info-title">1+(91) 458 654 528</p>
-                                    <p class="info-subtitle">Phone Number</p>
+                                    <?php
+                                    $phone = carbon_get_theme_option('crb_phone');
+                                    $phone_clear = clear_phone($phone);
+                                    ?>
+                                    <a href="tel:<?php echo $phone_clear; ?>" class="info-title"><?php echo $phone; ?></a>
+                                    <p class="info-subtitle"><?php echo esc_html__( 'Numarul de telefon', 'bs-axa' ); ?></p>
                                 </div>
                             </li>
                             <li>
                                 <span class="info-icon"><i class="icon icon-envelope"></i></span>
                                 <div class="info-wrapper">
-                                    <p class="info-title">info@example.com</p>
-                                    <p class="info-subtitle">Email Address</p>
+                                    <p class="info-title"><?php echo carbon_get_theme_option('crb_email'); ?></p>
+                                    <p class="info-subtitle"><?php echo esc_html__( 'Adresa email', 'bs-axa' ); ?></p>
                                 </div>
                             </li>
                             <li class="last">
                                 <span class="info-icon"><i class="icon icon-map-marker2"></i></span>
                                 <div class="info-wrapper">
-                                    <p class="info-title">1105 Roosevelt Street, CA</p>
-                                    <p class="info-subtitle">Location</p>
+                                    <p class="info-title"><?php echo carbon_get_theme_option('crb_address'.get_lang()); ?></p>
+                                    <p class="info-subtitle"><?php echo esc_html__( 'Locatia', 'bs-axa' ); ?></p>
                                 </div>
                             </li>
-                            <li class="header-get-a-quote">
-                                <a class="btn btn-primary" href="index-3.html#">Get A Quote</a>
-                            </li>
                         </ul><!-- Ul end -->
-                    </div><!-- header right end -->
                 </div><!-- logo area end -->
 
             </div><!-- Row end -->
@@ -117,80 +124,99 @@
                             </button>
 
                             <div id="navbarSupportedContent" class="collapse navbar-collapse navbar-responsive-collapse">
-                                <ul class="nav navbar-nav">
-                                    <li class="dropdown active">
-                                        <a href="index-3.html#" class="dropdown-toggle" data-toggle="dropdown">Home <i class="fa fa-angle-down"></i></a>
-                                        <ul class="dropdown-menu" role="menu">
-                                            <li><a href="index.html">Home One</a></li>
-                                            <li><a href="index-2.html">Home Two</a></li>
-                                            <li class="active"><a href="index-3.html">Home Three</a></li>
-                                            <li><a href="index-4.html">Home Four</a></li>
-                                            <li><a href="index-5.html">Home Five</a></li>
-                                            <li><a href="index-6.html">Home Six</a></li>
-                                            <li><a href="index-7.html">Home Seven</a></li>
-                                            <li><a href="index-8.html">Home Eight</a></li>
-                                        </ul>
-                                    </li>
+	                            <?php wp_nav_menu( [
+		                            'theme_location'  => 'menu-main',
+		                            'menu'            => '',
+		                            'container'       => '',
+		                            'container_class' => '',
+		                            'container_id'    => '',
+		                            'menu_class'      => 'nav navbar-nav',
+		                            'menu_id'         => '',
+		                            'echo'            => true,
+		                            'fallback_cb'     => 'wp_page_menu',
+		                            'before'          => '',
+		                            'after'           => '',
+		                            'link_before'     => '',
+		                            'link_after'      => '',
+		                            'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+		                            'depth'           => 0,
+		                            'walker'          => '',
+	                            ] ); ?>
+                                <!--<ul class="nav navbar-nav">-->
 
-                                    <li class="dropdown">
-                                        <a href="index-3.html#" class="dropdown-toggle" data-toggle="dropdown">Pages <i class="fa fa-angle-down"></i></a>
-                                        <ul class="dropdown-menu" role="menu">
-                                            <li><a href="about.html">About Us</a></li>
-                                            <li><a href="team.html">Our People</a></li>
-                                            <li><a href="testimonials.html">Testimonials</a></li>
-                                            <li><a href="faq.html">Faq</a></li>
-                                            <li><a href="pricing.html">Pricing</a></li>
-                                        </ul>
-                                    </li>
+                                    <!--<li class="dropdown active">-->
+                                    <!--    <a href="index-3.html#" class="dropdown-toggle" data-toggle="dropdown">Home <i class="fa fa-angle-down"></i></a>-->
+                                    <!--    <ul class="dropdown-menu" role="menu">-->
+                                    <!--        <li><a href="index.html">Home One</a></li>-->
+                                    <!--        <li><a href="index-2.html">Home Two</a></li>-->
+                                    <!--        <li class="active"><a href="index-3.html">Home Three</a></li>-->
+                                    <!--        <li><a href="index-4.html">Home Four</a></li>-->
+                                    <!--        <li><a href="index-5.html">Home Five</a></li>-->
+                                    <!--        <li><a href="index-6.html">Home Six</a></li>-->
+                                    <!--        <li><a href="index-7.html">Home Seven</a></li>-->
+                                    <!--        <li><a href="index-8.html">Home Eight</a></li>-->
+                                    <!--    </ul>-->
+                                    <!--</li>-->
+                                    <!---->
+                                    <!--<li class="dropdown">-->
+                                    <!--    <a href="index-3.html#" class="dropdown-toggle" data-toggle="dropdown">Pages <i class="fa fa-angle-down"></i></a>-->
+                                    <!--    <ul class="dropdown-menu" role="menu">-->
+                                    <!--        <li><a href="about.html">About Us</a></li>-->
+                                    <!--        <li><a href="team.html">Our People</a></li>-->
+                                    <!--        <li><a href="testimonials.html">Testimonials</a></li>-->
+                                    <!--        <li><a href="faq.html">Faq</a></li>-->
+                                    <!--        <li><a href="pricing.html">Pricing</a></li>-->
+                                    <!--    </ul>-->
+                                    <!--</li>-->
+                                    <!---->
+                                    <!--<li class="dropdown">-->
+                                    <!--    <a href="index-3.html#" class="dropdown-toggle" data-toggle="dropdown">Cases <i class="fa fa-angle-down"></i></a>-->
+                                    <!--    <ul class="dropdown-menu" role="menu">-->
+                                    <!--        <li><a href="case.html">Case All</a></li>-->
+                                    <!--        <li><a href="case-details.html">Case Single</a></li>-->
+                                    <!--    </ul>-->
+                                    <!--</li>-->
+                                    <!---->
+                                    <!--<li class="dropdown">-->
+                                    <!--    <a href="index-3.html#" class="dropdown-toggle" data-toggle="dropdown">Services <i class="fa fa-angle-down"></i></a>-->
+                                    <!--    <ul class="dropdown-menu" role="menu">-->
+                                    <!--        <li><a href="service-details1.html">Life Insurance</a></li>-->
+                                    <!--        <li><a href="service-details2.html">Travel Insurance</a></li>-->
+                                    <!--        <li><a href="service-details3.html">Home Insurance</a></li>-->
+                                    <!--        <li><a href="service-details4.html">Car Insurance</a></li>-->
+                                    <!--        <li><a href="service-details5.html">Business Insurance</a></li>-->
+                                    <!--        <li><a href="service-details6.html">Health Insurance</a></li>-->
+                                    <!--    </ul>-->
+                                    <!--</li>-->
+                                    <!---->
+                                    <!--<li class="dropdown">-->
+                                    <!--    <a href="index-3.html#" class="dropdown-toggle" data-toggle="dropdown">Features <i class="fa fa-angle-down"></i></a>-->
+                                    <!--    <ul class="dropdown-menu" role="menu">-->
+                                    <!--        <li><a href="typography.html">Typography</a></li>-->
+                                    <!--        <li><a href="404.html">404</a></li>-->
+                                    <!--        <li class="dropdown-submenu">-->
+                                    <!--            <a href="index-3.html#.">Parent Menu</a>-->
+                                    <!--            <ul class="dropdown-menu">-->
+                                    <!--                <li><a href="index-3.html#">Child Menu 1</a></li>-->
+                                    <!--                <li><a href="index-3.html#">Child Menu 2</a></li>-->
+                                    <!--                <li><a href="index-3.html#">Child Menu 3</a></li>-->
+                                    <!--            </ul>-->
+                                    <!--        </li>-->
+                                    <!--    </ul>-->
+                                    <!--</li>-->
+                                    <!---->
+                                    <!--<li class="dropdown">-->
+                                    <!--    <a href="index-3.html#" class="dropdown-toggle" data-toggle="dropdown">News <i class="fa fa-angle-down"></i></a>-->
+                                    <!--    <ul class="dropdown-menu" role="menu">-->
+                                    <!--        <li><a href="news-left-sidebar.html">News Left Sidebar</a></li>-->
+                                    <!--        <li><a href="news-right-sidebar.html">News Right Sidebar</a></li>-->
+                                    <!--        <li><a href="news-single.html">News Single</a></li>-->
+                                    <!--    </ul>-->
+                                    <!--</li>-->
+                                    <!---->
+                                    <!--<li><a href="contact.html">Contact</a></li>-->
 
-                                    <li class="dropdown">
-                                        <a href="index-3.html#" class="dropdown-toggle" data-toggle="dropdown">Cases <i class="fa fa-angle-down"></i></a>
-                                        <ul class="dropdown-menu" role="menu">
-                                            <li><a href="case.html">Case All</a></li>
-                                            <li><a href="case-details.html">Case Single</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="dropdown">
-                                        <a href="index-3.html#" class="dropdown-toggle" data-toggle="dropdown">Services <i class="fa fa-angle-down"></i></a>
-                                        <ul class="dropdown-menu" role="menu">
-                                            <li><a href="service-details1.html">Life Insurance</a></li>
-                                            <li><a href="service-details2.html">Travel Insurance</a></li>
-                                            <li><a href="service-details3.html">Home Insurance</a></li>
-                                            <li><a href="service-details4.html">Car Insurance</a></li>
-                                            <li><a href="service-details5.html">Business Insurance</a></li>
-                                            <li><a href="service-details6.html">Health Insurance</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="dropdown">
-                                        <a href="index-3.html#" class="dropdown-toggle" data-toggle="dropdown">Features <i class="fa fa-angle-down"></i></a>
-                                        <ul class="dropdown-menu" role="menu">
-                                            <li><a href="typography.html">Typography</a></li>
-                                            <li><a href="404.html">404</a></li>
-                                            <li class="dropdown-submenu">
-                                                <a href="index-3.html#.">Parent Menu</a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="index-3.html#">Child Menu 1</a></li>
-                                                    <li><a href="index-3.html#">Child Menu 2</a></li>
-                                                    <li><a href="index-3.html#">Child Menu 3</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="dropdown">
-                                        <a href="index-3.html#" class="dropdown-toggle" data-toggle="dropdown">News <i class="fa fa-angle-down"></i></a>
-                                        <ul class="dropdown-menu" role="menu">
-                                            <li><a href="news-left-sidebar.html">News Left Sidebar</a></li>
-                                            <li><a href="news-right-sidebar.html">News Right Sidebar</a></li>
-                                            <li><a href="news-single.html">News Single</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li><a href="contact.html">Contact</a></li>
-
-                                </ul><!--/ Nav ul end -->
+                                <!--</ul>/ Nav ul end -->
                             </div><!--/ Collapse end -->
 
                         </div><!-- Site Navbar inner end -->
