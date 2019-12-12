@@ -36,20 +36,23 @@ function crb_attach_theme_options()
 	// Add second options page under 'Basic Options'
 	Container::make('theme_options', 'Blocks')
 		->set_page_parent($basic_options_container)// reference to a top level container
-		->add_tab(__('Index intro'), array(
-			Field::make('text', 'crb_intro_index_title_ro', __('Block index_intro title ro'))
-				->set_width(30),
-			Field::make('text', 'crb_intro_index_title_ru', __('Block index_intro title ru'))
-				->set_width(30),
-			Field::make('text', 'crb_intro_index_title_en', __('Block index_intro title en'))
-				->set_width(30),
-			
-			Field::make('textarea', 'crb_intro_index_text_ro', __('Block index_intro text ro'))
-				->set_width(30),
-			Field::make('textarea', 'crb_intro_index_text_ru', __('Block index_intro text ru'))
-				->set_width(30),
-			Field::make('textarea', 'crb_intro_index_text_en', __('Block index_intro text en'))
-				->set_width(30),
+		->add_tab(__('Slider'), array(
+			Field::make('complex', 'crb_slider', __('Fields'))
+			     ->add_fields(array(
+				     Field::make('image', 'image', __('Image'))
+					     ->set_value_type( 'url' ),
+
+				     Field::make('text', 'title_ro', __('Title ro'))
+				          ->set_width(50),
+				     Field::make('text', 'title_ru', __('Title ru'))
+				          ->set_width(50),
+
+				     Field::make('text', 'text_ro', __('Text ro'))
+				          ->set_width(50),
+				     Field::make('text', 'text_ru', __('Text ru'))
+				          ->set_width(50),
+			     ))
+			     ->set_layout('tabbed-horizontal')
 		));
 }
 

@@ -1018,7 +1018,7 @@ ul.top-menu li a:hover {
 
 .topbar-transparent.border-down {
 	border-bottom: 1px solid rgba(255, 255, 255, .2);
-	padding-top: 6px;
+	padding-top: 10px;
 	line-height: normal;
 }
 
@@ -1896,7 +1896,8 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 /*-- Main slide --*/
 
 #main-slide .carousel-item {
-	min-height: 700px;
+	/*min-height: 700px;*/
+	height: 100vh;
 	color: #fff;
 	background-position: 100% 100%;
 	-webkit-background-size: cover;
@@ -1960,6 +1961,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 	color: #fff;
 	font-size: 60px;
 	line-height: 66px;
+	text-shadow: 2px 2px 5px rgba(0,0,0,.2);
 }
 
 #main-slide .slider-content.text-center .slide-sub-title {
@@ -2018,6 +2020,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 	font-size: 20px;
 	line-height: 34px;
 	margin: 20px 0 0;
+	text-shadow: 2px 2px 5px rgba(0,0,0,.2);
 }
 
 /* Carousel control */
@@ -6845,4 +6848,7 @@ label {
 
 img.custom-logo {
 	box-shadow: 0 3px 8px rgba(0, 0, 0, .3);
+}
+.site-navigation .current-menu-item a {
+	background: #9931BF;
 }

@@ -39,19 +39,23 @@ jQuery(function ($) {
 		/* ----------------------------------------------------------- */
 		let mainSlider = function () {
 			$('#main-slide .carousel-inner').slick({
-				arrows: false
+				arrows: false,
+				fade: true
 			});
 
 			$('#main-slide .carousel-item-left').on('click', function (e) {
 				e.preventDefault();
 				$('#main-slide .carousel-inner').slick('slickPrev');
+				$('#main-slide .carousel-item').removeClass('active');
+				$('#main-slide .slick-slide.slick-current .carousel-item').addClass('active');
 			});
 
 			$('#main-slide .carousel-item-right').on('click', function (e) {
 				e.preventDefault();
 				$('#main-slide .carousel-inner').slick('slickNext');
+				$('#main-slide .carousel-item').removeClass('active');
+				$('#main-slide .slick-slide.slick-current .carousel-item').addClass('active');
 			});
-
 		};
 		mainSlider();
 
