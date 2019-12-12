@@ -1,222 +1,391 @@
 <?php get_header(); ?>
     <!-- Carousel -->
-    <div id="box-slide" class="owl-carousel owl-theme page-slider mrt-140">
-        <div class="item" style="background-image:url(<?php echo get_template_directory_uri(); ?>/assets/images/slider/bg4.jpg)">
-            <div class="container">
-                <div class="box-slider-content">
-                    <div class="box-slider-text animated">
-                        <h2 class="box-slide-title">To Change Your World</h2>
-                        <h3 class="box-slide-sub-title">25 years young</h3>
-                        <p class="box-slide-description"> You have ideas, goals, and dreams. We have a culturally diverse, forward thinking team looking for talent like.
-                        </p>
-                        <p>
-                            <a href="index-2.html#" class="slider btn btn-primary">Our Service</a>
-                            <a href="index-2.html#" class="slider btn btn-border">Contact Now</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
+    <div id="main-slide" class="carousel slide" data-ride="carousel">
 
-        </div>
-        <!-- Item 1 end -->
+        <!-- Indicators -->
+        <ol class="carousel-indicators visible-lg visible-md">
+            <li data-target="#main-slide" data-slide-to="0" class="active"></li>
+            <li data-target="#main-slide" data-slide-to="1"></li>
+            <li data-target="#main-slide" data-slide-to="2"></li>
+        </ol><!--/ Indicators end-->
 
-        <div class="item" style="background-image:url(<?php echo get_template_directory_uri(); ?>/assets/images/slider/bg5.jpg)">
-            <div class="container">
-                <div class="box-slider-content">
-                    <div class="box-slider-text animated">
-                        <h2 class="box-slide-title">In Finance Industry</h2>
-                        <h3 class="box-slide-sub-title">We are the leader</h3>
-                        <p class="box-slide-description">You have ideas, goals, and dreams. We have a culturally diverse, forward thinking team looking for talent
-                            like.
-                        </p>
-                        <p>
-                            <a href="index-2.html#" class="slider btn btn-primary">Know Us</a>
-                            <a href="index-2.html#" class="slider btn btn-border">Contact Us</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Item 2 end -->
-    </div>
-    <!-- Box owl carousel end-->
+        <!-- Carousel inner -->
+        <div class="carousel-inner">
+
+            <div class="carousel-item patb-100 active" style="background-image:url(<?php echo get_template_directory_uri();?>/assets/images/slider/bg1.jpg)">
+                <div class="container">
+                    <div class="slider-content text-left">
+                        <div class="col-md-12">
+                            <h2 class="slide-title-classic animated3">Get Insurance for almost<br/>
+                                anything you need</h2>
+                            <p class="slider-description lead animated3">Nobody’s more committed to connecting you with the exceptional <br/> top talents with the right fit for your business than us.</p>
+                            <p class="animated3">
+                                <a href="index-3.html#" class="slider btn btn-primary">Our Services</a>
+                                <a href="index-3.html#" class="slider btn btn-border">Contact Us</a>
+                            </p>
+                        </div><!-- Col end -->
+                    </div><!-- Slider content end -->
+                </div><!--Container end -->
+            </div><!--/ Carousel item 1 end -->
+
+            <div class="carousel-item patb-100" style="background-image:url(images/slider/bg2.jpg)">
+                <div class="container">
+                    <div class="slider-content text-center">
+                        <div class="col-md-12">
+                            <h3 class="slide-sub-title animated3">We provide solutions to<br/>
+                                grow your business</h3>
+                            <p class="animated3">
+                                <a href="index-3.html#" class="slider btn btn-primary">Our Services</a>
+                                <a href="index-3.html#" class="slider btn btn-border">Contact Us</a>
+                            </p>
+                        </div><!-- Col end -->
+                    </div><!-- Slider content end -->
+                </div><!--Container end -->
+            </div><!--/ Carousel item 1 end -->
+
+            <div class="carousel-item patb-100" style="background-image:url(images/slider/bg3.jpg)">
+                <div class="container">
+                    <div class="slider-content text-right">
+                        <div class="col-md-12">
+                            <h2 class="slide-title title-light animated3">Your future is created by</h2>
+                            <h3 class="slide-sub-title animated3">We care about you</h3>
+                            <p class="slider-description lead animated3">Nobody’s more committed to connecting you with the exceptional <br/> top talents with the right fit for your business than us.</p>
+                            <p class="animated3">
+                                <a href="index-3.html#" class="slider btn btn-primary">Our Services</a>
+                                <a href="index-3.html#" class="slider btn btn-border">Contact Us</a>
+                            </p>
+                        </div><!-- Col end -->
+                    </div><!-- Slider content end -->
+                </div><!--Container end -->
+            </div><!--/ Carousel item 1 end -->
 
 
-    <section id="ts-about" class="ts-about">
+        </div><!-- Carousel inner end-->
+
+        <!-- Controllers -->
+        <a class="left carousel-control carousel-item-left" href="index-3.html#main-slide" data-slide="prev">
+            <span><i class="fa fa-angle-left"></i></span>
+        </a>
+        <a class="right carousel-control carousel-item-right" href="index-3.html#main-slide" data-slide="next">
+            <span><i class="fa fa-angle-right"></i></span>
+        </a>
+    </div><!--/ Carousel end -->
+
+
+    <section id="about-feature-classic" class="about-feature-classic">
         <div class="container">
             <div class="row">
-                <div class="col-lg-7 col-md-12">
-                    <h2 class="column-title title-small"><span>About Us</span>We aim to provide expert advice and quality service.</h2>
-                    <p>Have you a startup project that needs some help, work to be done and support. We are always by your side on your journey to success and help you whenever you need it. This is what we are for. Our team is experienced, seasoned and dedicated to working.</p>
-                    <p>We have significant experience in supporting growing businesses, including start-ups, which make up about 25% of our client base.We deliver jobs and other social and economic benefits in a cost-efficient way.</p>
+                <div class="col-lg-4 col-md-12 text-center">
+                    <div class="about-classic-box-single">
+                        <div class="about-content-box ">
+                            <div class="about-classic-icon">
+                                <i class="icon icon-balloon"></i>
+                            </div><!-- Feature Img end -->
+                            <div class="about-classic-content">
+                                <h3>25 years in excellence</h3>
+                                <p>Quality standards for competence and ethical behavior for the financial advisory sector test all are flexible to fit with</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- Col end -->
+                <div class="col-lg-4 col-md-12 text-center">
+                    <div class="about-classic-box-single">
+                        <div class="about-content-box ">
+                            <div class="about-classic-icon">
+                                <i class="icon icon-savings"></i>
+                            </div><!-- Feature Img end -->
+                            <div class="about-classic-content">
+                                <h3>Best Insurance Solution</h3>
+                                <p>Quality standards for competence and ethical behavior for the financial advisory sector test all are flexible to fit with</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- Col end -->
+                <div class="col-lg-4 col-md-12 text-center">
+                    <div class="about-classic-box-single">
+                        <div class="about-content-box last-box">
+                            <div class="about-classic-icon">
+                                <i class="icon icon-target"></i>
+                            </div><!-- Feature Img end -->
+                            <div class="about-classic-content">
+                                <h3>Clients Focused</h3>
+                                <p>Quality standards for competence and ethical behavior for the financial advisory sector test all are flexible to fit with</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- Col end -->
+            </div> <!-- Row End -->
+        </div> <!-- Container end -->
+    </section> <!-- About classic end -->
+
+    <section id="ts-services" class="ts-services solid-bg">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <h2 data-title="Our Services" class="section-title-dash">
+                        Our Services<span>&nbsp;</span>
+                    </h2>
                 </div><!-- Col end -->
-
-                <div class="col-lg-5 col-md-12">
-                    <div class="feature-classic ">
-                  <span class="feature-classic-icon">
-                    <i class="icon icon-balloon"></i>
-                  </span>
-                        <div class="feature-content">
-                            <h3 class="feature-title">25 years in excellence</h3>
-                            <p>Quality standards for competence and ethical behavior for the financial advisory sector test.</p>
-                        </div>
-                    </div><!-- Featured Classic 1 end -->
-
-                    <div class="gap-20"></div>
-
-                    <div class="feature-classic ">
-                  <span class="feature-classic-icon">
-                    <i class="icon icon-deal"></i>
-                  </span>
-                        <div class="feature-content">
-                            <h3 class="feature-title">Best Insurance Solution</h3>
-                            <p>Quality standards for competence and ethical behavior for the financial advisory sector test.</p>
-                        </div>
-                    </div><!-- Featured Classic 2 end -->
-
-                    <div class="gap-20"></div>
-
-                    <div class="feature-classic ">
-                  <span class="feature-classic-icon">
-                    <i class="icon icon-community"></i>
-                  </span>
-                        <div class="feature-content">
-                            <h3 class="feature-title">100+ Community Involvement</h3>
-                            <p>Quality standards for competence and ethical behavior for the financial advisory sector test.</p>
-                        </div>
-                    </div><!-- Featured Classic 3 end -->
-                </div>
             </div><!--/ Title row end -->
-        </div><!-- Container end -->
-    </section><!-- Main container end -->
 
-
-    <section id="ts-services-classic" class="ts-services-classic solid-bg">
-        <div class="container">
-
-            <div class="row text-left">
-                <div class="col-lg-12">
-                    <h2 class="section-title border-title-left">Our Best Services <span class="section-title-tagline title-light">What We Do</span></h2>
-                </div>
-            </div>
 
             <div class="row">
-                <div class="col-lg-12">
-                    <div class="featured-tab">
-                        <ul class="nav nav-tabs" id="myTab" role="tablist">
-                            <li class="nav-item"><a class="nav-link active animated fadeIn" href="index-2.html#tab_one" data-toggle="tab"><span class="tab-head"><span><i class="icon icon-bus2"></i></span><span class="tab-text-title"> Car Insurance </span></span></a></li>
-                            <!-- list 1 end-->
-                            <li class="nav-item"><a class="nav-link animated fadeIn" href="index-2.html#tab_two" data-toggle="tab"><span class="tab-head"><span><i class="icon icon-home2"></i></span><span class="tab-text-title"> Home Insurance </span></span></a></li>
-                            <!-- list 2 end-->
-                            <li class="nav-item"><a class="nav-link animated fadeIn" href="index-2.html#tab_three" data-toggle="tab"><span class="tab-head"><span><i class="icon icon-graphic-3"></i></span><span class="tab-text-title"> Business Insurance </span></span></a></li>
-                            <!-- list 3 end-->
-                            <li class="nav-item"><a class="nav-link animated fadeIn" href="index-2.html#tab_four" data-toggle="tab"><span class="tab-head"><span><i class="icon icon-heart-pulse"></i></span><span class="tab-text-title"> Health Insurance </span></span></a></li>
-                            <!-- list 4 end-->
-                        </ul>
-                        <!-- Nav-tabs end-->
-                        <div class="tab-content">
-                            <div class="tab-pane active animated fadeInRight" id="tab_one">
-                                <div class="row">
-                                    <div class="col-lg-4">
-                                        <div class="align-self-center">
-                                            <img class="img-center img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/services/service-1.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <!-- Col end-->
-                                    <div class="col-lg-8">
-                                        <div class="tab-content-info">
-                                            <h3 class="tab-content-title">Solution for your Car Insurance</h3>
-                                            <p>Eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p><a class="btn-light" href="index-2.html#">Read More <i class="fa fa-long-arrow-right"></i></a>
-                                        </div>
-                                        <!-- Tab content info end-->
-                                    </div>
-                                    <!-- Col end-->
-                                </div>
-                                <!-- Row end-->
-                            </div>
-                            <!-- Tab pane 1 end-->
-                            <div class="tab-pane animated fadeInRight" id="tab_two">
-                                <div class="row">
-                                    <div class="col-lg-8">
-                                        <div class="tab-content-info">
-                                            <h3 class="tab-content-title">We provide loan for Home Purchase</h3>
-                                            <p>Eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p><a class="btn-light" href="index-2.html#">Read More <i class="fa fa-long-arrow-right"></i></a>
-                                        </div>
-                                        <!-- Tab content info end-->
-                                    </div>
-                                    <!-- Col end-->
-                                    <div class="col-lg-4">
-                                        <div class="align-self-center">
-                                            <img class="img-center img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/services/service-2.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <!-- Col end-->
-                                </div>
-                                <!-- Row end-->
-                            </div>
-                            <!-- Tab pane 2 end-->
-                            <div class="tab-pane animated fadeInRight" id="tab_three">
-                                <div class="row">
-                                    <div class="col-lg-4">
-                                        <div class="align-self-center">
-                                            <img class="img-center img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/services/service-3.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <!-- Col end-->
-                                    <div class="col-lg-8">
-                                        <div class="tab-content-info">
-                                            <h3 class="tab-content-title">Register for online invoicing</h3>
-                                            <p>Eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                                                nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                                                officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus
-                                                error sit voluptatem accusantium doloremque laudantium.</p><a class="btn-light" href="index-2.html#">Read More <i class="fa fa-long-arrow-right"></i></a>
-                                        </div>
-                                        <!-- Tab content info end-->
-                                    </div>
-                                    <!-- Col end-->
-                                </div>
-                                <!-- Row end-->
-                            </div>
-                            <!-- Tab pane 3 end-->
-                            <div class="tab-pane animated fadeInRight" id="tab_four">
-                                <div class="row">
-                                    <div class="col-lg-8">
-                                        <div class="tab-content-info">
-                                            <h3 class="tab-content-title">We Provide Insurance Solutions</h3>
-                                            <p>Eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                                                nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                                                officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus
-                                                error sit voluptatem accusantium doloremque laudantium.</p><a class="btn-light" href="index-2.html#">Read More <i class="fa fa-long-arrow-right"></i></a>
-                                        </div>
-                                        <!-- Tab content info end-->
-                                    </div>
-                                    <!-- Col end-->
-                                    <div class="col-lg-4">
-                                        <div class="align-self-center">
-                                            <img class="img-center img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/services/service-4.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <!-- Col end-->
-                                </div>
-                                <!-- Row end-->
-                            </div>
-                            <!-- Tab pane 3 end-->
+                <div class="col-lg-4 col-md-12">
+                    <div class="ts-service-overlay">
+                        <div class="ts-image-wrapper">
+                            <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/services/service-1.jpg" alt="">
                         </div>
-                        <!-- tab content-->
+                        <div class="service-content">
+                            <h3 class="service-title"><i class="icon icon-car"></i> Car Insurance</h3>
+                            <p>Covers you for damage to your car as well as to other people's vehicles and property. Plus much more!</p>
+                            <p><a class="btn btn-primary icon-bg" href="index-3.html#">Get Quote <i class="icon icon-arrow-right"></i></a></p>
+                        </div>
+                    </div><!-- Service1 end -->
+                </div><!-- Col 1 end -->
+
+                <div class="col-lg-4 col-md-12">
+                    <div class="ts-service-overlay">
+                        <div class="ts-image-wrapper">
+                            <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/services/service-2.jpg" alt="">
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title"><i class="icon icon-home2"></i> Home Insurance</h3>
+                            <p>Covers you for damage to your car as well as to other people's vehicles and property. Plus much more!</p>
+                            <p><a class="btn btn-primary icon-bg" href="index-3.html#">Get Quote <i class="icon icon-arrow-right"></i></a></p>
+                        </div>
+                    </div><!-- Servic2 end -->
+                </div><!-- Col 2 end -->
+
+                <div class="col-lg-4 col-md-12">
+                    <div class="ts-service-overlay">
+                        <div class="ts-image-wrapper">
+                            <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/services/service-3.jpg" alt="">
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title"><i class="icon icon-heart"></i> Life Protection</h3>
+                            <p>Covers you for damage to your car as well as to other people's vehicles and property. Plus much more!</p>
+                            <p><a class="btn btn-primary icon-bg" href="index-3.html#">Get Quote <i class="icon icon-arrow-right"></i></a></p>
+                        </div>
+                    </div><!-- Service3 end -->
+                </div><!-- Col 3 end -->
+
+                <div class="gap-30"></div>
+
+                <div class="col-lg-4 col-md-12">
+                    <div class="ts-service-overlay">
+                        <div class="ts-image-wrapper">
+                            <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/services/service-4.jpg" alt="">
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title"><i class="icon icon-chart22"></i> Business Insurance</h3>
+                            <p>Covers you for damage to your car as well as to other people's vehicles and property. Plus much more!</p>
+                            <p><a class="btn btn-primary icon-bg" href="index-3.html#">Get Quote <i class="icon icon-arrow-right"></i></a></p>
+                        </div>
+                    </div><!-- Service4 end -->
+                </div><!-- Col 4 end -->
+
+                <div class="col-lg-4 col-md-12">
+                    <div class="ts-service-overlay">
+                        <div class="ts-image-wrapper">
+                            <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/services/service-5.jpg" alt="">
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title"><i class="icon icon-heart-pulse"></i> Health Insurance</h3>
+                            <p>Covers you for damage to your car as well as to other people's vehicles and property. Plus much more!</p>
+                            <p><a class="btn btn-primary icon-bg" href="index-3.html#">Get Quote <i class="icon icon-arrow-right"></i></a></p>
+                        </div>
+                    </div><!-- Service5 end -->
+                </div><!-- Col 5 end -->
+
+                <div class="col-lg-4 col-md-12">
+                    <div class="ts-image-wrapper ts-ad">
+                        <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/ad1.jpg" alt="">
                     </div>
-                    <!-- Schedule tab end-->
-                </div>
-                <!-- Col end-->
-            </div>
-            <!-- Content row end-->
+                </div><!-- Col 6 end -->
+
+            </div><!-- Main row end -->
         </div><!-- Conatiner end -->
     </section><!-- Main container end -->
 
-    <section id="contact-tab" class="contact-tab solid-bg mrt-0 pat-100">
+    <section id="ts-cta-area" class="ts-cta-area ts-cta-bg bg-overlay">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <div class="cta-img-box-left">
+                        <div class="cta-img-content">
+                            <img class="pull-left" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-image/cta-1.png" alt="">
+                        </div>
+                        <div class="cta-content text-white">
+                            <h3 class="text-white">Find an Insurance Agent</h3>
+                            <p>These Happy Days are yours and mine Happy Days then one day he was shooting at some food.</p>
+                            <p>
+                                <a class="btn btn-dark" href="index-3.html#">Call Now</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-12 ml-lg-auto">
+                    <div class="cta-img-box-right text-white">
+                        <div class="cta-img-content">
+                            <img class="pull-left" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-image/cta-2.png" alt="">
+                        </div>
+                        <div class="cta-content last">
+                            <h3>Call Us for Any Questions</h3>
+                            <div class="toll-free-cta">
+                                <h3>009-215-5596</h3>
+                                <p>(Toll Free)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ts-choose-us" class="ts-choose-us">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <h2 data-title="Why Choose Us" class="section-title-dash"> Why Choose Us <span class="dashborder">&nbsp;</span></h2>
+                </div> <!-- Col End -->
+            </div> <!-- Row End -->
+            <div class="row">
+                <div class="col-lg-5 col-md-12">
+                    <div class="ts-feature-classic ">
+                        <div class="ts-feature-info icon-left icon-round">
+                     <span class="feature-icon">
+                        <i class="icon icon-consult"></i>
+                     </span>
+                            <div class="feature-content">
+                                <h3 class="ts-feature-title">24/7 Support</h3>
+                                <p>We provide great cover for backpackers, gap years takers</p>
+                            </div> <!-- Feature content end -->
+                        </div> <!-- Feature Info End -->
+                    </div> <!-- Features end -->
+                    <div class="ts-feature-classic ">
+                        <div class="ts-feature-info icon-left icon-round">
+                     <span class="feature-icon">
+                        <i class="icon icon-funnel"></i>
+                     </span>
+                            <div class="feature-content">
+                                <h3 class="ts-feature-title">25 Years of experience</h3>
+                                <p>We provide great cover for backpackers, gap years takers</p>
+                            </div> <!-- Feature content end -->
+                        </div> <!-- Feature Info End -->
+                    </div> <!-- Features end -->
+                    <div class="ts-feature-classic ">
+                        <div class="ts-feature-info icon-left icon-round">
+                     <span class="feature-icon">
+                        <i class="icon icon-chart22"></i>
+                     </span>
+                            <div class="feature-content">
+                                <h3 class="ts-feature-title">Growing your business</h3>
+                                <p>We provide great cover for backpackers, gap years takers</p>
+                            </div> <!-- Feature content end -->
+                        </div> <!-- Feature Info End -->
+                    </div> <!-- Features end -->
+                </div> <!-- Col End -->
+                <div class="col-lg-5 col-md-12">
+                    <div class="ts-feature-classic ">
+                        <div class="ts-feature-info icon-left icon-round">
+                     <span class="feature-icon">
+                        <i class="icon icon-community"></i>
+                     </span>
+                            <div class="feature-content">
+                                <h3 class="ts-feature-title">Dedicared Team member</h3>
+                                <p>We provide great cover for backpackers, gap years takers</p>
+                            </div> <!-- Feature content end -->
+                        </div> <!-- Feature Info End -->
+                    </div> <!-- Features end -->
+                    <div class="ts-feature-classic ">
+                        <div class="ts-feature-info icon-left icon-round">
+                     <span class="feature-icon">
+                        <i class="icon icon-target"></i>
+                     </span>
+                            <div class="feature-content">
+                                <h3 class="ts-feature-title">Clients focused</h3>
+                                <p>We provide great cover for backpackers, gap years takers</p>
+                            </div> <!-- Feature content end -->
+                        </div> <!-- Feature Info End -->
+                    </div> <!-- Features end -->
+                    <div class="ts-feature-classic ">
+                        <div class="ts-feature-info icon-left icon-round">
+                     <span class="feature-icon">
+                        <i class="icon icon-love"></i>
+                     </span>
+                            <div class="feature-content">
+                                <h3 class="ts-feature-title">Service with love</h3>
+                                <p>We provide great cover for backpackers, gap years takers</p>
+                            </div> <!-- Feature content end -->
+                        </div> <!-- Feature Info End -->
+                    </div> <!-- Features end -->
+                </div> <!-- Col End -->
+                <div class="col-lg-2 col-md-12">
+                    <div class="choose-us-img">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/why-choose-us.png" alt="">
+                    </div>
+                </div>
+            </div> <!-- Row End -->
+        </div> <!-- Container end -->
+    </section><!-- section end -->
+
+
+    <section class="ts-testimonial-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2 class="text-white column-title"> Client’s Love</h2>
+                </div> <!-- Col End -->
+            </div> <!-- Row End -->
+        </div> <!-- Container end -->
+    </section> <!-- testimonial end -->
+
+    <section id="ts-testimonial-static" class="ts-testimonial-static no-padding">
+        <div class="container">
+            <div class="testimonial-items-wrapper">
+                <div class="row">
+                    <div class="col-lg-4 col-md-12">
+                        <div class="testimonial-item-single">
+                            <div class="quote-item-static-footer clearfix">
+                                <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/clients/testimonial1.png" alt="Jonas Blue">
+                                <div class="quote-item-info">
+                                    <h3 class="quote-author">Jonas Blue</h3>
+                                    <span class="quote-subtext"> Ceo Media </span>
+                                </div>
+                            </div> <!-- Item End -->
+                            <p class="quote-text">Without taking proper consideration, you could go ahead with a mismatche policy, meaning you could end up with all.</p>
+                        </div> <!-- Testimonial Single End -->
+                    </div> <!-- Col End -->
+                    <div class="col-lg-4 col-md-12">
+                        <div class="testimonial-item-single">
+                            <div class="quote-item-static-footer clearfix">
+                                <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/clients/testimonial2.png" alt="Jonas Blue">
+                                <div class="quote-item-info">
+                                    <h3 class="quote-author">Endrew Gotham</h3>
+                                    <span class="quote-subtext"> Ceo Rains </span>
+                                </div>
+                            </div> <!-- Item End -->
+                            <p class="quote-text">Without taking proper consideration, you could go ahead with a mismatche policy, meaning you could end up with all.</p>
+                        </div> <!-- Testimonial Single End -->
+                    </div> <!-- Col End -->
+                    <div class="col-lg-4 col-md-12">
+                        <div class="testimonial-item-single">
+                            <div class="quote-item-static-footer clearfix">
+                                <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/clients/testimonial3.png" alt="Jonas Blue">
+                                <div class="quote-item-info">
+                                    <h3 class="quote-author">Nance Merry</h3>
+                                    <span class="quote-subtext"> HR at Honta </span>
+                                </div>
+                            </div> <!-- Item End -->
+                            <p class="quote-text">Without taking proper consideration, you could go ahead with a mismatche policy, meaning you could end up with all.</p>
+                        </div> <!-- Testimonial Single End -->
+                    </div> <!-- Col End -->
+                </div> <!-- Row End -->
+            </div> <!-- Testimonial Wrapper End -->
+        </div>
+    </section>
+
+    <section id="contact-tab" class="contact-tab no-padding solid-bg">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-12">
@@ -233,22 +402,22 @@
                     <div class="insurance-tab">
                         <ul class="nav nav-tabs" id="myTab" role="tablist">
                             <li class="nav-item">
-                                <a class="nav-link active" id="travel-tab" data-toggle="tab" href="index-2.html#travel" role="tab" aria-controls="home" aria-selected="true">
+                                <a class="nav-link active" id="travel-tab" data-toggle="tab" href="index-3.html#travel" role="tab" aria-controls="home" aria-selected="true">
                                     <span> <i class="icon icon-travel"></i> </span> Travel Insurance
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="home-tab" data-toggle="tab" href="index-2.html#home" role="tab" aria-controls="profile" aria-selected="false">
+                                <a class="nav-link" id="home-tab" data-toggle="tab" href="index-3.html#home" role="tab" aria-controls="profile" aria-selected="false">
                                     <span> <i class="icon icon-house-1"></i> </span> Home Insurance
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="car-tab" data-toggle="tab" href="index-2.html#car" role="tab" aria-controls="contact" aria-selected="false">
+                                <a class="nav-link" id="car-tab" data-toggle="tab" href="index-3.html#car" role="tab" aria-controls="contact" aria-selected="false">
                                     <span> <i class="icon icon-car2"></i> </span> Car Insurance
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="life-tab" data-toggle="tab" href="index-2.html#life" role="tab" aria-controls="contact" aria-selected="false">
+                                <a class="nav-link" id="life-tab" data-toggle="tab" href="index-3.html#life" role="tab" aria-controls="contact" aria-selected="false">
                                     <span> <i class="icon icon-heart"></i> </span> Life Insurance
                                 </a>
                             </li>
@@ -495,7 +664,6 @@
         </div>
     </section>
 
-
     <section id="ts-news" class="ts-news">
         <div class="container">
             <div class="row text-center">
@@ -508,7 +676,7 @@
                 <div class="col-lg-6 col-md-12">
                     <div class="latest-post post-large">
                         <div class="latest-post-media">
-                            <a href="index-2.html#" class="latest-post-img">
+                            <a href="index-3.html#" class="latest-post-img">
                                 <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/news/news1.jpg" alt="img">
                             </a>
                             <div class="post-date-time">
@@ -517,10 +685,10 @@
                             </div>
                             <div class="post-body">
                                 <h4 class="post-title">
-                                    <a href="index-2.html#">Planning Retirement: Financial Areas for Empty Nesters</a>
+                                    <a href="index-3.html#">Planning Retirement: Financial Areas for Empty Nesters</a>
                                 </h4>
                                 <p>When children leave home, parents can reduce expenses to improve the oddy of a more secure retirement.</p>
-                                <a class="btn btn-primary" href="index-2.html#">Read More</a>
+                                <a class="btn btn-primary" href="index-3.html#">Read More</a>
                             </div><!-- Post body end -->
                         </div><!-- Post media end -->
                     </div><!-- Latest post end -->
@@ -531,7 +699,7 @@
                         <div class="col-md-12">
                             <div class="latest-post latest-post-right">
                                 <div class="latest-post-media">
-                                    <a href="index-2.html#" class="latest-post-img">
+                                    <a href="index-3.html#" class="latest-post-img">
                                         <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/news/news2.jpg" alt="img">
                                     </a>
                                 </div>
@@ -541,7 +709,7 @@
                                 </div>
                                 <div class="post-body">
                                     <h4 class="post-title">
-                                        <a href="index-2.html#">10 key considerations for your business insurance</a>
+                                        <a href="index-3.html#">10 key considerations for your business insurance</a>
                                     </h4>
                                     <div class="post-text">
                                         <p>We cover trips up to 12 months long. With the option to extend your.</p>
@@ -552,7 +720,7 @@
                         <div class="col-md-12">
                             <div class="latest-post latest-post-right">
                                 <div class="latest-post-media">
-                                    <a href="index-2.html#" class="latest-post-img">
+                                    <a href="index-3.html#" class="latest-post-img">
                                         <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/news/news3.jpg" alt="img">
                                     </a>
                                 </div>
@@ -562,7 +730,7 @@
                                 </div>
                                 <div class="post-body">
                                     <h4 class="post-title">
-                                        <a href="index-2.html#">Access great customer offers make a claim</a>
+                                        <a href="index-3.html#">Access great customer offers make a claim</a>
                                     </h4>
                                     <div class="post-text">
                                         <p>We cover trips up to 12 months long. With the option to extend your.</p>
@@ -573,7 +741,7 @@
                         <div class="col-md-12">
                             <div class="latest-post latest-post-right last">
                                 <div class="latest-post-media">
-                                    <a href="index-2.html#" class="latest-post-img">
+                                    <a href="index-3.html#" class="latest-post-img">
                                         <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/news/news4.jpg" alt="img">
                                     </a>
                                 </div>
@@ -583,7 +751,7 @@
                                 </div>
                                 <div class="post-body">
                                     <h4 class="post-title">
-                                        <a href="index-2.html#">10 key considerations for your business insurance</a>
+                                        <a href="index-3.html#">10 key considerations for your business insurance</a>
                                     </h4>
                                     <div class="post-text">
                                         <p>We cover trips up to 12 months long. With the option to extend your.</p>
@@ -597,7 +765,7 @@
 
             <div class="row">
                 <div class="col-12 text-center">
-                    <a href="index-2.html#" class="btn btn-primary news-btn">View All</a>
+                    <a href="index-3.html#" class="btn btn-primary news-btn">View All</a>
                 </div>
             </div>
         </div><!--/ Container end -->
@@ -664,7 +832,6 @@
         </div>
     </section>
 
-
     <!-- Partners start -->
     <section id="clients-area" class="clients-area">
         <div class="container">
@@ -679,31 +846,31 @@
             <div class="row">
                 <div id="partners-carousel" class="col-sm-12 owl-carousel owl-theme text-center partners">
                     <figure class="item partner-logo">
-                        <a href="index-2.html#"><img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/clients/client1.png" alt="" /></a>
+                        <a href="index-3.html#"><img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/clients/client1.png" alt="" /></a>
                     </figure>
 
                     <figure class="item partner-logo">
-                        <a href="index-2.html#"><img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/clients/client2.png" alt="" /></a>
+                        <a href="index-3.html#"><img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/clients/client2.png" alt="" /></a>
                     </figure>
 
                     <figure class="item partner-logo">
-                        <a href="index-2.html#"><img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/clients/client3.png" alt="" /></a>
+                        <a href="index-3.html#"><img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/clients/client3.png" alt="" /></a>
                     </figure>
 
                     <figure class="item partner-logo">
-                        <a href="index-2.html#"><img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/clients/client4.png" alt="" /></a>
+                        <a href="index-3.html#"><img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/clients/client4.png" alt="" /></a>
                     </figure>
 
                     <figure class="item partner-logo">
-                        <a href="index-2.html#"><img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/clients/client5.png" alt="" /></a>
+                        <a href="index-3.html#"><img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/clients/client5.png" alt="" /></a>
                     </figure>
 
                     <figure class="item partner-logo last">
-                        <a href="index-2.html#"><img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/clients/client6.png" alt="" /></a>
+                        <a href="index-3.html#"><img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/clients/client6.png" alt="" /></a>
                     </figure>
 
                     <figure class="item partner-logo last">
-                        <a href="index-2.html#"><img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/clients/client7.png" alt="" /></a>
+                        <a href="index-3.html#"><img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/clients/client7.png" alt="" /></a>
                     </figure>
 
                 </div><!--/ Owl carousel end -->
@@ -712,4 +879,3 @@
         </div><!--/ Container end -->
     </section><!--/ Partners end -->
 <?php get_footer(); ?>
-

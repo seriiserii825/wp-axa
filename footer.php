@@ -9,7 +9,7 @@
                 <div class="col-md-12">
                     <h3>Subscribe to <span class="title-text-color">our newsletter</span></h3>
                     <p>No spam message from us, only give you latest offer which is best for you and your business</p>
-                    <form action="index-2.html#" method="post" id="newsletter-form" class="newsletter-bg-form">
+                    <form action="index-3.html#" method="post" id="newsletter-form" class="newsletter-bg-form">
                         <i class="fa fa-paper-plane-o"></i>
                         <div class="form-group">
                             <input type="email" name="email" id="newsletter-form-email" class="form-control form-control-lg" placeholder="Your email" autocomplete="off">
@@ -27,34 +27,34 @@
                 <div class="col-lg-3 col-md-12 footer-widget">
                     <h3 class="widget-title">Our Company</h3>
                     <ul class="unstyled">
-                        <li><a href="index-2.html#">About Us</a></li>
-                        <li><a href="index-2.html#">Jobs</a></li>
-                        <li><a href="index-2.html#">Investors</a></li>
-                        <li><a href="index-2.html#">Newsroom</a></li>
-                        <li><a href="index-2.html#">Our Team</a></li>
+                        <li><a href="index-3.html#">About Us</a></li>
+                        <li><a href="index-3.html#">Jobs</a></li>
+                        <li><a href="index-3.html#">Investors</a></li>
+                        <li><a href="index-3.html#">Newsroom</a></li>
+                        <li><a href="index-3.html#">Our Team</a></li>
                     </ul>
                 </div><!-- Our Company end -->
 
                 <div class="col-lg-3 col-md-12 footer-widget">
                     <h3 class="widget-title">Our Services</h3>
                     <ul class="unstyled">
-                        <li><a href="index-2.html#">Home Insurance</a></li>
-                        <li><a href="index-2.html#">Travel Insurance</a></li>
-                        <li><a href="index-2.html#">Life Insurance</a></li>
-                        <li><a href="index-2.html#">Car Insurance</a></li>
-                        <li><a href="index-2.html#">Health Insurance</a></li>
-                        <li><a href="index-2.html#">Business Insurance</a></li>
+                        <li><a href="index-3.html#">Home Insurance</a></li>
+                        <li><a href="index-3.html#">Travel Insurance</a></li>
+                        <li><a href="index-3.html#">Life Insurance</a></li>
+                        <li><a href="index-3.html#">Car Insurance</a></li>
+                        <li><a href="index-3.html#">Health Insurance</a></li>
+                        <li><a href="index-3.html#">Business Insurance</a></li>
                     </ul>
                 </div><!-- Our services end -->
 
                 <div class="col-lg-3 col-md-12 footer-widget">
                     <h3 class="widget-title">Support</h3>
                     <ul class="unstyled">
-                        <li><a href="index-2.html#">Manage Policies</a></li>
-                        <li><a href="index-2.html#">Claims</a></li>
-                        <li><a href="index-2.html#">Travel Guides</a></li>
-                        <li><a href="index-2.html#">Producer Notifications</a></li>
-                        <li><a href="index-2.html#">Fraud Warning</a></li>
+                        <li><a href="index-3.html#">Manage Policies</a></li>
+                        <li><a href="index-3.html#">Claims</a></li>
+                        <li><a href="index-3.html#">Travel Guides</a></li>
+                        <li><a href="index-3.html#">Producer Notifications</a></li>
+                        <li><a href="index-3.html#">Fraud Warning</a></li>
                     </ul>
                 </div><!-- Support end -->
 
@@ -111,10 +111,10 @@
                 <div class="col-md-12 col-lg-3 text-center">
                     <div class="footer-social social-color">
                         <ul>
-                            <li><a href="index-2.html#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="index-2.html#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="index-2.html#"><i class="fa fa-google-plus"></i></a></li>
-                            <li><a href="index-2.html#"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="index-3.html#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="index-3.html#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="index-3.html#"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href="index-3.html#"><i class="fa fa-instagram"></i></a></li>
                         </ul>
                     </div><!-- Footer social end -->
                     <div class="copyright-info">
@@ -131,11 +131,7 @@
 
         </div><!-- Container end -->
     </div><!-- Copyright end -->
-
-
 </footer><!-- Footer end -->
-
-<!--[if lt IE 9]><script src="<?php echo get_template_directory_uri(); ?>/assets/contactme/js/EQCSS-polyfills-1.7.0.min.js"></script><![endif]-->
 
 </div><!-- Body inner end -->
 <?php wp_footer(); ?>

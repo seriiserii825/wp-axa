@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="<?php language_attributes(); ?>">
 <head>
+
+    <!-- Basic Page Needs
+	================================================== -->
     <meta charset="utf-8">
+    <title>Insurex - Insurance Agency HTML5 Template</title>
 
     <!-- Mobile Specific Metas
 	================================================== -->
@@ -13,8 +17,8 @@
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
     <!--[if lt IE 9]>
-    <script src="js/html5shiv.js"></script>
-    <script src="js/respond.min.js"></script>
+    <script src="<?php echo get_template_directory_uri()?>/assets/js/html5shiv.js"></script>
+    <script src="<?php echo get_template_directory_uri()?>/assets/js/respond.min.js"></script>
     <![endif]-->
 	<?php wp_head(); ?>
 </head>
@@ -22,35 +26,34 @@
 <body>
 
 <div <?php body_class('body-inner'); ?>>
-
-    <div id="top-bar" class="top-bar">
+    <div id="top-bar" class="topbar-transparent border-down">
         <div class="container">
             <div class="row">
-                <div class="col-lg-7 col-md-12 text-lg-left text-md-center">
+                <div class="col-lg-7 col-mf-12 text-md-center text-lg-left">
                     <ul class="top-menu unstyled ">
-                        <li><a href="index-2.html#">Why Us</a></li>
-                        <li><a href="index-2.html#">Locations</a></li>
-                        <li><a href="index-2.html#">Services</a></li>
-                        <li><a href="index-2.html#">Solution Center</a></li>
+                        <li><a href="index-3.html#">Why Us</a></li>
+                        <li><a href="index-3.html#">Locations</a></li>
+                        <li><a href="index-3.html#">Services</a></li>
+                        <li><a href="index-3.html#">Solution Center</a></li>
                     </ul>
                 </div><!--/ Top info end -->
 
-                <div class="col-lg-5 col-md-12 text-lg-right text-md-center">
+                <div class="col-lg-5 col-mf-12 text-md-center text-lg-right">
                     <ul class="top-social">
                         <li>
-                            <a title="Facebook" href="index-2.html#">
+                            <a title="Facebook" href="index-3.html#">
                                 <span class="social-icon"><i class="fa fa-facebook"></i></span>
                             </a>
-                            <a title="Twitter" href="index-2.html#">
+                            <a title="Twitter" href="index-3.html#">
                                 <span class="social-icon"><i class="fa fa-twitter"></i></span>
                             </a>
-                            <a title="Google+" href="index-2.html#">
+                            <a title="Google+" href="index-3.html#">
                                 <span class="social-icon"><i class="fa fa-google-plus"></i></span>
                             </a>
-                            <a title="Linkdin" href="index-2.html#">
+                            <a title="Linkdin" href="index-3.html#">
                                 <span class="social-icon"><i class="fa fa-linkedin"></i></span>
                             </a>
-                            <a title="Skype" href="index-2.html#">
+                            <a title="Skype" href="index-3.html#">
                                 <span class="social-icon"><i class="fa fa-instagram"></i></span>
                             </a>
                         </li>
@@ -61,13 +64,13 @@
     </div><!--/ Topbar end -->
 
     <!-- Header start -->
-    <header id="header" class="header navdown-boxed">
+    <header id="header" class="header navdown-boxed-transparent">
         <div class="container">
             <div class="row">
                 <div class="logo-area clearfix">
                     <div class="col-lg-2 col-md-12 logo">
                         <a href="index.html">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logos/logo-light.png" alt="">
                         </a>
                     </div><!-- logo end -->
 
@@ -95,7 +98,7 @@
                                 </div>
                             </li>
                             <li class="header-get-a-quote">
-                                <a class="btn btn-primary" href="index-2.html#">Get A Quote</a>
+                                <a class="btn btn-primary" href="index-3.html#">Get A Quote</a>
                             </li>
                         </ul><!-- Ul end -->
                     </div><!-- header right end -->
@@ -116,11 +119,11 @@
                             <div id="navbarSupportedContent" class="collapse navbar-collapse navbar-responsive-collapse">
                                 <ul class="nav navbar-nav">
                                     <li class="dropdown active">
-                                        <a href="index-2.html#" class="dropdown-toggle" data-toggle="dropdown">Home <i class="fa fa-angle-down"></i></a>
+                                        <a href="index-3.html#" class="dropdown-toggle" data-toggle="dropdown">Home <i class="fa fa-angle-down"></i></a>
                                         <ul class="dropdown-menu" role="menu">
                                             <li><a href="index.html">Home One</a></li>
-                                            <li class="active"><a href="index-2.html">Home Two</a></li>
-                                            <li><a href="index-3.html">Home Three</a></li>
+                                            <li><a href="index-2.html">Home Two</a></li>
+                                            <li class="active"><a href="index-3.html">Home Three</a></li>
                                             <li><a href="index-4.html">Home Four</a></li>
                                             <li><a href="index-5.html">Home Five</a></li>
                                             <li><a href="index-6.html">Home Six</a></li>
@@ -130,7 +133,7 @@
                                     </li>
 
                                     <li class="dropdown">
-                                        <a href="index-2.html#" class="dropdown-toggle" data-toggle="dropdown">Pages <i class="fa fa-angle-down"></i></a>
+                                        <a href="index-3.html#" class="dropdown-toggle" data-toggle="dropdown">Pages <i class="fa fa-angle-down"></i></a>
                                         <ul class="dropdown-menu" role="menu">
                                             <li><a href="about.html">About Us</a></li>
                                             <li><a href="team.html">Our People</a></li>
@@ -141,7 +144,7 @@
                                     </li>
 
                                     <li class="dropdown">
-                                        <a href="index-2.html#" class="dropdown-toggle" data-toggle="dropdown">Cases <i class="fa fa-angle-down"></i></a>
+                                        <a href="index-3.html#" class="dropdown-toggle" data-toggle="dropdown">Cases <i class="fa fa-angle-down"></i></a>
                                         <ul class="dropdown-menu" role="menu">
                                             <li><a href="case.html">Case All</a></li>
                                             <li><a href="case-details.html">Case Single</a></li>
@@ -149,7 +152,7 @@
                                     </li>
 
                                     <li class="dropdown">
-                                        <a href="index-2.html#" class="dropdown-toggle" data-toggle="dropdown">Services <i class="fa fa-angle-down"></i></a>
+                                        <a href="index-3.html#" class="dropdown-toggle" data-toggle="dropdown">Services <i class="fa fa-angle-down"></i></a>
                                         <ul class="dropdown-menu" role="menu">
                                             <li><a href="service-details1.html">Life Insurance</a></li>
                                             <li><a href="service-details2.html">Travel Insurance</a></li>
@@ -161,23 +164,23 @@
                                     </li>
 
                                     <li class="dropdown">
-                                        <a href="index-2.html#" class="dropdown-toggle" data-toggle="dropdown">Features <i class="fa fa-angle-down"></i></a>
+                                        <a href="index-3.html#" class="dropdown-toggle" data-toggle="dropdown">Features <i class="fa fa-angle-down"></i></a>
                                         <ul class="dropdown-menu" role="menu">
                                             <li><a href="typography.html">Typography</a></li>
                                             <li><a href="404.html">404</a></li>
                                             <li class="dropdown-submenu">
-                                                <a href="index-2.html#.">Parent Menu</a>
+                                                <a href="index-3.html#.">Parent Menu</a>
                                                 <ul class="dropdown-menu">
-                                                    <li><a href="index-2.html#">Child Menu 1</a></li>
-                                                    <li><a href="index-2.html#">Child Menu 2</a></li>
-                                                    <li><a href="index-2.html#">Child Menu 3</a></li>
+                                                    <li><a href="index-3.html#">Child Menu 1</a></li>
+                                                    <li><a href="index-3.html#">Child Menu 2</a></li>
+                                                    <li><a href="index-3.html#">Child Menu 3</a></li>
                                                 </ul>
                                             </li>
                                         </ul>
                                     </li>
 
                                     <li class="dropdown">
-                                        <a href="index-2.html#" class="dropdown-toggle" data-toggle="dropdown">News <i class="fa fa-angle-down"></i></a>
+                                        <a href="index-3.html#" class="dropdown-toggle" data-toggle="dropdown">News <i class="fa fa-angle-down"></i></a>
                                         <ul class="dropdown-menu" role="menu">
                                             <li><a href="news-left-sidebar.html">News Left Sidebar</a></li>
                                             <li><a href="news-right-sidebar.html">News Right Sidebar</a></li>
@@ -207,4 +210,3 @@
 
         </nav><!--/ Navigation end -->
     </header><!--/ Header end -->
-

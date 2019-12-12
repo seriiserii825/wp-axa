@@ -2337,7 +2337,7 @@ ul.navbar-nav>li.header-get-a-quote:hover>a:after {
 }
 
 .ts-feature-box-round.highlight:before {
-   background: rgba(162, 223, 72, .85);
+   background: rgba(191, 61, 238, .74);
 }
 
 .ts-feature-box-round .feature-info {
@@ -2460,7 +2460,7 @@ ul.navbar-nav>li.header-get-a-quote:hover>a:after {
 
 .ts-service-overlay .service-title {
    color: #fff;
-   background: rgba(162, 223, 72, .85);
+   background: rgba(191, 61, 238, .74);
    margin: 0;
    padding: 15px 0 20px;
    font-size: 22px;
