@@ -124,7 +124,6 @@ a:hover {
 	color: #fc6a2a;
 }
 
-section,
 .section-padding {
 	padding: 40px 0;
 	position: relative;
@@ -802,13 +801,16 @@ cite {
 }
 
 .btn.btn-primary {
-	background: #BF3DEE;
+	color: white;
+	background: #9931BF;
 	border: 2px solid transparent;
 }
 
+
 .btn.btn-primary:hover {
-	background: #1f1f1f;
-	border: 2px solid transparent;
+	color: #bf3dee;
+	background: white;
+	border: 2px solid #bf3dee;
 }
 
 .btn.btn-dark {
@@ -2488,12 +2490,19 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 ================================================== */
 
 /* Services overlay */
-
+.ts-services-wrap {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 20px;
+}
 .ts-service-overlay {
 	position: relative;
 	min-height: 310px;
 	overflow: hidden;
-	margin-bottom: 30px;
+}
+.ts-services__text {
+	height: 100px;
+	overflow: hidden;
 }
 
 .ts-service-overlay:before {
@@ -3640,9 +3649,9 @@ span.fact-icon {
 }
 
 .ts-testimonial-static {
-	margin-top: -105px;
 	position: relative;
 	z-index: 2;
+	background-color: #BF3DEE;
 }
 
 .ts-testimonial-bg.bg-angle-shape {
@@ -3688,7 +3697,7 @@ text-white .column-title-dash span:before {
 	border-radius: 2px;
 	position: relative;
 	z-index: 1;
-	box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.03);
+	box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.6);
 }
 
 .quote-text {
@@ -6932,6 +6941,8 @@ img.custom-logo {
 	padding: 60px 0;
 }
 .online-form__content input[type="text"],
+.online-form__content input[type="date"],
+.online-form__content select,
 .online-form__content input[type="tel"],
 .online-form__content input[type="email"] {
 	display: block;
@@ -6939,9 +6950,53 @@ img.custom-logo {
 	width: 600px;
 	text-indent: 20px;
 }
+.online-form select {
+	border: 1px solid #ccc;
+	border-radius: 3px;
+}
+.online-form__content input[type="text"]:focus,
+.online-form__content input[type="date"]:focus,
+.online-form__content select:focus,
+.online-form__content input[type="tel"]:focus,
+.online-form__content input[type="email"]:focus {
+	border-color: #9931BF;
+}
 input[type="submit"].btn-info {
 	padding: 10px 20px;
 }
 input[type="submit"].btn-info:hover {
 	background: #9931BF;
+}
+.main-container {
+	padding: 60px 0;
+}
+ul.list li {
+	margin: 5px 0;
+	font-weight: 500;
+	padding-left: 20px;
+	position: relative;
+}
+ul.list li::before {
+	font-family: fontawesome;
+	font-size: 12px;
+	border: none;
+	color: #a9a9a9;
+	content: "\f111";
+	display: inline-block;
+	margin-right: 10px;
+	padding: 0;
+	left: 0;
+	position: absolute;
+	top: 1px;
+}
+.section {
+	padding: 60px 0;
+}
+.section-border {
+	border-bottom: 2px solid rgba(153, 49, 191, 0.2);
+}
+.ts-choose-us-wrap {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 30px;
 }

@@ -10,51 +10,41 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+	<div id="banner-area" class="banner-area bg-overlay" style="background-image:url(<?php echo get_template_directory_uri(); ?>/assets/images/banner/banner-2.jpg)">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<div class="banner-heading">
+						<h1 class="banner-title">404</h1>
+					</div>
+				</div><!-- Col end -->
+			</div><!-- Row end -->
+		</div><!-- Container end -->
+	</div><!-- Banner area end -->
 
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'bs-axa' ); ?></h1>
-				</header><!-- .page-header -->
-
-				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'bs-axa' ); ?></p>
-
-					<?php
-					get_search_form();
-
-					the_widget( 'WP_Widget_Recent_Posts' );
-					?>
-
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'bs-axa' ); ?></h2>
-						<ul>
-							<?php
-							wp_list_categories( array(
-								'orderby'    => 'count',
-								'order'      => 'DESC',
-								'show_count' => 1,
-								'title_li'   => '',
-								'number'     => 10,
-							) );
-							?>
-						</ul>
-					</div><!-- .widget -->
-
-					<?php
-					/* translators: %1$s: smiley */
-					$bs_axa_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'bs-axa' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$bs_axa_archive_content" );
-
-					the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
-
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
+	<section id="main-container" class="main-container padtb-0">
+		<div class="container">
+			<div class="row">
+				<div class="col-6 text-center align-self-center">
+					<div class="error-page text-center">
+						<div class="error-code">
+							<strong>404</strong>
+						</div>
+						<div class="error-message">
+							<h3>Oops... <?php echo esc_html__( 'Pagina nu a fost gasita', 'bs-galadent' ); ?>!</h3>
+						</div>
+						<div class="error-body">
+							<?php echo esc_html__( 'Apasa pe buttton, pentru a trece pe pagina principala', 'bs-galadent' ); ?> <br>
+							<a href="<?php echo home_url(); ?>" class="btn btn-primary solid blank"><i class="fa fa-arrow-circle-left">&nbsp;</i> <?php echo esc_html__( 'Acasa', 'bs-galadent' );
+							 ?></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 text-right">
+					<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/404.png" alt="">
+				</div>
+			</div>
+		</div><!-- Container end -->
+	</section><!-- Main container end -->
 <?php
 get_footer();

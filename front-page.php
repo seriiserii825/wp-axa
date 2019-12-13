@@ -16,9 +16,12 @@ $slider = new WP_Query( [
 
         <!-- Carousel inner -->
         <div class="carousel-inner">
-			<?php $i = 0; while ( $slider->have_posts() ): ?>
+			<?php $i = 0;
+			while ( $slider->have_posts() ): ?>
 				<?php $slider->the_post(); ?>
-                <div class="carousel-item patb-100 <?php if($i == 0){echo ' active';} ?>" style="background-image:url(<?php echo kama_thumb_src('w=1600 &h=700');?>">
+                <div class="carousel-item patb-100 <?php if ( $i == 0 ) {
+					echo ' active';
+				} ?>" style="background-image:url(<?php echo kama_thumb_src( 'w=1600 &h=700' ); ?>">
                     <div class="container">
                         <div class="slider-content text-left">
                             <div class="col-md-12">
@@ -33,7 +36,7 @@ $slider = new WP_Query( [
                     </div><!--Container end -->
                 </div><!--/ Carousel item 1 end -->
 
-			<?php $i++; endwhile; ?>
+				<?php $i ++; endwhile; ?>
 			<?php wp_reset_postdata(); ?>
         </div>
         <a class="left carousel-control carousel-item-left" href="#">
@@ -47,303 +50,111 @@ $slider = new WP_Query( [
 <?php endif; ?>
 
 
-<section id="about-feature-classic" class="about-feature-classic">
+<section id="about-feature-classic" class="section section-border about-feature-classic">
     <h2 class="section-title-dash">Online</h2>
     <div class="container">
         <div class="row">
-            <?php $online = new WP_Query([
-                'post_type' => 'online',
-                'posts_per_page' => -1
-            ]); ?>
-            <?php if($online->have_posts()): ?>
-            	<?php while($online->have_posts()): ?>
-            		<?php $online->the_post(); ?>
+			<?php $online = new WP_Query( [
+				'post_type'      => 'online',
+				'posts_per_page' => - 1
+			] ); ?>
+			<?php if ( $online->have_posts() ): ?>
+				<?php while ( $online->have_posts() ): ?>
+					<?php $online->the_post(); ?>
                     <div class="col-lg-3 col-md-12 text-center">
                         <div class="about-classic-box-single">
                             <div class="about-content-box ">
                                 <div class="about-classic-icon">
-                                    <i class="fa fa-<?php echo carbon_get_the_post_meta('crb_online_icon'); ?>" aria-hidden="true"></i>
+                                    <i class="fa fa-<?php echo carbon_get_the_post_meta( 'crb_online_icon' ); ?>"
+                                       aria-hidden="true"></i>
                                 </div><!-- Feature Img end -->
                                 <div class="about-classic-content">
                                     <h3><?php the_title(); ?></h3>
-                                    <a class="btn btn-dark" href="<?php the_permalink(); ?>"><?php echo esc_html__( 'Comanda', 'bs-galadent' ); ?></a>
+                                    <a class="btn btn-primary"
+                                       href="<?php the_permalink(); ?>"><?php echo esc_html__( 'Comanda', 'bs-galadent' ); ?></a>
                                 </div>
                             </div>
                         </div>
                     </div> <!-- Col end -->
-            	<?php endwhile; ?>
-            	<?php wp_reset_postdata(); ?>
-            <?php endif; ?>
+				<?php endwhile; ?>
+				<?php wp_reset_postdata(); ?>
+			<?php endif; ?>
         </div> <!-- Row End -->
     </div> <!-- Container end -->
 </section> <!-- About classic end -->
 
-<section id="ts-services" class="ts-services solid-bg">
+<section id="ts-services" class="section section-border ts-services solid-bg">
     <div class="container">
         <div class="row text-center">
             <div class="col-md-12">
-                <h2 data-title="Our Services" class="section-title-dash">
-                    Our Services
+                <h2 data-title="<?php echo get_the_title( 2 ); ?>" class="section-title-dash">
+					<?php echo get_the_title( 2 ); ?>
                     <span>&nbsp;</span>
                 </h2>
             </div><!-- Col end -->
         </div><!--/ Title row end -->
-
-
-        <div class="row">
-            <div class="col-lg-4 col-md-12">
-                <div class="ts-service-overlay">
-                    <div class="ts-image-wrapper">
-                        <img class="img-fluid"
-                             src="<?php echo get_template_directory_uri(); ?>/assets/images/services/service-1.jpg"
-                             alt="">
-                    </div>
-                    <div class="service-content">
-                        <h3 class="service-title">
-                            <i class="icon icon-car"></i>
-                            Car Insurance
-                        </h3>
-                        <p>Covers you for damage to your car as well as to other people's vehicles and property. Plus much more!</p>
-                        <p><a class="btn btn-primary icon-bg" href="index-3.html#">Get Quote
-                                <i class="icon icon-arrow-right"></i>
-                            </a></p>
-                    </div>
-                </div><!-- Service1 end -->
-            </div><!-- Col 1 end -->
-
-            <div class="col-lg-4 col-md-12">
-                <div class="ts-service-overlay">
-                    <div class="ts-image-wrapper">
-                        <img class="img-fluid"
-                             src="<?php echo get_template_directory_uri(); ?>/assets/images/services/service-2.jpg"
-                             alt="">
-                    </div>
-                    <div class="service-content">
-                        <h3 class="service-title">
-                            <i class="icon icon-home2"></i>
-                            Home Insurance
-                        </h3>
-                        <p>Covers you for damage to your car as well as to other people's vehicles and property. Plus much more!</p>
-                        <p><a class="btn btn-primary icon-bg" href="index-3.html#">Get Quote
-                                <i class="icon icon-arrow-right"></i>
-                            </a></p>
-                    </div>
-                </div><!-- Servic2 end -->
-            </div><!-- Col 2 end -->
-
-            <div class="col-lg-4 col-md-12">
-                <div class="ts-service-overlay">
-                    <div class="ts-image-wrapper">
-                        <img class="img-fluid"
-                             src="<?php echo get_template_directory_uri(); ?>/assets/images/services/service-3.jpg"
-                             alt="">
-                    </div>
-                    <div class="service-content">
-                        <h3 class="service-title">
-                            <i class="icon icon-heart"></i>
-                            Life Protection
-                        </h3>
-                        <p>Covers you for damage to your car as well as to other people's vehicles and property. Plus much more!</p>
-                        <p><a class="btn btn-primary icon-bg" href="index-3.html#">Get Quote
-                                <i class="icon icon-arrow-right"></i>
-                            </a></p>
-                    </div>
-                </div><!-- Service3 end -->
-            </div><!-- Col 3 end -->
-
-            <div class="gap-30"></div>
-
-            <div class="col-lg-4 col-md-12">
-                <div class="ts-service-overlay">
-                    <div class="ts-image-wrapper">
-                        <img class="img-fluid"
-                             src="<?php echo get_template_directory_uri(); ?>/assets/images/services/service-4.jpg"
-                             alt="">
-                    </div>
-                    <div class="service-content">
-                        <h3 class="service-title">
-                            <i class="icon icon-chart22"></i>
-                            Business Insurance
-                        </h3>
-                        <p>Covers you for damage to your car as well as to other people's vehicles and property. Plus much more!</p>
-                        <p><a class="btn btn-primary icon-bg" href="index-3.html#">Get Quote
-                                <i class="icon icon-arrow-right"></i>
-                            </a></p>
-                    </div>
-                </div><!-- Service4 end -->
-            </div><!-- Col 4 end -->
-
-            <div class="col-lg-4 col-md-12">
-                <div class="ts-service-overlay">
-                    <div class="ts-image-wrapper">
-                        <img class="img-fluid"
-                             src="<?php echo get_template_directory_uri(); ?>/assets/images/services/service-5.jpg"
-                             alt="">
-                    </div>
-                    <div class="service-content">
-                        <h3 class="service-title">
-                            <i class="icon icon-heart-pulse"></i>
-                            Health Insurance
-                        </h3>
-                        <p>Covers you for damage to your car as well as to other people's vehicles and property. Plus much more!</p>
-                        <p><a class="btn btn-primary icon-bg" href="index-3.html#">Get Quote
-                                <i class="icon icon-arrow-right"></i>
-                            </a></p>
-                    </div>
-                </div><!-- Service5 end -->
-            </div><!-- Col 5 end -->
-
-            <div class="col-lg-4 col-md-12">
-                <div class="ts-image-wrapper ts-ad">
-                    <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/ad1.jpg"
-                         alt="">
-                </div>
-            </div><!-- Col 6 end -->
-
+        <div class="ts-services-wrap">
+			<?php $fizic = new WP_Query( [
+				'post_type'      => 'online',
+				'posts_per_page' => - 1
+			] ); ?>
+			<?php if ( $fizic->have_posts() ): ?>
+				<?php while ( $fizic->have_posts() ): ?>
+					<?php $fizic->the_post(); ?>
+                    <div class="ts-service-overlay">
+                        <div class="ts-image-wrapper">
+                            <img class="img-fluid" src="<?php echo kama_thumb_src('w=350 &h=310'); ?>" alt="">
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">
+                                <i class="fa fa-<?php echo carbon_get_the_post_meta( 'crb_online_icon' ); ?>"></i>
+                                <span><?php echo esc_html( get_the_title() ); ?></span>
+                            </h3>
+                            <div class="ts-services__text"><?php the_content(); ?></div>
+                            <p>
+                                <a class="btn btn-primary icon-bg"
+                                   href="<?php the_permalink(); ?>"><?php echo esc_html__( 'Mai mult', 'bs-galadent' ); ?>
+                                    <i class="icon icon-arrow-right"></i>
+                                </a>
+                            </p>
+                        </div>
+                    </div><!-- Service1 end -->
+				<?php endwhile; ?>
+				<?php wp_reset_postdata(); ?>
+			<?php endif; ?>
         </div><!-- Main row end -->
     </div><!-- Conatiner end -->
 </section><!-- Main container end -->
 
-<section id="ts-cta-area" class="ts-cta-area ts-cta-bg bg-overlay">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 col-md-12">
-                <div class="cta-img-box-left">
-                    <div class="cta-img-content">
-                        <img class="pull-left"
-                             src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-image/cta-1.png"
-                             alt="">
-                    </div>
-                    <div class="cta-content text-white">
-                        <h3 class="text-white">Find an Insurance Agent</h3>
-                        <p>These Happy Days are yours and mine Happy Days then one day he was shooting at some food.</p>
-                        <p>
-                            <a class="btn btn-dark" href="index-3.html#">Call Now</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-5 col-md-12 ml-lg-auto">
-                <div class="cta-img-box-right text-white">
-                    <div class="cta-img-content">
-                        <img class="pull-left"
-                             src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-image/cta-2.png"
-                             alt="">
-                    </div>
-                    <div class="cta-content last">
-                        <h3>Call Us for Any Questions</h3>
-                        <div class="toll-free-cta">
-                            <h3>009-215-5596</h3>
-                            <p>(Toll Free)</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="ts-choose-us" class="ts-choose-us">
+<section id="ts-choose-us" class="section ts-choose-us">
     <div class="container">
         <div class="row">
             <div class="col text-center">
-                <h2 data-title="Why Choose Us" class="section-title-dash"> Why Choose Us
+                <h2 data-title="<?php echo esc_html__( 'De ce noi', 'bs-galadent' ); ?>" class="section-title-dash"> <?php echo esc_html__( 'De ce noi', 'bs-galadent' ); ?>
                     <span class="dashborder">&nbsp;</span>
                 </h2>
             </div> <!-- Col End -->
         </div> <!-- Row End -->
-        <div class="row">
-            <div class="col-lg-5 col-md-12">
-                <div class="ts-feature-classic ">
+        <div class="ts-choose-us-wrap">
+            <?php $choose = carbon_get_post_meta(25, 'crb_why_choose_us'); ?>
+            <?php foreach($choose as $item): ?>
+                <div class="ts-feature-classic">
                     <div class="ts-feature-info icon-left icon-round">
                      <span class="feature-icon">
-                        <i class="icon icon-consult"></i>
+                        <i class="<?php echo $item['icon']; ?>"></i>
                      </span>
                         <div class="feature-content">
-                            <h3 class="ts-feature-title">24/7 Support</h3>
-                            <p>We provide great cover for backpackers, gap years takers</p>
+                            <h3 class="ts-feature-title"><?php echo $item['title'.get_lang()]; ?></h3>
+                            <p><?php echo $item['text'.get_lang()]; ?></p>
                         </div> <!-- Feature content end -->
                     </div> <!-- Feature Info End -->
                 </div> <!-- Features end -->
-                <div class="ts-feature-classic ">
-                    <div class="ts-feature-info icon-left icon-round">
-                     <span class="feature-icon">
-                        <i class="icon icon-funnel"></i>
-                     </span>
-                        <div class="feature-content">
-                            <h3 class="ts-feature-title">25 Years of experience</h3>
-                            <p>We provide great cover for backpackers, gap years takers</p>
-                        </div> <!-- Feature content end -->
-                    </div> <!-- Feature Info End -->
-                </div> <!-- Features end -->
-                <div class="ts-feature-classic ">
-                    <div class="ts-feature-info icon-left icon-round">
-                     <span class="feature-icon">
-                        <i class="icon icon-chart22"></i>
-                     </span>
-                        <div class="feature-content">
-                            <h3 class="ts-feature-title">Growing your business</h3>
-                            <p>We provide great cover for backpackers, gap years takers</p>
-                        </div> <!-- Feature content end -->
-                    </div> <!-- Feature Info End -->
-                </div> <!-- Features end -->
-            </div> <!-- Col End -->
-            <div class="col-lg-5 col-md-12">
-                <div class="ts-feature-classic ">
-                    <div class="ts-feature-info icon-left icon-round">
-                     <span class="feature-icon">
-                        <i class="icon icon-community"></i>
-                     </span>
-                        <div class="feature-content">
-                            <h3 class="ts-feature-title">Dedicared Team member</h3>
-                            <p>We provide great cover for backpackers, gap years takers</p>
-                        </div> <!-- Feature content end -->
-                    </div> <!-- Feature Info End -->
-                </div> <!-- Features end -->
-                <div class="ts-feature-classic ">
-                    <div class="ts-feature-info icon-left icon-round">
-                     <span class="feature-icon">
-                        <i class="icon icon-target"></i>
-                     </span>
-                        <div class="feature-content">
-                            <h3 class="ts-feature-title">Clients focused</h3>
-                            <p>We provide great cover for backpackers, gap years takers</p>
-                        </div> <!-- Feature content end -->
-                    </div> <!-- Feature Info End -->
-                </div> <!-- Features end -->
-                <div class="ts-feature-classic ">
-                    <div class="ts-feature-info icon-left icon-round">
-                     <span class="feature-icon">
-                        <i class="icon icon-love"></i>
-                     </span>
-                        <div class="feature-content">
-                            <h3 class="ts-feature-title">Service with love</h3>
-                            <p>We provide great cover for backpackers, gap years takers</p>
-                        </div> <!-- Feature content end -->
-                    </div> <!-- Feature Info End -->
-                </div> <!-- Features end -->
-            </div> <!-- Col End -->
-            <div class="col-lg-2 col-md-12">
-                <div class="choose-us-img">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/why-choose-us.png" alt="">
-                </div>
-            </div>
+            <?php endforeach; ?>
         </div> <!-- Row End -->
     </div> <!-- Container end -->
 </section><!-- section end -->
 
-
-<section class="ts-testimonial-bg">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h2 class="text-white column-title"> Client’s Love</h2>
-            </div> <!-- Col End -->
-        </div> <!-- Row End -->
-    </div> <!-- Container end -->
-</section> <!-- testimonial end -->
-
-<section id="ts-testimonial-static" class="ts-testimonial-static no-padding">
+<section id="ts-testimonial-static" class="section ts-testimonial-static no-padding">
     <div class="container">
         <div class="testimonial-items-wrapper">
             <div class="row">

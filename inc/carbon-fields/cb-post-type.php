@@ -25,3 +25,14 @@ function crb_attach_online_post_type_options() {
 		              ->set_value_type( 'url' )
 	         ) );
 }
+
+add_action( 'carbon_fields_register_fields', 'crb_attach_fizic_post_type_options' );
+function crb_attach_fizic_post_type_options() {
+	Container::make( 'post_meta', __( 'Fields' ) )
+	         ->where( 'post_type', '=', 'fizic' )
+	         ->add_tab( __( 'Image' ), array(
+		         Field::make( 'image', 'crb_online_image', __( 'Image in header' ) )
+		              ->set_help_text( '1600x515' )
+		              ->set_value_type( 'url' )
+	         ) );
+}
