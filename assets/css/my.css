@@ -26,6 +26,11 @@ h6 {
 	color: #252a37;
 	font-family: 'Open Sans', sans-serif;
 }
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
 
 h1 {
 	font-size: 48px;
@@ -91,6 +96,7 @@ body {
 a:link,
 a:visited {
 	text-decoration: none;
+	color: inherit;
 }
 
 a {
@@ -99,7 +105,7 @@ a {
 
 a:hover {
 	text-decoration: none;
-	color: #fc6a2a;
+	color: #9931BF;
 }
 
 .link-more {
@@ -120,7 +126,7 @@ a:hover {
 
 section,
 .section-padding {
-	padding: 100px 0;
+	padding: 40px 0;
 	position: relative;
 }
 
@@ -376,6 +382,7 @@ img.pull-right {
 	margin-bottom: 90px;
 	position: relative;
 	margin: 0 auto 90px;
+	text-align: center;
 }
 
 .section-title-dash:before {
@@ -1134,7 +1141,9 @@ ul.top-menu li a:hover {
 }
 
 .logo-area .top-info {
+	display: flex;
 	flex: 1;
+	padding: 20px 10px;
 }
 
 /* Insurex One */
@@ -1210,6 +1219,10 @@ ul.top-menu li a:hover {
 	-webkit-transition: 350ms;
 	-o-transition: 350ms;
 	transition: 350ms;
+}
+
+.header.navdown-boxed-transparent .logo-area .top-info {
+	background: rgba(191, 61, 238, 0.35);
 }
 
 .header.navdown-boxed-transparent .site-navigation.navdown {
@@ -1479,7 +1492,7 @@ ul.top-menu li a:hover {
 }
 
 .top-info li {
-	display: inline-block;
+	display: flex;
 }
 
 .top-info li:last-child {
@@ -1492,7 +1505,6 @@ ul.top-menu li a:hover {
 	font-size: 20px;
 	color: #BF3DEE;
 	display: inline-block;
-	top: -15px;
 	position: relative;
 	margin-right: 10px;
 }
@@ -1896,7 +1908,6 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 /*-- Main slide --*/
 
 #main-slide .carousel-item {
-	/*min-height: 700px;*/
 	height: 100vh;
 	color: #fff;
 	background-position: 100% 100%;
@@ -5016,9 +5027,22 @@ h4.panel-title a.collapsed:before {
 /* About us classic */
 
 .about-classic-icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	height: 110px;
+	width: 110px;
 	font-size: 60px;
 	display: inline-block;
 	color: #BF3DEE;
+	border: 1px solid #bf3dee;
+	border-radius: 50%;
+	box-shadow: 0 2px 8px rgba(0,0,0,.2);
+	transition: all .3s ease;
+}
+.about-classic-icon:hover {
+	box-shadow: none;
 }
 
 .about-classic-content h3 {
@@ -6849,6 +6873,75 @@ label {
 img.custom-logo {
 	box-shadow: 0 3px 8px rgba(0, 0, 0, .3);
 }
+.site-navigation .navbar-nav a {
+	transition: all .3s;
+}
+.site-navigation .navbar-nav a:hover {
+	background: #9931BF;
+}
 .site-navigation .current-menu-item a {
+	background: #9931BF;
+}
+
+.breadcrumb-list {
+	display: flex;
+	align-items: center;
+}
+.breadcrumb-list a {
+	position: relative;
+	margin-right: 10px;
+	padding: 10px;
+	transition: all .3s;
+	color: white;
+	background: #999;
+	border-radius: 3px;
+	overflow: hidden;
+}
+.breadcrumb-list a:hover {
+	color: white;
+	background: #9931BF;
+}
+.online-form {
+	margin-bottom: 30px;
+}
+.online-form__header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.online-form__header-item {
+	display: flex;
+	align-items: center;
+}
+.online-form__header-item h4 {
+	margin: 0;
+	padding: 0;
+	margin-right: 10px;
+	font-weight: normal;
+}
+.online-form__header-item a {
+	font-size: 18px;
+	font-weight: bold;
+	text-decoration: underline;
+	color: #9931BF;
+}
+.online-form__header-item a:hover {
+	text-decoration: none;
+}
+.online-form__content {
+	padding: 60px 0;
+}
+.online-form__content input[type="text"],
+.online-form__content input[type="tel"],
+.online-form__content input[type="email"] {
+	display: block;
+	margin-bottom: 20px;
+	width: 600px;
+	text-indent: 20px;
+}
+input[type="submit"].btn-info {
+	padding: 10px 20px;
+}
+input[type="submit"].btn-info:hover {
 	background: #9931BF;
 }

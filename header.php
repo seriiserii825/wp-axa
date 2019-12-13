@@ -63,7 +63,7 @@
                             <li>
 	                            <?php foreach($socials as $social): ?>
                                     <a href="<?php echo $social['link']; ?>">
-                                        <span class="social-icon"><i class="fa fa-<?php echo $social['icon']; ?>"></i></span>
+                                        <span class="social-icon"><i class="fab fa-<?php echo $social['icon']; ?>"></i></span>
                                     </a>
 	                            <?php endforeach; ?>
                             </li>
@@ -110,7 +110,6 @@
                             </li>
                         </ul><!-- Ul end -->
                 </div><!-- logo area end -->
-
             </div><!-- Row end -->
         </div><!-- Container end -->
 

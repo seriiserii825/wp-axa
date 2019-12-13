@@ -16,6 +16,7 @@ function bs_axa_scripts() {
 	wp_enqueue_style( 'bs-axa-owl.theme.default.min-css', get_stylesheet_directory_uri().'/assets/css/owl.theme.default.min.css' );
 	wp_enqueue_style( 'bs-axa-colorbox-css', get_stylesheet_directory_uri().'/assets/css/colorbox.css' );
 	wp_enqueue_style( 'bs-axa-slick-css', get_stylesheet_directory_uri().'/assets/libs/slick.css' );
+	wp_enqueue_style( 'bs-axa-fontawesome-5-css', get_stylesheet_directory_uri().'/assets/libs/fontawesome/css/all.min.css' );
 	wp_enqueue_style( 'bs-axa-style-css', get_stylesheet_directory_uri().'/assets/css/my.css' );
 	wp_enqueue_style( 'bs-axa-responsive-css', get_stylesheet_directory_uri().'/assets/css/responsive.css' );
 

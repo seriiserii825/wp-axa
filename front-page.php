@@ -48,47 +48,32 @@ $slider = new WP_Query( [
 
 
 <section id="about-feature-classic" class="about-feature-classic">
+    <h2 class="section-title-dash">Online</h2>
     <div class="container">
         <div class="row">
-            <div class="col-lg-4 col-md-12 text-center">
-                <div class="about-classic-box-single">
-                    <div class="about-content-box ">
-                        <div class="about-classic-icon">
-                            <i class="icon icon-balloon"></i>
-                        </div><!-- Feature Img end -->
-                        <div class="about-classic-content">
-                            <h3>25 years in excellence</h3>
-                            <p>Quality standards for competence and ethical behavior for the financial advisory sector test all are flexible to fit with</p>
+            <?php $online = new WP_Query([
+                'post_type' => 'online',
+                'posts_per_page' => -1
+            ]); ?>
+            <?php if($online->have_posts()): ?>
+            	<?php while($online->have_posts()): ?>
+            		<?php $online->the_post(); ?>
+                    <div class="col-lg-3 col-md-12 text-center">
+                        <div class="about-classic-box-single">
+                            <div class="about-content-box ">
+                                <div class="about-classic-icon">
+                                    <i class="fa fa-<?php echo carbon_get_the_post_meta('crb_online_icon'); ?>" aria-hidden="true"></i>
+                                </div><!-- Feature Img end -->
+                                <div class="about-classic-content">
+                                    <h3><?php the_title(); ?></h3>
+                                    <a class="btn btn-dark" href="<?php the_permalink(); ?>"><?php echo esc_html__( 'Comanda', 'bs-galadent' ); ?></a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div> <!-- Col end -->
-            <div class="col-lg-4 col-md-12 text-center">
-                <div class="about-classic-box-single">
-                    <div class="about-content-box ">
-                        <div class="about-classic-icon">
-                            <i class="icon icon-savings"></i>
-                        </div><!-- Feature Img end -->
-                        <div class="about-classic-content">
-                            <h3>Best Insurance Solution</h3>
-                            <p>Quality standards for competence and ethical behavior for the financial advisory sector test all are flexible to fit with</p>
-                        </div>
-                    </div>
-                </div>
-            </div> <!-- Col end -->
-            <div class="col-lg-4 col-md-12 text-center">
-                <div class="about-classic-box-single">
-                    <div class="about-content-box last-box">
-                        <div class="about-classic-icon">
-                            <i class="icon icon-target"></i>
-                        </div><!-- Feature Img end -->
-                        <div class="about-classic-content">
-                            <h3>Clients Focused</h3>
-                            <p>Quality standards for competence and ethical behavior for the financial advisory sector test all are flexible to fit with</p>
-                        </div>
-                    </div>
-                </div>
-            </div> <!-- Col end -->
+                    </div> <!-- Col end -->
+            	<?php endwhile; ?>
+            	<?php wp_reset_postdata(); ?>
+            <?php endif; ?>
         </div> <!-- Row End -->
     </div> <!-- Container end -->
 </section> <!-- About classic end -->
