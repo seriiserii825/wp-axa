@@ -3689,6 +3689,7 @@ text-white .column-title-dash span:before {
 	display: flex;
 	align-items: center;
 	position: relative;
+	margin-bottom: 10px;
 }
 
 .testimonial-item-single {

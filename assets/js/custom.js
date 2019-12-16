@@ -385,5 +385,19 @@ jQuery(function ($) {
 		$('#back-to-top').tooltip('hide');
 
 
+		let testimonialEgualHeight = function(){
+			let itemHeight = 0;
+
+			$('#ts-testimonial-static .testimonial-item-single').each(function () {
+				if($(this).height() > itemHeight){
+					itemHeight = $(this).height();
+				}
+			});
+
+			$('#ts-testimonial-static .testimonial-item-single').each(function () {
+				$(this).height(itemHeight);
+			});
+		}
+		testimonialEgualHeight();
 	}
 );

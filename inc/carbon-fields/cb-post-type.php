@@ -36,3 +36,15 @@ function crb_attach_fizic_post_type_options() {
 		              ->set_value_type( 'url' )
 	         ) );
 }
+
+add_action( 'carbon_fields_register_fields', 'crb_attach_reviews_post_type_options' );
+function crb_attach_reviews_post_type_options() {
+	Container::make( 'post_meta', __( 'Fields' ) )
+	         ->where( 'post_type', '=', 'reviews' )
+	         ->add_tab( __( 'Profession' ), array(
+		         Field::make( 'text', 'crb_reviews_profession_ro', __( 'Profesia ro' ) )
+		         ->set_width(50),
+		         Field::make( 'text', 'crb_reviews_profession_ru', __( 'Profesia ru' ) )
+		              ->set_width(50),
+	         ) );
+}
