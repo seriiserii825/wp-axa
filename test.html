@@ -19,7 +19,7 @@
     <script src="<?php echo get_template_directory_uri() ?>/assets/js/html5shiv.js"></script>
     <script src="<?php echo get_template_directory_uri() ?>/assets/js/respond.min.js"></script>
     <![endif]-->
-	<?php wp_head(); ?>
+    <?php wp_head(); ?>
 </head>
 
 <body>
@@ -30,45 +30,45 @@
         <div class="container">
             <div class="header-top">
                 <div class="header-top__item">
-					<?php wp_nav_menu( [
+                    <?php wp_nav_menu( [
 						'theme_location'  => 'menu-top',
-						'menu'            => '',
-						'container'       => '',
-						'container_class' => '',
-						'container_id'    => '',
-						'menu_class'      => 'top-menu unstyled ',
-						'menu_id'         => '',
-						'echo'            => true,
-						'fallback_cb'     => 'wp_page_menu',
-						'before'          => '',
-						'after'           => '',
-						'link_before'     => '',
-						'link_after'      => '',
-						'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-						'depth'           => 0,
-						'walker'          => '',
-					] ); ?>
+                    'menu'            => '',
+                    'container'       => '',
+                    'container_class' => '',
+                    'container_id'    => '',
+                    'menu_class'      => 'top-menu unstyled ',
+                    'menu_id'         => '',
+                    'echo'            => true,
+                    'fallback_cb'     => 'wp_page_menu',
+                    'before'          => '',
+                    'after'           => '',
+                    'link_before'     => '',
+                    'link_after'      => '',
+                    'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                    'depth'           => 0,
+                    'walker'          => '',
+                    ] ); ?>
                 </div><!--/ Top info end -->
 
                 <div class="header-top__item">
                     <div class="language-widget">
-						<?php if ( ! dynamic_sidebar( 'language' ) ): ?>
-                            <h2>Language widget</h2>
-						<?php endif; ?>
+                        <?php if ( ! dynamic_sidebar( 'language' ) ): ?>
+                        <h2>Language widget</h2>
+                        <?php endif; ?>
                     </div>
 
-					<?php $socials = carbon_get_theme_option( 'crb_socials' ); ?>
-					<?php if ( $socials ): ?>
-                        <ul class="top-social">
-                            <li>
-								<?php foreach ( $socials as $social ): ?>
-                                    <a href="<?php echo $social['link']; ?>">
-                                        <span class="social-icon"><i class="fab fa-<?php echo $social['icon']; ?>"></i></span>
-                                    </a>
-								<?php endforeach; ?>
-                            </li>
-                        </ul>
-					<?php endif; ?>
+                    <?php $socials = carbon_get_theme_option( 'crb_socials' ); ?>
+                    <?php if ( $socials ): ?>
+                    <ul class="top-social">
+                        <li>
+                            <?php foreach ( $socials as $social ): ?>
+                            <a href="<?php echo $social['link']; ?>">
+                                <span class="social-icon"><i class="fab fa-<?php echo $social['icon']; ?>"></i></span>
+                            </a>
+                            <?php endforeach; ?>
+                        </li>
+                    </ul>
+                    <?php endif; ?>
 
                 </div><!--/ Top social end -->
             </div><!--/ Content row end -->
@@ -79,16 +79,16 @@
     <header id="header" class="header">
         <div class="container">
             <div class="logo-area">
-				<?php the_custom_logo(); ?>
+                <?php the_custom_logo(); ?>
 
                 <ul class="top-info unstyled">
                     <li>
                         <span class="info-icon"><i class="icon icon-phone3"></i></span>
                         <div class="info-wrapper">
-							<?php
-							$phone = carbon_get_theme_option('crb_phone');
-							$phone_clear = clear_phone($phone);
-							?>
+                            <?php
+					        $phone = carbon_get_theme_option('crb_phone');
+					        $phone_clear = clear_phone($phone);
+					        ?>
                             <a href="tel:<?php echo $phone_clear; ?>" class="info-title"><?php echo $phone; ?></a>
                             <p class="info-subtitle"><?php echo esc_html__( 'Numarul de telefon', 'bs-axa' ); ?></p>
                         </div>
@@ -96,7 +96,7 @@
                     <li>
                         <span class="info-icon"><i class="icon icon-envelope"></i></span>
                         <div class="info-wrapper">
-                            <p class="info-title"><a href="mailto:<?php echo carbon_get_theme_option('crb_email'); ?>"><?php echo carbon_get_theme_option('crb_email'); ?></a></p>
+                            <p class="info-title"><?php echo carbon_get_theme_option('crb_email'); ?></p>
                             <p class="info-subtitle"><?php echo esc_html__( 'Adresa email', 'bs-axa' ); ?></p>
                         </div>
                     </li>
@@ -121,24 +121,24 @@
                             </button>
 
                             <div id="navbarSupportedContent" class="collapse navbar-collapse navbar-responsive-collapse">
-								<?php wp_nav_menu( [
-									'theme_location'  => 'menu-main',
-									'menu'            => '',
-									'container'       => '',
-									'container_class' => '',
-									'container_id'    => '',
-									'menu_class'      => 'nav navbar-nav',
-									'menu_id'         => '',
-									'echo'            => true,
-									'fallback_cb'     => 'wp_page_menu',
-									'before'          => '',
-									'after'           => '',
-									'link_before'     => '',
-									'link_after'      => '',
-									'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-									'depth'           => 0,
-									'walker'          => '',
-								] ); ?>
+                                <?php wp_nav_menu( [
+								    'theme_location'  => 'menu-main',
+                                'menu'            => '',
+                                'container'       => '',
+                                'container_class' => '',
+                                'container_id'    => '',
+                                'menu_class'      => 'nav navbar-nav',
+                                'menu_id'         => '',
+                                'echo'            => true,
+                                'fallback_cb'     => 'wp_page_menu',
+                                'before'          => '',
+                                'after'           => '',
+                                'link_before'     => '',
+                                'link_after'      => '',
+                                'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                                'depth'           => 0,
+                                'walker'          => '',
+                                ] ); ?>
                             </div><!--/ Collapse end -->
 
                         </div><!-- Site Navbar inner end -->

@@ -105,3 +105,4 @@ function custom_upload_mimes( $existing_mimes = array() ) {
 
 	return $existing_mimes;
 }
+

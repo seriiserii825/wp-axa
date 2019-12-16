@@ -1,92 +1,59 @@
 
 <!-- Footer start -->
 <footer id="footer" class="footer-light">
-    <div class="footer-icon"><i class="icon icon-invest"></i></div>
-    <div class="ts-oval-shape"></div>
-    <div class="newsletter-bg text-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h3>Subscribe to <span class="title-text-color">our newsletter</span></h3>
-                    <p>No spam message from us, only give you latest offer which is best for you and your business</p>
-                    <form action="index-3.html#" method="post" id="newsletter-form" class="newsletter-bg-form">
-                        <i class="fa fa-paper-plane-o"></i>
-                        <div class="form-group">
-                            <input type="email" name="email" id="newsletter-form-email" class="form-control form-control-lg" placeholder="Your email" autocomplete="off">
-                            <button class="btn btn-dark">Get a quote</button>
-                        </div>
-                    </form>
-                </div><!-- Col end -->
-            </div><!--/ Content row end -->
-        </div><!--/ Container end -->
-    </div><!--/ Footer top end -->
-
     <div class="footer-main">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-12 footer-widget">
-                    <h3 class="widget-title">Our Company</h3>
-                    <ul class="unstyled">
-                        <li><a href="index-3.html#">About Us</a></li>
-                        <li><a href="index-3.html#">Jobs</a></li>
-                        <li><a href="index-3.html#">Investors</a></li>
-                        <li><a href="index-3.html#">Newsroom</a></li>
-                        <li><a href="index-3.html#">Our Team</a></li>
-                    </ul>
+                    <h3 class="widget-title"><?php echo esc_html__( 'Menu', 'bs-galadent' ); ?></h3>
+                    <?php wp_nav_menu( [
+                    	'theme_location'  => 'menu-main',
+                    	'menu'            => '',
+                    	'container'       => '',
+                    	'container_class' => '',
+                    	'container_id'    => '',
+                    	'menu_class'      => 'unstyled footer-menu',
+                    	'menu_id'         => '',
+                    	'echo'            => true,
+                    	'fallback_cb'     => 'wp_page_menu',
+                    	'before'          => '',
+                    	'after'           => '',
+                    	'link_before'     => '',
+                    	'link_after'      => '',
+                    	'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                    	'depth'           => 0,
+                    	'walker'          => '',
+                    ] ); ?>
+
                 </div><!-- Our Company end -->
 
-                <div class="col-lg-3 col-md-12 footer-widget">
-                    <h3 class="widget-title">Our Services</h3>
-                    <ul class="unstyled">
-                        <li><a href="index-3.html#">Home Insurance</a></li>
-                        <li><a href="index-3.html#">Travel Insurance</a></li>
-                        <li><a href="index-3.html#">Life Insurance</a></li>
-                        <li><a href="index-3.html#">Car Insurance</a></li>
-                        <li><a href="index-3.html#">Health Insurance</a></li>
-                        <li><a href="index-3.html#">Business Insurance</a></li>
-                    </ul>
-                </div><!-- Our services end -->
-
-                <div class="col-lg-3 col-md-12 footer-widget">
-                    <h3 class="widget-title">Support</h3>
-                    <ul class="unstyled">
-                        <li><a href="index-3.html#">Manage Policies</a></li>
-                        <li><a href="index-3.html#">Claims</a></li>
-                        <li><a href="index-3.html#">Travel Guides</a></li>
-                        <li><a href="index-3.html#">Producer Notifications</a></li>
-                        <li><a href="index-3.html#">Fraud Warning</a></li>
-                    </ul>
+                <div class="col-lg-6 map footer-widget">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2719.8747374477525!2d28.819407315462893!3d47.02306373609824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c97dcd7165caed%3A0x1d7c3c4d480b3c1a!2zU3RyYWRhIE1hcmlhIENlYm90YXJpIDExLCBDaGnImWluxIN1LCDQnNC-0LvQtNCw0LLQuNGP!5e0!3m2!1sru!2s!4v1576489775628!5m2!1sru!2s" width="100%" height="280" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                 </div><!-- Support end -->
 
                 <div class="col-lg-3 col-md-12 footer-widget">
-                    <h3 class="widget-title">Contact Us</h3>
+
+                    <h3 class="widget-title"><?php echo esc_html__( 'Contactati-ne', 'bs-galadent' ); ?></h3>
                     <div class="row">
-                        <div class="col-md-4">
-                            <p>Location:</p>
-                        </div>
-                        <div class="col-md-8">
-                            <p>1010 Avenue, NY, USA</p>
+                        <div class="col-md-12">
+                            <h4><?php echo esc_html__( 'Locatia', 'bs-galadent' ); ?></h4>
+                            <p><?php echo carbon_get_theme_option('crb_address'.get_lang()); ?></p>
+
+                            <h4><?php echo esc_html__( 'Telefoane', 'bs-galadent' ); ?></h4>
+                            <ul>
+                                <li>
+                                    <a href="tel:<?php echo clear_phone(carbon_get_theme_option('crb_phone')) ?>"><?php echo carbon_get_theme_option('crb_phone'); ?></a>
+                                </li>
+                            </ul>
+
+                            <h4><?php echo esc_html__( 'Posta', 'bs-galadent' ); ?></h4>
+                            <ul>
+                                <li>
+                                    <a href="mailto:<?php echo carbon_get_theme_option('crb_email'); ?>"><?php echo carbon_get_theme_option('crb_email'); ?></a>
+                                </li>
+                            </ul>
                         </div>
                     </div><!--Inner row 1 end -->
-
-                    <div class="row">
-                        <div class="col-md-4">
-                            <p>Call Us:</p>
-                        </div>
-                        <div class="col-md-8">
-                            <p>009-215-5596 (toll free) <br/> 009-215-5597</p>
-                        </div>
-                    </div><!--Inner row 1 end -->
-
-                    <div class="row">
-                        <div class="col-md-4">
-                            <p>Mail Us:</p>
-                        </div>
-                        <div class="col-md-8">
-                            <p>mail@example.com</p>
-                        </div>
-                    </div><!--Inner row 1 end -->
-
                 </div><!-- Col end -->
 
             </div><!--/ Content row end -->
@@ -99,26 +66,31 @@
             <div class="row">
                 <div class="col-md-12 col-lg-3">
                     <div class="footer-logo">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/footer-logo.png" alt="">
+                        <?php the_custom_logo(); ?>
                     </div>
                 </div>
 
                 <div class="col-md-12 col-lg-6">
-                    <p>Invest in your drivers, improve their safety and reduce the risk of incidents with our main comprehensive courses and seminars tailored to the needs of your organisation. With a choice of full or half-day sessions.
-                        all are flexible to fit with your schedules.</p>
+                    <p><?php echo carbon_get_theme_option('crb_description'.get_lang()) ?></p>
                 </div>
 
                 <div class="col-md-12 col-lg-3 text-center">
                     <div class="footer-social social-color">
-                        <ul>
-                            <li><a href="index-3.html#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="index-3.html#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="index-3.html#"><i class="fa fa-google-plus"></i></a></li>
-                            <li><a href="index-3.html#"><i class="fa fa-instagram"></i></a></li>
-                        </ul>
+	                    <?php $socials = carbon_get_theme_option( 'crb_socials' ); ?>
+	                    <?php if ( $socials ): ?>
+                            <ul>
+                                <li>
+				                    <?php foreach ( $socials as $social ): ?>
+                                        <a href="<?php echo $social['link']; ?>">
+                                            <span class="social-icon"><i class="fab fa-<?php echo $social['icon']; ?>"></i></span>
+                                        </a>
+				                    <?php endforeach; ?>
+                                </li>
+                            </ul>
+	                    <?php endif; ?>
                     </div><!-- Footer social end -->
                     <div class="copyright-info">
-                        <span>© Copyright 2018 Insurexs Insurance.</span>
+                        <span><?php echo carbon_get_theme_option('crb_copyright'.get_lang()); ?></span>
                     </div>
                 </div>
             </div><!-- Row end -->

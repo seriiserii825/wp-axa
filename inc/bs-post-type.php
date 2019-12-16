@@ -88,7 +88,6 @@
 			'menu_icon' => get_template_directory_uri().'/assets/images/boy.png',
 			'supports' => array('title', 'editor', 'thumbnail')
 		));
-
 		register_post_type('reviews', array(
 			'labels' => array(
 				'name' => __(''), // Основное название типа записи

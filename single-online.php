@@ -1,5 +1,5 @@
 <?php
-get_header( 'main' );
+get_header();
 $object = get_queried_object();
 $post_id = $object->ID;
 ?>

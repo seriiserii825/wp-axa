@@ -3,7 +3,7 @@
  * Template Name: Principala
  */
 ?>
-<?php get_header(); ?>
+<?php get_header( 'main' ); ?>
 <?php
 $slider = new WP_Query( [
 	'post_type'      => 'slider',
@@ -103,7 +103,7 @@ $slider = new WP_Query( [
 					<?php $fizic->the_post(); ?>
                     <div class="ts-service-overlay">
                         <div class="ts-image-wrapper">
-                            <img class="img-fluid" src="<?php echo kama_thumb_src('w=350 &h=310'); ?>" alt="">
+                            <img class="img-fluid" src="<?php echo kama_thumb_src( 'w=350 &h=310' ); ?>" alt="">
                         </div>
                         <div class="service-content">
                             <h3 class="service-title">
@@ -130,26 +130,27 @@ $slider = new WP_Query( [
     <div class="container">
         <div class="row">
             <div class="col text-center">
-                <h2 data-title="<?php echo esc_html__( 'De ce noi', 'bs-galadent' ); ?>" class="section-title-dash"> <?php echo esc_html__( 'De ce noi', 'bs-galadent' ); ?>
+                <h2 data-title="<?php echo esc_html__( 'De ce noi', 'bs-galadent' ); ?>"
+                    class="section-title-dash"> <?php echo esc_html__( 'De ce noi', 'bs-galadent' ); ?>
                     <span class="dashborder">&nbsp;</span>
                 </h2>
             </div> <!-- Col End -->
         </div> <!-- Row End -->
         <div class="ts-choose-us-wrap">
-            <?php $choose = carbon_get_post_meta(25, 'crb_why_choose_us'); ?>
-            <?php foreach($choose as $item): ?>
+			<?php $choose = carbon_get_post_meta( 25, 'crb_why_choose_us' ); ?>
+			<?php foreach ( $choose as $item ): ?>
                 <div class="ts-feature-classic">
                     <div class="ts-feature-info icon-left icon-round">
                      <span class="feature-icon">
                         <i class="<?php echo $item['icon']; ?>"></i>
                      </span>
                         <div class="feature-content">
-                            <h3 class="ts-feature-title"><?php echo $item['title'.get_lang()]; ?></h3>
-                            <p><?php echo $item['text'.get_lang()]; ?></p>
+                            <h3 class="ts-feature-title"><?php echo $item[ 'title' . get_lang() ]; ?></h3>
+                            <p><?php echo $item[ 'text' . get_lang() ]; ?></p>
                         </div> <!-- Feature content end -->
                     </div> <!-- Feature Info End -->
                 </div> <!-- Features end -->
-            <?php endforeach; ?>
+			<?php endforeach; ?>
         </div> <!-- Row End -->
     </div> <!-- Container end -->
 </section><!-- section end -->
@@ -158,482 +159,142 @@ $slider = new WP_Query( [
     <div class="container">
         <div class="testimonial-items-wrapper">
             <div class="row">
-                <?php $reviews = new WP_Query([
-                    'post_type' => 'reviews',
-                    'posts_per_page' => 3
-                ]); ?>
-                <?php if($reviews->have_posts()): ?>
-                	<?php while($reviews->have_posts()): ?>
-                		<?php $reviews->the_post(); ?>
+				<?php $reviews = new WP_Query( [
+					'post_type'      => 'reviews',
+					'posts_per_page' => 3
+				] ); ?>
+				<?php if ( $reviews->have_posts() ): ?>
+					<?php while ( $reviews->have_posts() ): ?>
+						<?php $reviews->the_post(); ?>
                         <div class="col-lg-4 col-md-12">
                             <div class="testimonial-item-single">
                                 <div class="quote-item-static-footer clearfix">
                                     <img class="img-fluid"
-                                         src="<?php echo kama_thumb_src('w=100 &h=100'); ?>"
+                                         src="<?php echo kama_thumb_src( 'w=100 &h=100' ); ?>"
                                          alt="Jonas Blue">
                                     <div class="quote-item-info">
                                         <h3 class="quote-author"><?php the_title(); ?></h3>
-                                        <span class="quote-subtext"><?php echo carbon_get_the_post_meta('crb_reviews_profession'.get_lang()); ?></span>
+                                        <span class="quote-subtext"><?php echo carbon_get_the_post_meta( 'crb_reviews_profession' . get_lang() ); ?></span>
                                     </div>
                                 </div> <!-- Item End -->
-                                <?php the_content(); ?>
+								<?php the_content(); ?>
                             </div> <!-- Testimonial Single End -->
                         </div> <!-- Col End -->
 
-                	<?php endwhile; ?>
-                	<?php wp_reset_postdata(); ?>
-                <?php endif; ?>
+					<?php endwhile; ?>
+					<?php wp_reset_postdata(); ?>
+				<?php endif; ?>
 
             </div> <!-- Row End -->
         </div> <!-- Testimonial Wrapper End -->
     </div>
 </section>
 
-<section id="contact-tab" class="contact-tab no-padding solid-bg">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4 col-md-12">
-                <div class="col heading text-white">
-                    <h2 class="column-title">
-                        <span>Get quote</span>
-                        Get Insurance
-                        Quote
-                    </h2>
-                    <p>For travellers who do need emergency Canada and United States.</p>
-                </div> <!-- Col End -->
-                <div class="contact-img">
-                    <img class="img-fluid"
-                         src="<?php echo get_template_directory_uri(); ?>/assets/images/contact-bg.png" alt="">
-                </div>
-            </div>
-            <div class="col-lg-8 col-md-12">
-                <div class="insurance-tab">
-                    <ul class="nav nav-tabs" id="myTab" role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link active" id="travel-tab" data-toggle="tab" href="index-3.html#travel"
-                               role="tab" aria-controls="home" aria-selected="true">
-                                <span> <i class="icon icon-travel"></i> </span>
-                                Travel Insurance
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="home-tab" data-toggle="tab" href="index-3.html#home" role="tab"
-                               aria-controls="profile" aria-selected="false">
-                                <span> <i class="icon icon-house-1"></i> </span>
-                                Home Insurance
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="car-tab" data-toggle="tab" href="index-3.html#car" role="tab"
-                               aria-controls="contact" aria-selected="false">
-                                <span> <i class="icon icon-car2"></i> </span>
-                                Car Insurance
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="life-tab" data-toggle="tab" href="index-3.html#life" role="tab"
-                               aria-controls="contact" aria-selected="false">
-                                <span> <i class="icon icon-heart"></i> </span>
-                                Life Insurance
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="travel" role="tabpanel" aria-labelledby="travel-tab">
-                        <div id="general-form" class="form-container active">
-                            <!-- START copy section: General Contact Form -->
-                            <form class="contactMe small"
-                                  action="http://demo.themewinter.com/html/insurex/contactme/home-form.php"
-                                  method="POST" enctype="multipart/form-data">
-                                <section>
-                                    <h3>Travel Insurance Quote</h3>
-                                    <div class="form-row">
-                                        <div class="col-md-6">
-                                            <div class="title">Your name</div>
-                                            <input type="text" name="name" data-displayname="Name" class="field"
-                                                   placeholder="Name*" required>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="title">Your e-mail</div>
-                                            <input type="email" name="email" data-displayname="Email" class="field"
-                                                   placeholder="Email*" required>
-                                        </div>
-                                    </div>
-                                    <div class="form-row">
-                                        <div class="col-md-6">
-                                            <div class="title">Phone</div>
-                                            <input type="tel" name="phone" data-displayname="Phone" class="field"
-                                                   placeholder="Phone" required="">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="title">Total Person</div>
-                                            <input type="number" name="personNumber" data-displayname="Person"
-                                                   class="field" placeholder="Total Person*" required="">
-                                        </div>
-                                    </div>
-                                    <div class="form-row">
-                                        <div class="col-md-6">
-                                            <div class="title">Destination*</div>
-                                            <input type="text" name="destination" data-displayname="Destination"
-                                                   class="field" placeholder="Destination*" required>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="title">Days to Stay*</div>
-                                            <input type="number" name="dayToStay" data-displayname="Days to Stay"
-                                                   class="field" placeholder="Days to Stay*" required>
-                                        </div>
-                                    </div>
-
-                                    <!-- Google reCAPTCHA -->
-                                    <!-- Create a site key for your website: https://www.google.com/recaptcha -->
-                                    <!-- Replace YOUR_SITE_KEY_HERE with your site key -->
-                                    <!-- To enable Google reCAPTCHA V2, uncomment the next line -->
-                                    <!-- <div class="re-captcha" data-sitekey="YOUR_SITE_KEY_HERE"></div> -->
-                                    <!-- To enable Google Invisible reCAPTCHA, uncomment the next line -->
-                                    <!-- <div class="re-captcha invisible" data-sitekey="YOUR_SITE_KEY_HERE"></div> -->
-
-                                    <div class="msg"></div>
-
-                                    <button class="btn btn-primary float-lg-right float-md-none" type="submit"
-                                            data-sending="Sending...">Submit
-                                    </button>
-                                </section>
-                            </form>
-                            <!-- END copy section: General Contact Form -->
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
-                        <div id="general-form1" class="form-container active">
-                            <!-- START copy section: General Contact Form -->
-                            <form class="contactMe small"
-                                  action="http://demo.themewinter.com/html/insurex/contactme/travel-form.php"
-                                  method="POST" enctype="multipart/form-data">
-                                <section>
-                                    <h3>Home Insurance quote</h3>
-                                    <div class="form-row">
-                                        <div class="col-md-6">
-                                            <div class="title">Property Type</div>
-                                            <select name="propertyType" data-displayname="Property Type" class="field"
-                                                    placeholder="Property Type" required>
-                                                <option default></option>
-                                                <option value="information">Information</option>
-                                                <option value="support">Support request</option>
-                                                <option value="other">Other ...</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="title">Year of build</div>
-                                            <input type="text" name="yearOfBuild" data-displayname="Year Of Build"
-                                                   class="field cm-date" autocomplete="off" placeholder="Year of build*"
-                                                   required>
-                                        </div>
-                                    </div>
-                                    <div class="form-row">
-                                        <div class="col-md-6">
-                                            <div class="title">Full Address</div>
-                                            <input type="text" name="fullAddress" data-displayname="Full Address"
-                                                   class="field" placeholder="Full Address" required>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="title">Property Used for</div>
-                                            <select name="propertyUsedFor" data-displayname="Property Used For"
-                                                    class="field" placeholder="Property Used for" required>
-                                                <option default></option>
-                                                <option value="information">Information</option>
-                                                <option value="support">Support request</option>
-                                                <option value="other">Other ...</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <h3>Your Details</h3>
-                                    <div class="form-row">
-                                        <div class="col-md-6">
-                                            <div class="title">Your name</div>
-                                            <input type="text" name="name" data-displayname="Name" class="field"
-                                                   placeholder="Your name" required>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="title">Your e-mail</div>
-                                            <input type="email" name="email" data-displayname="Email" class="field"
-                                                   placeholder="Email*" required>
-                                        </div>
-                                    </div>
-
-                                    <!-- Google reCAPTCHA -->
-                                    <!-- Create a site key for your website: https://www.google.com/recaptcha -->
-                                    <!-- Replace YOUR_SITE_KEY_HERE with your site key -->
-                                    <!-- To enable Google reCAPTCHA V2, uncomment the next line -->
-                                    <!-- <div class="re-captcha" data-sitekey="YOUR_SITE_KEY_HERE"></div> -->
-                                    <!-- To enable Google Invisible reCAPTCHA, uncomment the next line -->
-                                    <!-- <div class="re-captcha invisible" data-sitekey="YOUR_SITE_KEY_HERE"></div> -->
-
-                                    <div class="msg"></div>
-
-                                    <button class="btn btn-primary float-lg-right float-md-none" type="submit"
-                                            data-sending="Sending...">Submit
-                                    </button>
-                                </section>
-                            </form>
-                            <!-- END copy section: General Contact Form -->
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="car" role="tabpanel" aria-labelledby="car-tab">
-                        <div id="general-form2" class="form-container active">
-                            <!-- START copy section: General Contact Form -->
-                            <form class="contactMe small"
-                                  action="http://demo.themewinter.com/html/insurex/contactme/home-form.php"
-                                  method="POST" enctype="multipart/form-data">
-                                <section>
-                                    <h3>Travel Insurance Quote</h3>
-                                    <div class="form-row">
-                                        <div class="col-md-6">
-                                            <div class="title">Your name</div>
-                                            <input type="text" name="name" data-displayname="Name" class="field"
-                                                   placeholder="Name*" required>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="title">Your e-mail</div>
-                                            <input type="email" name="email" data-displayname="Email" class="field"
-                                                   placeholder="Email*" required>
-                                        </div>
-                                    </div>
-                                    <div class="form-row">
-                                        <div class="col-md-6">
-                                            <div class="title">Phone</div>
-                                            <input type="tel" name="phone" data-displayname="Phone" class="field"
-                                                   placeholder="Phone" required="">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="title">Total Person</div>
-                                            <input type="number" name="personNumber" data-displayname="Person"
-                                                   class="field" placeholder="Total Person*" required="">
-                                        </div>
-                                    </div>
-                                    <div class="form-row">
-                                        <div class="col-md-6">
-                                            <div class="title">Destination*</div>
-                                            <input type="text" name="destination" data-displayname="Destination"
-                                                   class="field" placeholder="Destination*" required>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="title">Days to Stay*</div>
-                                            <input type="number" name="dayToStay" data-displayname="Days to Stay"
-                                                   class="field" placeholder="Days to Stay*" required>
-                                        </div>
-                                    </div>
-
-                                    <!-- Google reCAPTCHA -->
-                                    <!-- Create a site key for your website: https://www.google.com/recaptcha -->
-                                    <!-- Replace YOUR_SITE_KEY_HERE with your site key -->
-                                    <!-- To enable Google reCAPTCHA V2, uncomment the next line -->
-                                    <!-- <div class="re-captcha" data-sitekey="YOUR_SITE_KEY_HERE"></div> -->
-                                    <!-- To enable Google Invisible reCAPTCHA, uncomment the next line -->
-                                    <!-- <div class="re-captcha invisible" data-sitekey="YOUR_SITE_KEY_HERE"></div> -->
-
-                                    <div class="msg"></div>
-
-                                    <button class="btn btn-primary float-lg-right float-md-none" type="submit"
-                                            data-sending="Sending...">Submit
-                                    </button>
-                                </section>
-                            </form>
-                            <!-- END copy section: General Contact Form -->
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="life" role="tabpanel" aria-labelledby="life-tab">
-                        <div id="general-form3" class="form-container active">
-                            <!-- START copy section: General Contact Form -->
-                            <form class="contactMe small"
-                                  action="http://demo.themewinter.com/html/insurex/contactme/travel-form.php"
-                                  method="POST" enctype="multipart/form-data">
-                                <section>
-                                    <h3>Home Insurance quote</h3>
-                                    <div class="form-row">
-                                        <div class="col-md-6">
-                                            <div class="title">Property Type</div>
-                                            <select name="propertyType" data-displayname="Property Type" class="field"
-                                                    placeholder="Property Type" required>
-                                                <option default></option>
-                                                <option value="information">Information</option>
-                                                <option value="support">Support request</option>
-                                                <option value="other">Other ...</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="title">Year of build</div>
-                                            <input type="text" name="yearOfBuild" data-displayname="Year Of Build"
-                                                   class="field cm-date" autocomplete="off" placeholder="Year of build*"
-                                                   required>
-                                        </div>
-                                    </div>
-                                    <div class="form-row">
-                                        <div class="col-md-6">
-                                            <div class="title">Full Address</div>
-                                            <input type="text" name="fullAddress" data-displayname="Full Address"
-                                                   class="field" placeholder="Full Address" required>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="title">Property Used for</div>
-                                            <select name="propertyUsedFor" data-displayname="Property Used For"
-                                                    class="field" placeholder="Property Used for" required>
-                                                <option default></option>
-                                                <option value="information">Information</option>
-                                                <option value="support">Support request</option>
-                                                <option value="other">Other ...</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <h3>Your Details</h3>
-                                    <div class="form-row">
-                                        <div class="col-md-6">
-                                            <div class="title">Your name</div>
-                                            <input type="text" name="name" data-displayname="Name" class="field"
-                                                   placeholder="Your name" required>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="title">Your e-mail</div>
-                                            <input type="email" name="email" data-displayname="Email" class="field"
-                                                   placeholder="Email*" required>
-                                        </div>
-                                    </div>
-
-                                    <!-- Google reCAPTCHA -->
-                                    <!-- Create a site key for your website: https://www.google.com/recaptcha -->
-                                    <!-- Replace YOUR_SITE_KEY_HERE with your site key -->
-                                    <!-- To enable Google reCAPTCHA V2, uncomment the next line -->
-                                    <!-- <div class="re-captcha" data-sitekey="YOUR_SITE_KEY_HERE"></div> -->
-                                    <!-- To enable Google Invisible reCAPTCHA, uncomment the next line -->
-                                    <!-- <div class="re-captcha invisible" data-sitekey="YOUR_SITE_KEY_HERE"></div> -->
-
-                                    <div class="msg"></div>
-
-                                    <button class="btn btn-primary float-lg-right float-md-none" type="submit"
-                                            data-sending="Sending...">Submit
-                                    </button>
-                                </section>
-                            </form>
-                            <!-- END copy section: General Contact Form -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="ts-news" class="ts-news">
+<section id="ts-news" class="section ts-news">
     <div class="container">
         <div class="row text-center">
             <div class="col text-center">
-                <h2 data-title="Latest News" class="section-title-dash"> Latest News
+                <h2 data-title="<?php echo esc_html__( 'Ultimele Noutati', 'bs-galadent' ); ?>"
+                    class="section-title-dash"> <?php echo esc_html__( 'Ultimele Noutati', 'bs-galadent' ); ?>
                     <span class="dashborder">&nbsp;</span>
                 </h2>
             </div> <!-- Col End -->
         </div><!--/ Title row end -->
+		<?php $news_one = new WP_Query( [
+			'category_name'  => 'noutati',
+			'posts_per_page' => 1
+		] ); ?>
 
         <div class="row">
             <div class="col-lg-6 col-md-12">
-                <div class="latest-post post-large">
-                    <div class="latest-post-media">
-                        <a href="index-3.html#" class="latest-post-img">
-                            <img class="img-fluid"
-                                 src="<?php echo get_template_directory_uri(); ?>/assets/images/news/news1.jpg"
-                                 alt="img">
-                        </a>
-                        <div class="post-date-time">
-                            <span class="post-item-day">08</span>
-                            <span class="post-item-month">may</span>
-                        </div>
-                        <div class="post-body">
-                            <h4 class="post-title">
-                                <a href="index-3.html#">Planning Retirement: Financial Areas for Empty Nesters</a>
-                            </h4>
-                            <p>When children leave home, parents can reduce expenses to improve the oddy of a more secure retirement.</p>
-                            <a class="btn btn-primary" href="index-3.html#">Read More</a>
-                        </div><!-- Post body end -->
-                    </div><!-- Post media end -->
-                </div><!-- Latest post end -->
+				<?php if ( $news_one->have_posts() ): ?>
+					<?php $i = 0;
+					while ( $news_one->have_posts() ): ?>
+						<?php $news_one->the_post(); ?>
+						<?php if ( $i > 0 ): ?>
+							<?php break; ?>
+						<?php else: ?>
+                            <div class="latest-post post-large">
+                                <div class="latest-post-media">
+                                    <a href="<?php the_permalink(); ?>" class="latest-post-img">
+                                        <img class="img-fluid" src="<?php echo kama_thumb_src( 'w=540' ); ?>" alt="img">
+                                    </a>
+									<?php
+									$date_day   = get_the_date( 'd' );
+									$date_month = get_the_date( 'M' );
+									?>
+                                    <div class="post-date-time">
+                                        <span class="post-item-day"><?php echo $date_day; ?></span>
+                                        <span class="post-item-month"><?php echo $date_month; ?></span>
+                                    </div>
+                                    <div class="post-body">
+                                        <h4 class="post-title">
+                                            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                        </h4>
+                                        <p><?php echo carbon_get_the_post_meta( 'crb_news_short_text' . get_lang() ); ?></p>
+                                        <a class="btn btn-primary"
+                                           href="<?php the_permalink(); ?>"><?php echo esc_html__( 'Mai multe', 'bs-galadent' ); ?></a>
+                                    </div><!-- Post body end -->
+                                </div><!-- Post media end -->
+                            </div><!-- Latest post end -->
+						<?php endif; ?>
+						<?php $i ++; endwhile; ?>
+					<?php wp_reset_postdata(); ?>
+				<?php endif; ?>
+
             </div><!-- Col big news end -->
 
             <div class="col-lg-6 col-md-12">
                 <div class="row">
-                    <div class="col-md-12">
-                        <div class="latest-post latest-post-right">
-                            <div class="latest-post-media">
-                                <a href="index-3.html#" class="latest-post-img">
-                                    <img class="img-fluid"
-                                         src="<?php echo get_template_directory_uri(); ?>/assets/images/news/news2.jpg"
-                                         alt="img">
-                                </a>
-                            </div>
-                            <div class="post-date-time">
-                                <span class="post-item-day">08</span>
-                                <span class="post-item-month">may</span>
-                            </div>
-                            <div class="post-body">
-                                <h4 class="post-title">
-                                    <a href="index-3.html#">10 key considerations for your business insurance</a>
-                                </h4>
-                                <div class="post-text">
-                                    <p>We cover trips up to 12 months long. With the option to extend your.</p>
-                                </div>
-                            </div>
-                        </div><!-- Latest post end -->
-                    </div><!--Col end -->
-                    <div class="col-md-12">
-                        <div class="latest-post latest-post-right">
-                            <div class="latest-post-media">
-                                <a href="index-3.html#" class="latest-post-img">
-                                    <img class="img-fluid"
-                                         src="<?php echo get_template_directory_uri(); ?>/assets/images/news/news3.jpg"
-                                         alt="img">
-                                </a>
-                            </div>
-                            <div class="post-date-time">
-                                <span class="post-item-day">10</span>
-                                <span class="post-item-month">may</span>
-                            </div>
-                            <div class="post-body">
-                                <h4 class="post-title">
-                                    <a href="index-3.html#">Access great customer offers make a claim</a>
-                                </h4>
-                                <div class="post-text">
-                                    <p>We cover trips up to 12 months long. With the option to extend your.</p>
-                                </div>
-                            </div>
-                        </div><!-- Latest post end -->
-                    </div><!--Col end -->
-                    <div class="col-md-12">
-                        <div class="latest-post latest-post-right last">
-                            <div class="latest-post-media">
-                                <a href="index-3.html#" class="latest-post-img">
-                                    <img class="img-fluid"
-                                         src="<?php echo get_template_directory_uri(); ?>/assets/images/news/news4.jpg"
-                                         alt="img">
-                                </a>
-                            </div>
-                            <div class="post-date-time">
-                                <span class="post-item-day">15</span>
-                                <span class="post-item-month">may</span>
-                            </div>
-                            <div class="post-body">
-                                <h4 class="post-title">
-                                    <a href="index-3.html#">10 key considerations for your business insurance</a>
-                                </h4>
-                                <div class="post-text">
-                                    <p>We cover trips up to 12 months long. With the option to extend your.</p>
-                                </div>
-                            </div>
-                        </div><!-- Latest post end -->
-                    </div><!--Col end -->
+					<?php $news = new WP_Query( [
+						'category_name'  => 'noutati',
+						'posts_per_page' => 4
+					] ); ?>
+					<?php if ( $news->have_posts() ): ?>
+						<?php $i = 0;
+						while ( $news->have_posts() ): ?>
+							<?php $news->the_post(); ?>
+							<?php if ( $i !== 0 ): ?>
+                                <div class="col-md-12">
+                                    <div class="latest-post latest-post-right last">
+                                        <div class="latest-post-media">
+                                            <a href="<?php the_permalink(); ?>" class="latest-post-img">
+                                                <img class="img-fluid"
+                                                     src="<?php echo kama_thumb_src( 'w=200 &h=110' ); ?>" alt="img">
+                                            </a>
+
+	                                        <?php
+	                                        $date_day   = get_the_date( 'd' );
+	                                        $date_month = get_the_date( 'M' );
+	                                        ?>
+                                            <div class="post-date-time">
+                                                <span class="post-item-day"><?php echo $date_day; ?></span>
+                                                <span class="post-item-month"><?php echo $date_month; ?></span>
+                                            </div>
+                                        </div>
+                                        <div class="post-body">
+                                            <h4 class="post-title">
+                                                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                            </h4>
+                                            <div class="post-text">
+                                                <p><?php echo carbon_get_the_post_meta( 'crb_news_short_text' . get_lang() ); ?></p>
+                                            </div>
+                                        </div>
+                                    </div><!-- Latest post end -->
+                                </div><!--Col end -->
+							<?php endif; ?>
+							<?php $i ++; endwhile; ?>
+						<?php wp_reset_postdata(); ?>
+					<?php endif; ?>
+
                 </div><!-- row end -->
             </div><!-- Col small news end -->
         </div><!--/ Content row end -->
 
         <div class="row">
             <div class="col-12 text-center">
-                <a href="index-3.html#" class="btn btn-primary news-btn">View All</a>
+                <a href="<?php echo get_category_link( 1 ); ?>"
+                   class="btn btn-primary news-btn"><?php echo esc_html__( 'Vezi toate', 'bs-galadent' ); ?></a>
             </div>
         </div>
     </div><!--/ Container end -->
@@ -643,13 +304,75 @@ $slider = new WP_Query( [
 <section id="ts-facts-area" class="ts-facts-area padtb-0">
     <div class="container-fluid">
         <div class="row">
+
             <div class="col-lg-7 col-md-12 funfacts-bg no-padding">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/facts/facts-bg.png" alt="">
-                <div class="heading">
-                    <div class="column-title">
-                        <h3>Insurance company 2017</h3>
+                <div class="facts-content">
+                    <!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="0 0 488.779 488.779" style="enable-background:new 0 0 488.779 488.779;"
+                         xml:space="preserve">
+                        <g>
+                            <g>
+                                <path d="M434.539,221.226l-6-8.2c-6.6-9-6.7-21.2-0.2-30.3l5.9-8.3c9-12.7,4.8-30.5-8.9-37.9l-9-4.8c-9.8-5.3-15.2-16.2-13.3-27.2
+                                    l1.7-10.1c2.6-15.4-8.9-29.6-24.5-30.2l-10.2-0.4c-11.1-0.5-20.7-8-23.8-18.7l-2.8-9.8c-4.3-15-20.8-22.8-35.2-16.6l-9.4,4
+                                    c-10.2,4.4-22.1,1.8-29.6-6.5l-6.8-7.6c-10.4-11.6-28.7-11.5-38.9,0.3l-6.7,7.7c-7.3,8.4-19.2,11.2-29.5,7l-9.4-3.9
+                                    c-14.4-6-30.8,2.1-34.9,17.1l-2.7,9.8c-2.9,10.7-12.4,18.4-23.5,19.1l-10.2,0.6c-15.6,0.9-26.9,15.3-24,30.6l1.8,10
+                                    c2,11-3.2,22-12.9,27.4l-8.9,5c-13.7,7.6-17.6,25.4-8.4,38l6,8.2c6.6,9,6.7,21.2,0.2,30.3l-5.9,8.3c-9,12.7-4.8,30.5,8.9,37.9
+                                    l9,4.8c9.8,5.3,15.2,16.2,13.3,27.2l-1.7,10.1c-2.6,15.4,8.9,29.6,24.5,30.2l10.2,0.4c11.1,0.5,20.7,8,23.8,18.7l2.8,9.8
+                                    c4.3,15,20.8,22.8,35.2,16.6l9.4-4c10.2-4.4,22.1-1.8,29.6,6.5l6.8,7.6c10.4,11.6,28.7,11.5,38.9-0.3l6.7-7.7
+                                    c7.3-8.4,19.2-11.2,29.5-7l9.4,3.9c14.4,6,30.8-2.1,34.9-17.1l2.7-9.8c2.9-10.7,12.4-18.4,23.5-19.1l10.2-0.6
+                                    c15.6-0.9,26.9-15.3,24-30.6l-1.8-10c-2-11,3.2-22,12.9-27.4l8.9-5C439.839,251.726,443.739,233.826,434.539,221.226z
+                                     M244.239,329.226c-71.7,0-130-58.3-130-130s58.3-130,130-130s130,58.3,130,130S315.939,329.226,244.239,329.226z"/>
+                                <path d="M380.039,361.126l-4.5,0.3l-2.2,8c-6.5,23.7-28.2,40.2-52.7,40.2c-7.2,0-14.2-1.4-20.8-4.1l-7.6-3.2l-2.4,2.8l37.1,67.5
+                                    c2.2,3.9,6,6.7,10.4,7.5l44.7,8.3c7,1.3,14-2.5,16.7-9.2l16.9-42.2c1.7-4.2,1.4-8.9-0.8-12.8L380.039,361.126z"/>
+                                <path d="M191.739,406.226c-6.9,3-14.1,4.5-21.6,4.5c-24.2,0-45.8-16.2-52.5-39.4l-2.3-7.9l-8-0.3l-33.6,61.2
+                                    c-2.2,3.9-2.5,8.6-0.8,12.8l16.9,42.2c2.7,6.7,9.7,10.5,16.7,9.2l44.7-8.3c4.4-0.8,8.2-3.6,10.4-7.5l38.1-69.3l-0.3-0.3
+                                    L191.739,406.226z"/>
+                                <path d="M319.139,191.926c0,0,7.5-11.7-2.2-20.6c-12.1-11.1-45-3.7-45-3.7l0,0c-2.3,0.4-4.7,0.9-7.3,1.5c0,0-11.4,5.3,0-29.2
+                                    s-7.6-39.9-15.6-39.9s-5.3,17.1-5.3,17.1s-17.1,47.1-33.4,59.6c-4.3,4.6-6.7,9.7-7.9,13.3c-2.6-2.2-5.9-3.5-9.5-3.5h-21.9
+                                    c-8.1,0-14.6,6.6-14.6,14.6v58.4c0,8.1,6.6,14.6,14.6,14.6h21.9c3,0,5.8-0.9,8.1-2.5c0.5-0.5,3.4-3.4,3.4-11.5v-36.3
+                                    c0,1.4,0.2,45,25.3,47.7c9,0.6,20.1,1.1,31.2,0.9c10.1,0.8,20.9,0.9,29.4-0.9c29-6.2,21.8-26.4,21.8-26.4
+                                    c15.7-11.8,6.8-26.5,6.8-26.5C332.739,204.126,319.139,191.926,319.139,191.926z"/>
+                            </g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+</svg>
+                    <div class="heading">
+                        <div class="column-title">
+                            <h3><?php echo carbon_get_theme_option( 'crb_numbers_title' . get_lang() ); ?></h3>
+                        </div>
+                        <p><?php echo carbon_get_theme_option( 'crb_numbers_text' . get_lang() ); ?></p>
                     </div>
-                    <p>We cover trips up to 12 month long with the option to next year have five children in colleghig.</p>
                 </div>
             </div>
             <div class="col-lg-5 col-md-12 facts-overlay">
@@ -660,10 +383,10 @@ $slider = new WP_Query( [
                                 <span class="facts-icon"><i class="fa fa-briefcase"></i></span>
                                 <div class="ts-facts-num">
                                     <h3 class="funfact">
-                                        <span class="counterUp">370</span>
+                                        <span class="counterUp"><?php echo carbon_get_theme_option( 'crb_numbers_one' ); ?></span>
                                     </h3>
                                 </div>
-                                <p>Cases Completed</p>
+                                <p><?php echo carbon_get_theme_option( 'crb_numbers_one' . get_lang() ); ?></p>
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -671,10 +394,10 @@ $slider = new WP_Query( [
                                 <span class="facts-icon"><i class="icon icon-users"></i></span>
                                 <div class="ts-facts-num">
                                     <h3 class="funfact">
-                                        <span class="counterUp">900</span>
+                                        <span class="counterUp"><?php echo carbon_get_theme_option( 'crb_numbers_two' ); ?></span>
                                     </h3>
                                 </div>
-                                <p>Active member</p>
+                                <p><?php echo carbon_get_theme_option( 'crb_numbers_two' . get_lang() ); ?></p>
                             </div>
                         </div>
                     </div>
@@ -684,10 +407,10 @@ $slider = new WP_Query( [
                                 <span class="facts-icon"><i class="fa fa-trophy"></i></span>
                                 <div class="ts-facts-num">
                                     <h3 class="funfact">
-                                        <span class="counterUp">85</span>
+                                        <span class="counterUp"><?php echo carbon_get_theme_option( 'crb_numbers_three' ); ?></span>
                                     </h3>
                                 </div>
-                                <p>Awards winning</p>
+                                <p><?php echo carbon_get_theme_option( 'crb_numbers_three' . get_lang() ); ?></p>
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -695,10 +418,10 @@ $slider = new WP_Query( [
                                 <span class="facts-icon"><i class="icon icon-graphic-2"></i></span>
                                 <div class="ts-facts-num">
                                     <h3 class="funfact">
-                                        <span class="counterUp">50</span>
+                                        <span class="counterUp"><?php echo carbon_get_theme_option( 'crb_numbers_four' ); ?></span>
                                     </h3>
                                 </div>
-                                <p>Running Projects</p>
+                                <p><?php echo carbon_get_theme_option( 'crb_numbers_four' . get_lang() ); ?></p>
                             </div>
                         </div>
                     </div>
@@ -714,70 +437,25 @@ $slider = new WP_Query( [
         <div class="row text-center">
             <div class="col-md-12">
                 <h2 class="section-title-dash">
-                    Our Partners
+                    <?php echo esc_html__( 'Partenerii nostrii', 'bs-axa' ); ?>
                     <span></span>
                 </h2>
             </div><!-- Col end -->
         </div><!-- Title row end -->
 
         <div class="row">
+            <?php $partners = carbon_get_theme_option('crb_parners'); ?>
+
             <div id="partners-carousel" class="col-sm-12 owl-carousel owl-theme text-center partners">
-                <figure class="item partner-logo">
-                    <a href="index-3.html#">
-                        <img class="img-fluid"
-                             src="<?php echo get_template_directory_uri(); ?>/assets/images/clients/client1.png"
-                             alt=""/>
-                    </a>
-                </figure>
-
-                <figure class="item partner-logo">
-                    <a href="index-3.html#">
-                        <img class="img-fluid"
-                             src="<?php echo get_template_directory_uri(); ?>/assets/images/clients/client2.png"
-                             alt=""/>
-                    </a>
-                </figure>
-
-                <figure class="item partner-logo">
-                    <a href="index-3.html#">
-                        <img class="img-fluid"
-                             src="<?php echo get_template_directory_uri(); ?>/assets/images/clients/client3.png"
-                             alt=""/>
-                    </a>
-                </figure>
-
-                <figure class="item partner-logo">
-                    <a href="index-3.html#">
-                        <img class="img-fluid"
-                             src="<?php echo get_template_directory_uri(); ?>/assets/images/clients/client4.png"
-                             alt=""/>
-                    </a>
-                </figure>
-
-                <figure class="item partner-logo">
-                    <a href="index-3.html#">
-                        <img class="img-fluid"
-                             src="<?php echo get_template_directory_uri(); ?>/assets/images/clients/client5.png"
-                             alt=""/>
-                    </a>
-                </figure>
-
-                <figure class="item partner-logo last">
-                    <a href="index-3.html#">
-                        <img class="img-fluid"
-                             src="<?php echo get_template_directory_uri(); ?>/assets/images/clients/client6.png"
-                             alt=""/>
-                    </a>
-                </figure>
-
-                <figure class="item partner-logo last">
-                    <a href="index-3.html#">
-                        <img class="img-fluid"
-                             src="<?php echo get_template_directory_uri(); ?>/assets/images/clients/client7.png"
-                             alt=""/>
-                    </a>
-                </figure>
-
+                <?php foreach($partners as $partner): ?>
+                    <figure class="item partner-logo">
+                        <a class="partner-logo__link" href="<?php echo $partner['link']; ?>">
+                            <img class="img-fluid"
+                                 src="<?php echo $partner['image']; ?>"
+                                 alt=""/>
+                        </a>
+                    </figure>
+                <?php endforeach; ?>
             </div><!--/ Owl carousel end -->
 
         </div><!--/ Content row end -->
