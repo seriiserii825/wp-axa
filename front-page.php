@@ -87,6 +87,49 @@ $slider = new WP_Query( [
     <div class="container">
         <div class="row text-center">
             <div class="col-md-12">
+                <h2 data-title="<?php echo get_the_title( 8 ); ?>" class="section-title-dash">
+					<?php echo get_the_title( 8 ); ?>
+                    <span>&nbsp;</span>
+                </h2>
+            </div><!-- Col end -->
+        </div><!--/ Title row end -->
+        <div class="ts-services-wrap">
+			<?php $juridic = new WP_Query( [
+				'post_type'      => 'juridic',
+				'posts_per_page' => - 1
+			] ); ?>
+			<?php if ( $juridic->have_posts() ): ?>
+				<?php while ( $juridic->have_posts() ): ?>
+					<?php $juridic->the_post(); ?>
+                    <div class="ts-service-overlay">
+                        <div class="ts-image-wrapper">
+                            <img class="img-fluid" src="<?php echo kama_thumb_src( 'w=350 &h=310' ); ?>" alt="">
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">
+                                <i class="fa fa-<?php echo carbon_get_the_post_meta( 'crb_online_icon' ); ?>"></i>
+                                <span><?php echo esc_html( get_the_title() ); ?></span>
+                            </h3>
+                            <div class="ts-services__text"><?php the_content(); ?></div>
+                            <p>
+                                <a class="btn btn-primary icon-bg"
+                                   href="<?php the_permalink(); ?>"><?php echo esc_html__( 'Mai mult', 'bs-galadent' ); ?>
+                                    <i class="icon icon-arrow-right"></i>
+                                </a>
+                            </p>
+                        </div>
+                    </div><!-- Service1 end -->
+				<?php endwhile; ?>
+				<?php wp_reset_postdata(); ?>
+			<?php endif; ?>
+        </div><!-- Main row end -->
+    </div><!-- Conatiner end -->
+</section><!-- Main container end -->
+
+<section id="ts-services" class="section section-border ts-services solid-bg">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-12">
                 <h2 data-title="<?php echo get_the_title( 2 ); ?>" class="section-title-dash">
 					<?php echo get_the_title( 2 ); ?>
                     <span>&nbsp;</span>
@@ -125,6 +168,7 @@ $slider = new WP_Query( [
         </div><!-- Main row end -->
     </div><!-- Conatiner end -->
 </section><!-- Main container end -->
+
 
 <section id="ts-choose-us" class="section ts-choose-us">
     <div class="container">

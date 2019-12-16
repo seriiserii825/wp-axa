@@ -43,6 +43,18 @@ function crb_attach_fizic_post_type_options() {
 	         ) );
 }
 
+add_action( 'carbon_fields_register_fields', 'crb_attach_juridic_post_type_options' );
+function crb_attach_juridic_post_type_options() {
+	Container::make( 'post_meta', __( 'Fields' ) )
+	         ->where( 'post_type', '=', 'juridic' )
+	         ->add_tab( __( 'Text' ), array(
+		         Field::make( 'text', 'crb_juridic_short_text_ro', __( 'Short text ro' ) )
+		              ->set_width( 50 ),
+		         Field::make( 'text', 'crb_juridic_short_text_ru', __( 'Short text ru' ) )
+		              ->set_width( 50 ),
+	         ) );
+}
+
 add_action( 'carbon_fields_register_fields', 'crb_attach_reviews_post_type_options' );
 function crb_attach_reviews_post_type_options() {
 	Container::make( 'post_meta', __( 'Fields' ) )
