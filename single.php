@@ -66,6 +66,10 @@ get_header();
 
                     </div><!-- Content Col end -->
                 </div><!-- Main row end -->
+
+                <div class="col-lg-4 col-md-12">
+		            <?php require_once __DIR__.'/template-parts/content-sidebar.php';?>
+                </div>
             </div><!-- Container end -->
     </section><!-- Main container end -->
 

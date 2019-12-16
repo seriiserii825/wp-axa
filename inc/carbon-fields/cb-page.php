@@ -30,3 +30,14 @@ function crb_attach_page_finance_options() {
 		              ->set_layout( 'tabbed-horizontal' )
 	         ) );
 }
+
+add_action( 'carbon_fields_register_fields', 'crb_attach_fizic_page_options' );
+function crb_attach_fizic_page_options() {
+	Container::make( 'post_meta', __( 'Fields' ) )
+	         ->where( 'post_id', '=', 2 )
+	         ->add_tab( __( 'Image' ), array(
+		         Field::make( 'image', 'crb_online_image', __( 'Image in header' ) )
+		              ->set_help_text( '1600x515' )
+		              ->set_value_type( 'url' )
+	         ) );
+}

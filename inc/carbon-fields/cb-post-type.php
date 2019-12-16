@@ -34,6 +34,12 @@ function crb_attach_fizic_post_type_options() {
 		         Field::make( 'image', 'crb_online_image', __( 'Image in header' ) )
 		              ->set_help_text( '1600x515' )
 		              ->set_value_type( 'url' )
+	         ) )
+	         ->add_tab( __( 'Text' ), array(
+		         Field::make( 'text', 'crb_fizic_short_text_ro', __( 'Short text ro' ) )
+		              ->set_width( 50 ),
+		         Field::make( 'text', 'crb_fizic_short_text_ru', __( 'Short text ru' ) )
+		              ->set_width( 50 ),
 	         ) );
 }
 
@@ -43,8 +49,8 @@ function crb_attach_reviews_post_type_options() {
 	         ->where( 'post_type', '=', 'reviews' )
 	         ->add_tab( __( 'Profession' ), array(
 		         Field::make( 'text', 'crb_reviews_profession_ro', __( 'Profesia ro' ) )
-		         ->set_width(50),
+		              ->set_width( 50 ),
 		         Field::make( 'text', 'crb_reviews_profession_ru', __( 'Profesia ru' ) )
-		              ->set_width(50),
+		              ->set_width( 50 ),
 	         ) );
 }

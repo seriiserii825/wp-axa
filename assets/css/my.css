@@ -5219,8 +5219,15 @@ h4.panel-title a.collapsed:before {
 }
 
 .ts-case-content {
+	display: flex;
+	flex-direction: column;
 	position: relative;
-	padding-left: 30px;
+	padding: 15px 25px;
+	text-align: center;
+}
+.ts-case-content .btn {
+	margin: auto auto 0;
+	width: 200px;
 }
 
 .ts-case-content .border-long:before {
@@ -5233,6 +5240,9 @@ h4.panel-title a.collapsed:before {
 	height: 5px;
 }
 
+.ts-case-box {
+	display: block;
+}
 /* Slider pages */
 
 .page-slider.small-bg .item {
@@ -7055,4 +7065,8 @@ a.latest-post-img:hover {
 }
 .partner-logo__link:hover {
 	opacity: 1;
+}
+.ts-case-box {
+	margin-bottom: 30px;
+	box-shadow: 0 6px 12px rgba(0,0,0,0.2);
 }

@@ -385,11 +385,11 @@ jQuery(function ($) {
 		$('#back-to-top').tooltip('hide');
 
 
-		let testimonialEgualHeight = function(){
+		let testimonialEgualHeight = function () {
 			let itemHeight = 0;
 
 			$('#ts-testimonial-static .testimonial-item-single').each(function () {
-				if($(this).height() > itemHeight){
+				if ($(this).height() > itemHeight) {
 					itemHeight = $(this).height();
 				}
 			});
@@ -399,5 +399,19 @@ jQuery(function ($) {
 			});
 		}
 		testimonialEgualHeight();
+
+		let fizicPageEqualHeight = function () {
+			let itemHeight = 0;
+			$('.fizic-page .ts-case-content').each(function () {
+				if ($(this).height() > itemHeight) {
+					itemHeight = $(this).height();
+				}
+			});
+
+			$('.fizic-page .ts-case-content').each(function () {
+				$(this).height(itemHeight);
+			});
+		};
+		fizicPageEqualHeight();
 	}
 );
