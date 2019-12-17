@@ -22,9 +22,9 @@
 	<?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php body_class('body-inner'); ?>>
 
-<div class="body-inner">
+<div>
 
     <div id="top-bar" class="top-bar">
         <div class="container">

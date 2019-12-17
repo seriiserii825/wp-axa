@@ -7,7 +7,7 @@ get_header();
             <div class="row">
                 <div class="col-md-12 text-center">
                     <div class="banner-heading">
-                        <h1 class="banner-title"><?php the_title(); ?></h1>
+                        <h1 class="banner-title"><?php single_cat_title(); ?></h1>
                     </div>
                 </div><!-- Col end -->
             </div><!-- Row end -->

@@ -23,9 +23,9 @@
 	<?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php body_class('body-inner'); ?>>
 
-<div <?php body_class('body-inner'); ?>>
+<div>
     <div id="top-bar" class="topbar-transparent border-down">
         <div class="container">
             <div class="header-top">
