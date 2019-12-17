@@ -86,8 +86,8 @@
                         <span class="info-icon"><i class="icon icon-phone3"></i></span>
                         <div class="info-wrapper">
 							<?php
-							$phone = carbon_get_theme_option('crb_phone');
-							$phone_clear = clear_phone($phone);
+							$phone       = carbon_get_theme_option( 'crb_phone' );
+							$phone_clear = clear_phone( $phone );
 							?>
                             <a href="tel:<?php echo $phone_clear; ?>" class="info-title"><?php echo $phone; ?></a>
                             <p class="info-subtitle"><?php echo esc_html__( 'Numarul de telefon', 'bs-axa' ); ?></p>
@@ -96,14 +96,16 @@
                     <li>
                         <span class="info-icon"><i class="icon icon-envelope"></i></span>
                         <div class="info-wrapper">
-                            <p class="info-title"><a href="mailto:<?php echo carbon_get_theme_option('crb_email'); ?>"><?php echo carbon_get_theme_option('crb_email'); ?></a></p>
+                            <p class="info-title"><a
+                                        href="mailto:<?php echo carbon_get_theme_option( 'crb_email' ); ?>"><?php echo carbon_get_theme_option( 'crb_email' ); ?></a>
+                            </p>
                             <p class="info-subtitle"><?php echo esc_html__( 'Adresa email', 'bs-axa' ); ?></p>
                         </div>
                     </li>
                     <li class="last">
                         <span class="info-icon"><i class="icon icon-map-marker2"></i></span>
                         <div class="info-wrapper">
-                            <p class="info-title"><?php echo carbon_get_theme_option('crb_address'.get_lang()); ?></p>
+                            <p class="info-title"><?php echo carbon_get_theme_option( 'crb_address' . get_lang() ); ?></p>
                             <p class="info-subtitle"><?php echo esc_html__( 'Locatia', 'bs-axa' ); ?></p>
                         </div>
                     </li>
@@ -116,11 +118,14 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="site-nav-inner pull-left">
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                    aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
 
-                            <div id="navbarSupportedContent" class="collapse navbar-collapse navbar-responsive-collapse">
+                            <div id="navbarSupportedContent"
+                                 class="collapse navbar-collapse navbar-responsive-collapse">
 								<?php wp_nav_menu( [
 									'theme_location'  => 'menu-main',
 									'menu'            => '',
@@ -147,11 +152,14 @@
                 </div><!--/ Row end -->
 
                 <div class="nav-search">
-                    <span id="search"><i class="icon icon-search"></i></span>
+                    <span id="search">
+                        <i class="icon icon-search"></i>
+                    </span>
                 </div><!-- Search end -->
 
+
                 <div class="search-block" style="display: none;">
-                    <input type="text" class="form-control" placeholder="Type what you want and enter">
+	                <?php echo do_shortcode('[wpdreams_ajaxsearchlite]'); ?>
                     <span class="search-close">&times;</span>
                 </div><!-- Site search end -->
             </div><!--/ Container end -->

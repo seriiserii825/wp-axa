@@ -86,8 +86,8 @@ body {
 .preload {
 	position: fixed;
 	background: #fff url(http://demo.themewinter.com/html/insurex/images/preload.gif) center center no-repeat;
-	left: 0px;
-	top: 0px;
+	left: 0;
+	top: 0;
 	width: 100%;
 	height: 100%;
 	z-index: 99999;
@@ -225,7 +225,7 @@ a:hover {
 }
 
 .pab-140 {
-	padding-bottom: 140 !important;
+	padding-bottom: 140px !important;
 }
 
 .pat-100 {
@@ -1176,7 +1176,7 @@ ul.top-menu li a:hover {
 	height: 70px;
 	line-height: 55px;
 	right: 0;
-	background: #1f1f1f;
+	background: #9931BF;
 }
 
 /* Insurex Two */
@@ -1274,7 +1274,7 @@ ul.top-menu li a:hover {
 
 .header-standard {
 	background: #fff;
-	box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
 	z-index: 2;
 }
 
@@ -1452,7 +1452,7 @@ ul.top-menu li a:hover {
 
 .header {
 	background: #fff;
-	box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
 	position: relative;
 	z-index: 2;
 }
@@ -1836,7 +1836,7 @@ ul.navbar-nav > li > a i {
 }
 
 .search-block {
-	background: #1f1f1f;;
+	background: #9931BF;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 	display: none;
 	padding: 10px;
@@ -2425,7 +2425,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 
 .ts-feature-box-round .feature-title {
 	font-size: 22px;
-	margin: 10px 0 0px;
+	margin: 10px 0 0;
 	color: #fff;
 }
 
@@ -2653,8 +2653,8 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 	border-top: 0;
 	padding: 50px;
 	overflow: hidden;
-	-webkit-box-shadow: 0px 2px 20px 0 rgba(0, 0, 0, 0.05);
-	box-shadow: 0px 2px 20px 0 rgba(0, 0, 0, 0.05);
+	-webkit-box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.05);
+	box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.05);
 }
 
 
@@ -2761,7 +2761,7 @@ span.fact-icon {
 .fact-content h3 {
 	font-size: 30px;
 	margin-top: 15px;
-	margin-bottom: 0px;
+	margin-bottom: 0;
 	color: #fff;
 }
 
@@ -3178,7 +3178,7 @@ span.fact-icon {
 
 .feature-standard-content h3 {
 	font-size: 28px;
-	margin: 30px 0px 20px;
+	margin: 30px 0 20px;
 	color: #fff;
 }
 
@@ -3392,7 +3392,7 @@ span.fact-icon {
 }
 
 .ts-team-classic:hover {
-	box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.06);
+	box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.06);
 }
 
 .team-social-classic a {
@@ -3686,7 +3686,7 @@ text-white .column-title-dash span:before {
 	border-radius: 2px;
 	position: relative;
 	z-index: 1;
-	box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.6);
+	box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.6);
 }
 
 .quote-text {
@@ -3698,7 +3698,7 @@ text-white .column-title-dash span:before {
 	font-family: iconfont;
 	position: absolute;
 	font-size: 36px;
-	right: 0px;
+	right: 0;
 	top: 10px;
 	color: rgba(0, 0, 0, 0.15);
 }
@@ -4023,7 +4023,7 @@ p.author-designation {
 	color: #222222;
 	font-weight: 600;
 	background: transparent;
-	padding-left: 0px;
+	padding-left: 0;
 }
 
 .insurance-tab .nav-tabs .nav-link.active {
@@ -4072,7 +4072,6 @@ p.author-designation {
 	opacity: 1;
 	-webkit-filter: grayscale(0%);
 	-moz-filter: grayscale(0%);
-	-ms-filter: grayscale(0%);
 	-o-filter: grayscale(0%);
 	filter: grayscale(0%);
 }
@@ -4137,7 +4136,7 @@ p.author-designation {
 
 .project-item img {
 	width: 100%;
-	max-width: auto;
+	max-width: initial;
 	-webkit-transition: all 0.6s ease 0s;
 	transition: all 0.6s ease 0s;
 }
@@ -4386,7 +4385,6 @@ h4.panel-title a.collapsed:before {
 	-webkit-filter: grayscale(1);
 	-webkit-filter: grayscale(100%);
 	filter: grayscale(100%);
-	filter: gray;
 }
 
 .ts-service-faq .container {
@@ -4426,7 +4424,7 @@ h4.panel-title a.collapsed:before {
 }
 
 .ts-service-feature .feature-info p {
-	padding: 0px 60px;
+	padding: 0 60px;
 }
 
 .ts-service-feature .feature-info h3 {
@@ -4906,6 +4904,7 @@ h4.panel-title a.collapsed:before {
 .banner-title {
 	color: #fff;
 	font-size: 60px;
+	line-height: 1.3;
 	margin-bottom: 20px;
 }
 
@@ -5057,7 +5056,7 @@ h4.panel-title a.collapsed:before {
 }
 
 .about-content-box {
-	padding: 0px 25px;
+	padding: 0 25px;
 }
 
 .about-feature-classic [class*=col-] {
@@ -5535,7 +5534,7 @@ h4.panel-title a.collapsed:before {
 
 .form-box textarea {
 	resize: none;
-	padding: 25px 0px 65px;
+	padding: 25px 0 65px;
 	overflow: hidden;
 	color: #fff;
 }
@@ -6292,7 +6291,7 @@ label {
 .post-single blockquote {
 	border: 1px solid #f0f0f0;
 	border-left: 3px solid #BF3DEE;
-	padding: 35px 30px 0px;
+	padding: 35px 30px 0;
 }
 
 .post-single blockquote:before {
@@ -7069,4 +7068,7 @@ a.latest-post-img:hover {
 .ts-case-box {
 	margin-bottom: 30px;
 	box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+.search-live .search-live-results .entry a {
+	color: #444;
 }

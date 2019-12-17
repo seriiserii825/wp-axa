@@ -153,7 +153,7 @@
                 </div><!-- Search end -->
 
                 <div class="search-block" style="display: none;">
-                    <input type="text" class="form-control" placeholder="Type what you want and enter">
+                    <?php echo do_shortcode('[wpdreams_ajaxsearchlite]'); ?>
                     <span class="search-close">&times;</span>
                 </div><!-- Site search end -->
             </div><!--/ Container end -->
