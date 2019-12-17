@@ -5,8 +5,6 @@
     <!-- Basic Page Needs
 	================================================== -->
     <meta charset="utf-8">
-    <title>Insurex - Insurance Agency HTML5 Template</title>
-
     <!-- Mobile Specific Metas
 	================================================== -->
 
@@ -159,10 +157,10 @@
 
 
                 <div class="search-block" style="display: none;">
-					<?php if ( ! dynamic_sidebar( 'search' ) ): ?>
-                        <h2>search widget</h2>
-					<?php endif; ?>
-                    <!--	                --><?php //echo do_shortcode('[wpdreams_ajaxsearchlite]'); ?>
+<!--					--><?php //if ( ! dynamic_sidebar( 'search' ) ): ?>
+<!--                        <h2>search widget</h2>-->
+<!--					--><?php //endif; ?>
+                    	                <?php echo do_shortcode('[wpdreams_ajaxsearchlite]'); ?>
                     <span class="search-close">&times;</span>
                 </div><!-- Site search end -->
             </div><!--/ Container end -->

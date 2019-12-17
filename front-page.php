@@ -28,8 +28,8 @@ $slider = new WP_Query( [
                                 <h2 class="slide-title-classic animated6"><?php the_title(); ?></h2>
                                 <div class="slider-description lead animated3"><?php the_content(); ?></div>
                                 <p class="animated6">
-                                    <a href="index-3.html#" class="slider btn btn-primary">Our Services</a>
-                                    <a href="index-3.html#" class="slider btn btn-border">Contact Us</a>
+                                    <a href="<?php echo get_page_link(2); ?>" class="slider btn btn-primary"><?php echo get_the_title(2); ?></a>
+                                    <a href="<?php echo get_page_link(14); ?>" class="slider btn btn-border"><?php echo get_the_title(14); ?></a>
                                 </p>
                             </div><!-- Col end -->
                         </div><!-- Slider content end -->
