@@ -91,6 +91,7 @@
                             </ul>
 	                    <?php endif; ?>
                     </div><!-- Footer social end -->
+
                     <div class="copyright-info">
                         <span><?php echo carbon_get_theme_option('crb_copyright'.get_lang()); ?></span>
                     </div>

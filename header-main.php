@@ -73,41 +73,6 @@
 
     <!-- Header start -->
     <header id="header" class="header navdown-boxed-transparent">
-        <!--<div class="container">-->
-        <!--    <div class="row">-->
-        <!--        <div class="logo-area">-->
-		<!--			--><?php //the_custom_logo(); ?>
-        <!---->
-        <!--            <ul class="top-info unstyled">-->
-        <!--                <li>-->
-        <!--                    <span class="info-icon"><i class="icon icon-phone3"></i></span>-->
-        <!--                    <div class="info-wrapper">-->
-		<!--						--><?php
-		//						$phone = carbon_get_theme_option('crb_phone');
-		//						$phone_clear = clear_phone($phone);
-		//						?>
-        <!--                        <a href="tel:--><?php //echo $phone_clear; ?><!--" class="info-title">--><?php //echo $phone; ?><!--</a>-->
-        <!--                        <p class="info-subtitle">--><?php //echo esc_html__( 'Numarul de telefon', 'bs-axa' ); ?><!--</p>-->
-        <!--                    </div>-->
-        <!--                </li>-->
-        <!--                <li>-->
-        <!--                    <span class="info-icon"><i class="icon icon-envelope"></i></span>-->
-        <!--                    <div class="info-wrapper">-->
-        <!--                        <p class="info-title"><a href="mailto:--><?php //echo carbon_get_theme_option('crb_email'); ?><!--">--><?php //echo carbon_get_theme_option('crb_email'); ?><!--</a></p>-->
-        <!--                        <p class="info-subtitle">--><?php //echo esc_html__( 'Adresa email', 'bs-axa' ); ?><!--</p>-->
-        <!--                    </div>-->
-        <!--                </li>-->
-        <!--                <li class="last">-->
-        <!--                    <span class="info-icon"><i class="icon icon-map-marker2"></i></span>-->
-        <!--                    <div class="info-wrapper">-->
-        <!--                        <p class="info-title">--><?php //echo carbon_get_theme_option('crb_address'.get_lang()); ?><!--</p>-->
-        <!--                        <p class="info-subtitle">--><?php //echo esc_html__( 'Locatia', 'bs-axa' ); ?><!--</p>-->
-        <!--                    </div>-->
-        <!--                </li>-->
-        <!--            </ul>-->
-        <!--        </div>-->
-        <!--    </div>-->
-        <!--</div>-->
 
         <nav class="site-navigation navdown navbar navbar-expand-lg">
             <div class="container">
