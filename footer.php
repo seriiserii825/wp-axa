@@ -66,7 +66,9 @@
             <div class="row">
                 <div class="col-md-12 col-lg-3">
                     <div class="footer-logo">
-                        <?php the_custom_logo(); ?>
+                        <a href="<?php echo home_url() ?>">
+                            <img src="<?php echo carbon_get_theme_option('crb_logo'); ?>" width="160" alt="">
+                        </a>
                     </div>
                 </div>
 

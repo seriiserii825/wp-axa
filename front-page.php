@@ -21,7 +21,7 @@ $slider = new WP_Query( [
 				<?php $slider->the_post(); ?>
                 <div class="carousel-item patb-100 <?php if ( $i == 0 ) {
 					echo ' active';
-				} ?>" style="background-image:url(<?php echo kama_thumb_src( 'w=1600 &h=700' ); ?>">
+				} ?>" style="background-image:url(<?php echo kama_thumb_src( 'w=1600 &h=400' ); ?>">
                     <div class="container">
                         <div class="slider-content text-left">
                             <div class="col-md-12">
@@ -108,7 +108,7 @@ $slider = new WP_Query( [
                         <div class="service-content">
                             <h3 class="service-title">
                                 <i class="fa fa-<?php echo carbon_get_the_post_meta( 'crb_online_icon' ); ?>"></i>
-                                <span><?php echo esc_html( get_the_title() ); ?></span>
+                                <span class="service-content__title"><?php echo esc_html( get_the_title() ); ?></span>
                             </h3>
                             <div class="ts-services__text"><?php the_content(); ?></div>
                             <p>
@@ -199,157 +199,11 @@ $slider = new WP_Query( [
     </div> <!-- Container end -->
 </section><!-- section end -->
 
-<section id="ts-testimonial-static" class="section ts-testimonial-static no-padding">
-    <div class="container">
-        <div class="testimonial-items-wrapper">
-            <div class="row">
-				<?php $reviews = new WP_Query( [
-					'post_type'      => 'reviews',
-					'posts_per_page' => 3
-				] ); ?>
-				<?php if ( $reviews->have_posts() ): ?>
-					<?php while ( $reviews->have_posts() ): ?>
-						<?php $reviews->the_post(); ?>
-                        <div class="col-lg-4 col-md-12">
-                            <div class="testimonial-item-single">
-                                <div class="quote-item-static-footer clearfix">
-                                    <img class="img-fluid"
-                                         src="<?php echo kama_thumb_src( 'w=100 &h=100' ); ?>"
-                                         alt="Jonas Blue">
-                                    <div class="quote-item-info">
-                                        <h3 class="quote-author"><?php the_title(); ?></h3>
-                                        <span class="quote-subtext"><?php echo carbon_get_the_post_meta( 'crb_reviews_profession' . get_lang() ); ?></span>
-                                    </div>
-                                </div> <!-- Item End -->
-								<?php the_content(); ?>
-                            </div> <!-- Testimonial Single End -->
-                        </div> <!-- Col End -->
-
-					<?php endwhile; ?>
-					<?php wp_reset_postdata(); ?>
-				<?php endif; ?>
-
-            </div> <!-- Row End -->
-        </div> <!-- Testimonial Wrapper End -->
-    </div>
-</section>
-
-<section id="ts-news" class="section ts-news">
-    <div class="container">
-        <div class="row text-center">
-            <div class="col text-center">
-                <h2 data-title="<?php echo esc_html__( 'Ultimele Noutati', 'bs-galadent' ); ?>"
-                    class="section-title-dash"> <?php echo esc_html__( 'Ultimele Noutati', 'bs-galadent' ); ?>
-                    <span class="dashborder">&nbsp;</span>
-                </h2>
-            </div> <!-- Col End -->
-        </div><!--/ Title row end -->
-		<?php $news_one = new WP_Query( [
-			'category_name'  => 'noutati',
-			'posts_per_page' => 1
-		] ); ?>
-
-        <div class="row">
-            <div class="col-lg-6 col-md-12">
-				<?php if ( $news_one->have_posts() ): ?>
-					<?php $i = 0;
-					while ( $news_one->have_posts() ): ?>
-						<?php $news_one->the_post(); ?>
-						<?php if ( $i > 0 ): ?>
-							<?php break; ?>
-						<?php else: ?>
-                            <div class="latest-post post-large">
-                                <div class="latest-post-media">
-                                    <a href="<?php the_permalink(); ?>" class="latest-post-img">
-                                        <img class="img-fluid" src="<?php echo kama_thumb_src( 'w=540' ); ?>" alt="img">
-                                    </a>
-									<?php
-									$date_day   = get_the_date( 'd' );
-									$date_month = get_the_date( 'M' );
-									?>
-                                    <div class="post-date-time">
-                                        <span class="post-item-day"><?php echo $date_day; ?></span>
-                                        <span class="post-item-month"><?php echo $date_month; ?></span>
-                                    </div>
-                                    <div class="post-body">
-                                        <h4 class="post-title">
-                                            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                                        </h4>
-                                        <p><?php echo carbon_get_the_post_meta( 'crb_news_short_text' . get_lang() ); ?></p>
-                                        <a class="btn btn-primary"
-                                           href="<?php the_permalink(); ?>"><?php echo esc_html__( 'Mai multe', 'bs-galadent' ); ?></a>
-                                    </div><!-- Post body end -->
-                                </div><!-- Post media end -->
-                            </div><!-- Latest post end -->
-						<?php endif; ?>
-						<?php $i ++; endwhile; ?>
-					<?php wp_reset_postdata(); ?>
-				<?php endif; ?>
-
-            </div><!-- Col big news end -->
-
-            <div class="col-lg-6 col-md-12">
-                <div class="row">
-					<?php $news = new WP_Query( [
-						'category_name'  => 'noutati',
-						'posts_per_page' => 4
-					] ); ?>
-					<?php if ( $news->have_posts() ): ?>
-						<?php $i = 0;
-						while ( $news->have_posts() ): ?>
-							<?php $news->the_post(); ?>
-							<?php if ( $i !== 0 ): ?>
-                                <div class="col-md-12">
-                                    <div class="latest-post latest-post-right last">
-                                        <div class="latest-post-media">
-                                            <a href="<?php the_permalink(); ?>" class="latest-post-img">
-                                                <img class="img-fluid"
-                                                     src="<?php echo kama_thumb_src( 'w=200 &h=110' ); ?>" alt="img">
-                                            </a>
-
-	                                        <?php
-	                                        $date_day   = get_the_date( 'd' );
-	                                        $date_month = get_the_date( 'M' );
-	                                        ?>
-                                            <div class="post-date-time">
-                                                <span class="post-item-day"><?php echo $date_day; ?></span>
-                                                <span class="post-item-month"><?php echo $date_month; ?></span>
-                                            </div>
-                                        </div>
-                                        <div class="post-body">
-                                            <h4 class="post-title">
-                                                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                                            </h4>
-                                            <div class="post-text">
-                                                <p><?php echo carbon_get_the_post_meta( 'crb_news_short_text' . get_lang() ); ?></p>
-                                            </div>
-                                        </div>
-                                    </div><!-- Latest post end -->
-                                </div><!--Col end -->
-							<?php endif; ?>
-							<?php $i ++; endwhile; ?>
-						<?php wp_reset_postdata(); ?>
-					<?php endif; ?>
-
-                </div><!-- row end -->
-            </div><!-- Col small news end -->
-        </div><!--/ Content row end -->
-
-        <div class="row">
-            <div class="col-12 text-center">
-                <a href="<?php echo get_category_link( 1 ); ?>"
-                   class="btn btn-primary news-btn"><?php echo esc_html__( 'Vezi toate', 'bs-galadent' ); ?></a>
-            </div>
-        </div>
-    </div><!--/ Container end -->
-</section><!--/ News end -->
-
-
 <section id="ts-facts-area" class="ts-facts-area padtb-0">
     <div class="container-fluid">
         <div class="row">
 
-            <div class="col-lg-7 col-md-12 funfacts-bg no-padding">
+            <div class="col-lg-12 funfacts-bg no-padding">
                 <div class="facts-content">
                     <!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
@@ -416,58 +270,6 @@ $slider = new WP_Query( [
                             <h3><?php echo carbon_get_theme_option( 'crb_numbers_title' . get_lang() ); ?></h3>
                         </div>
                         <p><?php echo carbon_get_theme_option( 'crb_numbers_text' . get_lang() ); ?></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-5 col-md-12 facts-overlay">
-                <div class="facts-wrapper">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="ts-facts">
-                                <span class="facts-icon"><i class="fa fa-briefcase"></i></span>
-                                <div class="ts-facts-num">
-                                    <h3 class="funfact">
-                                        <span class="counterUp"><?php echo carbon_get_theme_option( 'crb_numbers_one' ); ?></span>
-                                    </h3>
-                                </div>
-                                <p><?php echo carbon_get_theme_option( 'crb_numbers_one' . get_lang() ); ?></p>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="ts-facts">
-                                <span class="facts-icon"><i class="icon icon-users"></i></span>
-                                <div class="ts-facts-num">
-                                    <h3 class="funfact">
-                                        <span class="counterUp"><?php echo carbon_get_theme_option( 'crb_numbers_two' ); ?></span>
-                                    </h3>
-                                </div>
-                                <p><?php echo carbon_get_theme_option( 'crb_numbers_two' . get_lang() ); ?></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="ts-facts">
-                                <span class="facts-icon"><i class="fa fa-trophy"></i></span>
-                                <div class="ts-facts-num">
-                                    <h3 class="funfact">
-                                        <span class="counterUp"><?php echo carbon_get_theme_option( 'crb_numbers_three' ); ?></span>
-                                    </h3>
-                                </div>
-                                <p><?php echo carbon_get_theme_option( 'crb_numbers_three' . get_lang() ); ?></p>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="ts-facts">
-                                <span class="facts-icon"><i class="icon icon-graphic-2"></i></span>
-                                <div class="ts-facts-num">
-                                    <h3 class="funfact">
-                                        <span class="counterUp"><?php echo carbon_get_theme_option( 'crb_numbers_four' ); ?></span>
-                                    </h3>
-                                </div>
-                                <p><?php echo carbon_get_theme_option( 'crb_numbers_four' . get_lang() ); ?></p>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>

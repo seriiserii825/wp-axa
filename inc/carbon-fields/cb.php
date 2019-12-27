@@ -21,6 +21,14 @@ function crb_attach_theme_options() {
 		                                         ->set_layout( 'tabbed-horizontal' )
 	                                    ) )
 	                                    ->add_tab( __( 'Info' ), array(
+		                                    Field::make( 'image', 'crb_logo', __( 'Logo' ) )
+		                                         ->set_value_type( 'url' )
+		                                         ->set_width( 50 ),
+
+		                                    Field::make( 'image', 'crb_logo_white', __( 'Logo white' ) )
+		                                         ->set_value_type( 'url' )
+		                                         ->set_width( 50 ),
+
 		                                    Field::make( 'text', 'crb_phone', __( 'Telefon' ) )
 		                                         ->set_width( 50 ),
 		                                    Field::make( 'text', 'crb_email', __( 'Email' ) )
@@ -84,7 +92,7 @@ function crb_attach_theme_options() {
 		         Field::make( 'complex', 'crb_parners', __( 'Fields' ) )
 		              ->add_fields( array(
 			              Field::make( 'image', 'image', __( 'Image' ) )
-				              ->set_value_type('url')
+			                   ->set_value_type( 'url' )
 			                   ->set_width( 50 ),
 			              Field::make( 'text', 'link', __( 'Link' ) )
 			                   ->set_width( 50 ),

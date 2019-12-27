@@ -77,7 +77,11 @@
     <header id="header" class="header">
         <div class="container">
             <div class="logo-area">
-				<?php the_custom_logo(); ?>
+                <div class="logo-area">
+                    <a href="<?php echo home_url(); ?>">
+                        <img src="<?php echo carbon_get_theme_option('crb_logo'); ?>" width="160" alt="">
+                    </a>
+                </div>
 
                 <ul class="top-info unstyled">
                     <li>
@@ -107,9 +111,9 @@
                             <p class="info-subtitle"><?php echo esc_html__( 'Locatia', 'bs-axa' ); ?></p>
                         </div>
                     </li>
-                </ul><!-- Ul end -->
-            </div><!-- logo area end -->
-        </div><!-- Container end -->
+                </ul>
+            </div>
+        </div>
 
         <nav class="site-navigation navdown navbar navbar-expand-lg">
             <div class="container">
