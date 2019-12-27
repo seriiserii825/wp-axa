@@ -27,28 +27,9 @@ get_header();
                             <div class="contact-box form-box">
                                 <div id="general-form" class="form-container active">
                                     <!-- START copy section: General Contact Form -->
-                                    <form class="contactMe small" action="contact.html#" method="POST" enctype="multipart/form-data">
-                                        <section>
-                                            <div class="form-row">
-                                                <div class="col-md-6">
-                                                    <input type="text" name="name" data-displayname="Name" class="field" placeholder="Full Name*" required>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <input type="email" name="email" data-displayname="Email" class="field" placeholder="Email Address*" required>
-                                                </div>
-                                            </div>
-                                            <div class="form-row">
-                                                <div class="col-md-12">
-                                                    <input type="text" name="subject" data-displayname="subject" class="field" placeholder="Subject" required="">
-                                                </div>
-                                                <div class="col-md-12">
-                                                    <textarea name="message" data-displayname="Message" class="field" placeholder="Message" required=""></textarea>
-                                                </div>
-                                            </div>
-
-                                            <button class="btn btn-primary float-lg-right float-md-none" type="submit" data-sending="Sending...">Send Message</button>
-                                        </section>
-                                    </form>
+                                    <div class="contactMe small">
+                                        <?php echo do_shortcode('[contact-form-7 id="134" title="Контактная форма 1"]'); ?>
+                                    </div>
                                     <!-- END copy section: General Contact Form -->
                                 </div>
                             </div> <!-- Contact Box End -->
@@ -89,3 +70,4 @@ get_header();
 
 <?php
 get_footer();
+
