@@ -56,6 +56,7 @@ jQuery(function ($) {
 			$('#main-slide .carousel-item').removeClass('active');
 			$('#main-slide .slick-slide.slick-current .carousel-item').addClass('active');
 		});
+
 	};
 	mainSlider();
 
@@ -109,34 +110,25 @@ jQuery(function ($) {
 
 
 	//Partners slide
+	let partnersSlider = function(){
+		$("#partners-carousel").slick({
+			slidesToShow: 4,
+			slidesToScroll: 2,
+			arrows: false
+		});
 
-	$("#partners-carousel").owlCarousel({
+		$('.partners-button--next').on('click', function (e) {
+			e.preventDefault();
+			$("#partners-carousel").slick('slickNext');
+		});
 
-		loop: true,
-		autoplay: false,
-		autoplayHoverPause: true,
-		nav: true,
-		margin: -50,
-		dots: false,
-		mouseDrag: true,
-		touchDrag: true,
-		slideSpeed: 500,
-		navText: ["<i class='icon icon-left-arrow2'></i>", "<i class='icon icon-right-arrow2'></i>"],
-		items: 5,
-		responsive: {
-			0: {
-				items: 1
-			},
-			600: {
-				items: 3
-			},
-			1000: {
-				items: 5,
-			}
-		}
+		$('.partners-button--prev').on('click', function (e) {
+			e.preventDefault();
+			$("#partners-carousel").slick('slickPrev');
+		});
 
-	});
-	//testimonial slide
+	};
+	partnersSlider();
 
 	$(".testimonial-carousel").owlCarousel({
 

@@ -7101,3 +7101,57 @@ a.latest-post-img:hover {
 #cursmdcursBox .bottom {
 	background: none;
 }
+.partners-wrap {
+	position: relative;
+}
+.partners-button {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	display: block;
+	width: 60px;
+	height: 60px;
+	line-height: 70px;
+	text-align: center;
+	background: #eee;
+	border-radius: 3px;
+	box-shadow: 0 3px 6px rgba(0,0,0,.2);
+	transition: all .3s;
+}
+.partners-button:hover .fa {
+	color: #9931BF;
+}
+.partners-button:active {
+	box-shadow: none;
+}
+.partners-button .fa {
+	font-size: 30px;
+	color: #ccc;
+}
+.partners-button--prev {
+	left: -60px;
+}
+.partners-button--next {
+	right: -60px;
+}
+.partners .slick-slide {
+	height: 100px;
+}
+.partners .slick-slide div{
+	height: 100%;
+}
+.partners .partner-logo__link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 6px;
+	padding: 15px;
+	height: 100%;
+	background: linear-gradient(45deg, #443f44 0%, #c9c2cb 50%, #443f44 100%);
+	border-radius: 5px;
+	box-shadow: 0 3px 6px rgba(0,0,0,.1);
+}
+.partners .partner-logo__link img{
+	width: auto;
+	height: 80%;
+}

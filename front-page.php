@@ -31,8 +31,10 @@ $slider = new WP_Query( [
                                 <h2 class="slide-title-classic animated6"><?php the_title(); ?></h2>
                                 <div class="slider-description lead animated3"><?php the_content(); ?></div>
                                 <p class="animated6">
-                                    <a href="<?php echo get_page_link(2); ?>" class="slider btn btn-primary"><?php echo get_the_title(2); ?></a>
-                                    <a href="<?php echo get_page_link(14); ?>" class="slider btn btn-border"><?php echo get_the_title(14); ?></a>
+                                    <a href="<?php echo get_page_link( 2 ); ?>"
+                                       class="slider btn btn-primary"><?php echo get_the_title( 2 ); ?></a>
+                                    <a href="<?php echo get_page_link( 14 ); ?>"
+                                       class="slider btn btn-border"><?php echo get_the_title( 14 ); ?></a>
                                 </p>
                             </div><!-- Col end -->
                         </div><!-- Slider content end -->
@@ -75,7 +77,8 @@ $slider = new WP_Query( [
                         <div class="about-classic-box-single">
                             <div class="about-content-box ">
                                 <div class="about-classic-icon">
-                                    <i class="fa fa-<?php echo carbon_get_the_post_meta( 'crb_online_icon' ); ?>" aria-hidden="true"></i>
+                                    <i class="fa fa-<?php echo carbon_get_the_post_meta( 'crb_online_icon' ); ?>"
+                                       aria-hidden="true"></i>
                                 </div><!-- Feature Img end -->
                                 <div class="about-classic-content">
                                     <h3><?php the_title(); ?></h3>
@@ -292,26 +295,33 @@ $slider = new WP_Query( [
         <div class="row text-center">
             <div class="col-md-12">
                 <h2 class="section-title-dash">
-                    <?php echo esc_html__( 'Partenerii nostrii', 'bs-axa' ); ?>
+					<?php echo esc_html__( 'Partenerii nostrii', 'bs-axa' ); ?>
                     <span></span>
                 </h2>
             </div><!-- Col end -->
         </div><!-- Title row end -->
 
         <div class="row">
-            <?php $partners = carbon_get_theme_option('crb_parners'); ?>
+			<?php $partners = carbon_get_theme_option( 'crb_parners' ); ?>
+            <div class="partners-wrap col-sm-12 ">
+                <a class="partners-button partners-button--prev" href="#">
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                </a>
+                <a class="partners-button partners-button--next" href="#">
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </a>
 
-            <div id="partners-carousel" class="col-sm-12 owl-carousel owl-theme text-center partners">
-                <?php foreach($partners as $partner): ?>
-                    <figure class="item partner-logo">
-                        <a class="partner-logo__link" href="<?php echo $partner['link']; ?>">
-                            <img class="img-fluid"
-                                 src="<?php echo $partner['image']; ?>"
-                                 alt=""/>
-                        </a>
-                    </figure>
-                <?php endforeach; ?>
-            </div><!--/ Owl carousel end -->
+                <div id="partners-carousel" class="owl-carousel owl-theme text-center partners">
+					<?php foreach ( $partners as $partner ): ?>
+                        <div class="item">
+                            <a class="partner-logo__link" target="_blank" href="<?php echo $partner['link']; ?>">
+                                <img width="150" src="<?php echo $partner['image']; ?>" alt=""/>
+                            </a>
+                        </div>
+					<?php endforeach; ?>
+                </div><!--/ Owl carousel end -->
+
+            </div>
 
         </div><!--/ Content row end -->
     </div><!--/ Container end -->
