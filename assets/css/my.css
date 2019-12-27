@@ -7155,3 +7155,9 @@ a.latest-post-img:hover {
 	width: auto;
 	height: 80%;
 }
+.page-single-content ul {
+	list-style-type: disc;
+}
+.page-single-content ul li {
+	margin-left: 20px;
+}

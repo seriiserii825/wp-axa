@@ -17,20 +17,23 @@ get_header();
 
     <section id="main-container" class="main-container padt-90">
         <div id="ts-contact-us" class=" ts-contact-us">
-            <div class="container">
-                <div class="row">
-                    <?php if(have_posts()): ?>
-                    	<?php while(have_posts()): ?>
-                    		<?php the_post(); ?>
-                        <?php the_title(); ?>
-                        <?php the_content(); ?>
+            <div class="page-single-content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+							<?php if ( have_posts() ): ?>
+								<?php while ( have_posts() ): ?>
+									<?php the_post(); ?>
+                                    <h3><?php the_title(); ?></h3>
+									<?php the_content(); ?>
 
-                    	<?php endwhile; ?>
-                    	<?php wp_reset_postdata(); ?>
-                    <?php endif; ?>
-
-                </div>
-            </div> <!-- Container End -->
+								<?php endwhile; ?>
+								<?php wp_reset_postdata(); ?>
+							<?php endif; ?>
+                        </div>
+                    </div>
+                </div> <!-- Container End -->
+            </div>
         </div> <!-- Pricing End -->
     </section><!-- Main container end -->
 

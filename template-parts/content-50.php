@@ -6,7 +6,7 @@
     <input type="email" name="email" placeholder="E-mail">
     <div class="online-form__checkbox">
         <input type="checkbox" name="termen" id="checkbox-termen">
-        <label for="checkbox-termen"><a href="#">Accept Termenii şi Condiţiile</a></label>
+        <label for="checkbox-termen"><a href="<?php echo get_page_link(156); ?>">Accept Termenii şi Condiţiile</a></label>
     </div>
     <div class="online-form__checkbox">
         <input type="checkbox" name="prelucrare" id="checkbox-prelucrare">
