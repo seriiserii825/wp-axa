@@ -66,7 +66,10 @@ get_header();
                                     <div class="ts-contact-info"><span class="ts-contact-icon float-left"><i class="icon icon-phone3"></i></span>
                                         <div class="ts-contact-content">
                                             <h3 class="ts-contact-title"><?php echo esc_html__( 'Sunati-ne', 'bs-axa' ); ?></h3>
-                                            <p><a href="tel:<?php echo clear_phone(carbon_get_theme_option('crb_phone')); ?>"><?php echo carbon_get_theme_option('crb_phone') ?></a></p>
+                                            <ul>
+                                                <li><a href="tel:<?php echo clear_phone(carbon_get_theme_option('crb_phone_home')); ?>"><?php echo carbon_get_theme_option('crb_phone_home') ?></a></li>
+                                                <li><a href="tel:<?php echo clear_phone(carbon_get_theme_option('crb_phone')); ?>"><?php echo carbon_get_theme_option('crb_phone') ?></a></li>
+                                            </ul>
                                         </div> <!-- Contact content end-->
                                     </div> <!-- Contact Info End -->
                                     <div class="ts-contact-info last"><span class="ts-contact-icon float-left"><i class="icon icon-envelope"></i></span>

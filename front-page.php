@@ -3,13 +3,16 @@
  * Template Name: Principala
  */
 ?>
-<?php get_header( 'main' ); ?>
+
+<?php get_header(); ?>
+
 <?php
 $slider = new WP_Query( [
 	'post_type'      => 'slider',
 	'posts_per_page' => - 1
 ] );
 ?>
+
 <?php if ( $slider->have_posts() ): ?>
     <!-- Carousel -->
     <div id="main-slide" class="carousel slide main-slider" data-ride="carousel">
@@ -19,7 +22,7 @@ $slider = new WP_Query( [
 			<?php $i = 0;
 			while ( $slider->have_posts() ): ?>
 				<?php $slider->the_post(); ?>
-                <div class="carousel-item patb-100 <?php if ( $i == 0 ) {
+                <div class="carousel-item <?php if ( $i == 0 ) {
 					echo ' active';
 				} ?>" style="background-image:url(<?php echo kama_thumb_src( 'w=1600 &h=400' ); ?>">
                     <div class="container">
@@ -51,7 +54,14 @@ $slider = new WP_Query( [
 
 
 <section id="about-feature-classic" class="section section-border about-feature-classic">
-    <h2 class="section-title-dash">Online</h2>
+    <div class="about-feature-classic__header">
+        <h2 class="about-feature-classic__title"><?php echo esc_html__( 'Online', 'bs-axa' ); ?></h2>
+        <p class="about-feature-classic__text">
+            <i class="fa fa-car" aria-hidden="true"></i>
+            <span><?php echo esc_html__( 'Livrare gratuita', 'bs-axa' ); ?></span>
+        </p>
+    </div>
+
     <div class="container">
         <div class="row">
 			<?php $online = new WP_Query( [
@@ -65,8 +75,7 @@ $slider = new WP_Query( [
                         <div class="about-classic-box-single">
                             <div class="about-content-box ">
                                 <div class="about-classic-icon">
-                                    <i class="fa fa-<?php echo carbon_get_the_post_meta( 'crb_online_icon' ); ?>"
-                                       aria-hidden="true"></i>
+                                    <i class="fa fa-<?php echo carbon_get_the_post_meta( 'crb_online_icon' ); ?>" aria-hidden="true"></i>
                                 </div><!-- Feature Img end -->
                                 <div class="about-classic-content">
                                     <h3><?php the_title(); ?></h3>
@@ -203,7 +212,7 @@ $slider = new WP_Query( [
     <div class="container-fluid">
         <div class="row">
 
-            <div class="col-lg-12 funfacts-bg no-padding">
+            <div class="col-lg-12 funfacts-bg">
                 <div class="facts-content">
                     <!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"

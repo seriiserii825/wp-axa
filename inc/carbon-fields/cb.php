@@ -30,9 +30,11 @@ function crb_attach_theme_options() {
 		                                         ->set_width( 50 ),
 
 		                                    Field::make( 'text', 'crb_phone', __( 'Telefon' ) )
-		                                         ->set_width( 50 ),
+		                                         ->set_width( 30 ),
+		                                    Field::make( 'text', 'crb_phone_home', __( 'Telefon home' ) )
+		                                         ->set_width( 30 ),
 		                                    Field::make( 'text', 'crb_email', __( 'Email' ) )
-		                                         ->set_width( 50 ),
+		                                         ->set_width( 30 ),
 
 		                                    Field::make( 'text', 'crb_address_ro', __( 'address ro' ) )
 		                                         ->set_width( 50 ),

@@ -1909,7 +1909,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 /*-- Main slide --*/
 
 #main-slide .carousel-item {
-	height: 400px;
+	height: 330px;
 	color: #fff;
 	background-position: 100% 100%;
 	-webkit-background-size: cover;
@@ -7051,6 +7051,7 @@ a.latest-post-img:hover {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	padding: 30px 0;
 	height: 100%;
 }
 .facts-content svg {
@@ -7073,5 +7074,30 @@ a.latest-post-img:hover {
 	color: #444;
 }
 .main-slider .slick-slide {
-	height: 400px;
+	height: 330px;
+}
+.about-feature-classic__header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 40px;
+}
+.about-feature-classic__title {
+	margin-bottom: 0;
+	margin-right: 20px;
+	padding-right: 20px;
+	border-right: 2px solid #9931BF;
+}
+.about-feature-classic__text {
+	margin-bottom: 0;
+}
+.about-feature-classic__text .fa {
+	color: #9931BF;
+}
+.online-form__delivery {
+	margin-bottom: 20px;
+	color: #9931BF;
+}
+#cursmdcursBox .bottom {
+	background: none;
 }

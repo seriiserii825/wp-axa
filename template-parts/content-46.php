@@ -49,6 +49,7 @@
         <input type="checkbox" name="prelucrare" id="checkbox-prelucrare">
         <label for="checkbox-prelucrare"><a href="#">Accept Prelucrarea datelor cu caracter personal.</a></label>
     </div>
+	<?php require_once __DIR__.'/online-form-delivery.php';?>
     <input class="btn btn-info" type="submit" value="Trimite">
 </div>
 <span><?php echo esc_html__( 'După plasarea comenzii, operatorul va prelua discuţia în JivoChat sau veţi fi apelat în scurt timp.', 'bs-galadent' ); ?></span>
