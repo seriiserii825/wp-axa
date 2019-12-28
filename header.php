@@ -11,12 +11,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
-
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
-    <!--[if lt IE 9]>
-    <script src="<?php echo get_template_directory_uri() ?>/assets/js/html5shiv.js"></script>
-    <script src="<?php echo get_template_directory_uri() ?>/assets/js/respond.min.js"></script>
-    <![endif]-->
 	<?php wp_head(); ?>
 </head>
 

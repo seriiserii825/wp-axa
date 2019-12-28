@@ -400,4 +400,17 @@ jQuery(function ($) {
 		});
 	};
 	fizicPageEqualHeight();
+
+	let scrollToRca = function () {
+		$('.rca .anchors a').on('click', function (e) {
+			e.preventDefault();
+			let href = $(this).attr('href');
+			let hrefOffset = $(href).offset().top - 100;
+
+			$('html, body').animate({
+				scrollTop: hrefOffset
+			}, 1000);
+		});
+	};
+	scrollToRca();
 });

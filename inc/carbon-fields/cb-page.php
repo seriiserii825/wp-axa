@@ -140,5 +140,32 @@ function crb_attach_rca_page_options() {
 		              ->set_width( 50 ),
 		         Field::make( 'rich_text', 'crb_rca_2_footer_text_ru', __( 'Text ru' ) )
 		              ->set_width( 50 ),
+	         ) )
+	         ->add_tab( __( 'Accident cu daune mari și cu răniți/victime' ), array(
+		         Field::make( 'text', 'crb_rca_3_title_ro', __( 'Title ro' ) )
+		              ->set_width( 50 ),
+		         Field::make( 'text', 'crb_rca_3_title_ru', __( 'Title ru' ) )
+		              ->set_width( 50 ),
+
+		         Field::make( 'rich_text', 'crb_rca_3_intro_text_ro', __( 'Text ro' ) )
+		              ->set_width( 50 ),
+		         Field::make( 'rich_text', 'crb_rca_3_intro_text_ru', __( 'Text ru' ) )
+		              ->set_width( 50 ),
+	         ) )
+	         ->add_tab( __( 'Accident când făptașul nu a fost identificat' ), array(
+		         Field::make( 'text', 'crb_rca_4_title_ro', __( 'Title ro' ) )
+		              ->set_width( 50 ),
+		         Field::make( 'text', 'crb_rca_4_title_ru', __( 'Title ru' ) )
+		              ->set_width( 50 ),
+
+		         Field::make( 'rich_text', 'crb_rca_4_intro_text_ro', __( 'Text ro' ) )
+		              ->set_width( 50 ),
+		         Field::make( 'rich_text', 'crb_rca_4_intro_text_ru', __( 'Text ru' ) )
+		              ->set_width( 50 ),
+
+		         Field::make( 'rich_text', 'crb_rca_4_limit_ro', __( 'Text ro' ) )
+		              ->set_width( 50 ),
+		         Field::make( 'rich_text', 'crb_rca_4_limit_ru', __( 'Text ru' ) )
+		              ->set_width( 50 ),
 	         ) );
 }

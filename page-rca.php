@@ -93,6 +93,29 @@ get_header();
                                     </ul>
                                 </div>
                             </div>
+
+                            <div class="rca-3" id="js-3">
+                                <h3 class="section-title-dash">
+			                        <?php echo carbon_get_the_post_meta( 'crb_rca_3_title' . get_lang() ); ?>
+                                    <span></span>
+                                </h3>
+                                <div>
+	                                <?php echo wpautop( carbon_get_the_post_meta( 'crb_rca_3_intro_text' . get_lang() ) ); ?>
+                                </div>
+                            </div>
+
+                            <div class="rca-4" id="js-4">
+                                <h3 class="section-title-dash">
+			                        <?php echo carbon_get_the_post_meta( 'crb_rca_4_title' . get_lang() ); ?>
+                                    <span></span>
+                                </h3>
+                                <div>
+			                        <?php echo wpautop( carbon_get_the_post_meta( 'crb_rca_4_intro_text' . get_lang() ) ); ?>
+                                </div>
+                                <div>
+		                            <?php echo wpautop( carbon_get_the_post_meta( 'crb_rca_4_limit' . get_lang() ) ); ?>
+                                </div>
+                            </div>
                         </div>
                     </div><!-- Content Col end -->
 
