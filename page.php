@@ -15,27 +15,34 @@ get_header();
     </div><!-- Banner area end -->
 
 
-    <section id="main-container" class="main-container padt-90">
-        <div id="ts-contact-us" class=" ts-contact-us">
-            <div class="page-single-content">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-							<?php if ( have_posts() ): ?>
-								<?php while ( have_posts() ): ?>
-									<?php the_post(); ?>
-                                    <h3><?php the_title(); ?></h3>
-									<?php the_content(); ?>
-
-								<?php endwhile; ?>
-								<?php wp_reset_postdata(); ?>
-							<?php endif; ?>
-                        </div>
+    <section id="main-container" class="main-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-12">
+					<?php if ( have_posts() ): ?>
+						<?php the_post(); ?>
+						<?php the_content(); ?>
+					<?php endif; ?>
+                    <div class="partners-gallery">
+						<?php $partners = carbon_get_theme_option( 'crb_parners' ); ?>
+						<?php foreach ( $partners as $partner ): ?>
+                            <div class="item">
+                                <a class="partner-logo__link" target="_blank" href="<?php echo $partner['link']; ?>">
+                                    <img width="150" src="<?php echo $partner['image']; ?>" alt=""/>
+                                </a>
+                            </div>
+						<?php endforeach; ?>
                     </div>
-                </div> <!-- Container End -->
-            </div>
-        </div> <!-- Pricing End -->
+                </div><!-- Content Col end -->
+
+                <div class="col-lg-4 col-md-12">
+					<?php require_once __DIR__ . '/template-parts/content-sidebar-info.php'; ?>
+                </div>
+            </div><!-- Main row end -->
+
+        </div><!-- Container end -->
     </section><!-- Main container end -->
+
 
 <?php
 get_footer();
