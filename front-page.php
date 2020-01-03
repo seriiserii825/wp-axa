@@ -315,7 +315,7 @@ $slider = new WP_Query( [
 					<?php foreach ( $partners as $partner ): ?>
                         <div class="item">
                             <a class="partner-logo__link" target="_blank" href="<?php echo $partner['link']; ?>">
-                                <img width="150" src="<?php echo $partner['image']; ?>" alt=""/>
+                                <img src="<?php echo $partner['image']; ?>" alt=""/>
                             </a>
                         </div>
 					<?php endforeach; ?>

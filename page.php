@@ -23,12 +23,12 @@ get_header();
 						<?php the_post(); ?>
 						<?php the_content(); ?>
 					<?php endif; ?>
-                    <div class="partners-gallery">
+                    <div class="partners-gallery partners">
 						<?php $partners = carbon_get_theme_option( 'crb_parners' ); ?>
 						<?php foreach ( $partners as $partner ): ?>
                             <div class="item">
                                 <a class="partner-logo__link" target="_blank" href="<?php echo $partner['link']; ?>">
-                                    <img width="150" src="<?php echo $partner['image']; ?>" alt=""/>
+                                    <img src="<?php echo $partner['image']; ?>" alt=""/>
                                 </a>
                             </div>
 						<?php endforeach; ?>
