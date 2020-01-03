@@ -31,10 +31,8 @@ $slider = new WP_Query( [
                                 <h2 class="slide-title-classic animated6"><?php the_title(); ?></h2>
                                 <div class="slider-description lead animated3"><?php the_content(); ?></div>
                                 <p class="animated6">
-                                    <a href="<?php echo get_page_link( 2 ); ?>"
-                                       class="slider btn btn-primary"><?php echo get_the_title( 2 ); ?></a>
-                                    <a href="<?php echo get_page_link( 14 ); ?>"
-                                       class="slider btn btn-border"><?php echo get_the_title( 14 ); ?></a>
+                                    <a href="<?php echo get_page_link( carbon_get_the_post_meta('crb_slider_button_link') ); ?>" class="slider btn btn-primary"><?php echo carbon_get_theme_option('crb_slider_button_text'.get_lang() ); ?></a>
+                                    <a href="<?php echo get_page_link( 14 ); ?>" class="slider btn btn-border"><?php echo get_the_title( 14 ); ?></a>
                                 </p>
                             </div><!-- Col end -->
                         </div><!-- Slider content end -->

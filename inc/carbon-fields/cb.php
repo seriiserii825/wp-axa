@@ -90,17 +90,23 @@ function crb_attach_theme_options() {
 			Field::make( 'text', 'crb_numbers_four_ru', __( 'four ru' ) )
 			     ->set_width( 50 ),
 		) )
-	         ->add_tab( __( 'Partners' ), array(
-		         Field::make( 'complex', 'crb_parners', __( 'Fields' ) )
-		              ->add_fields( array(
-			              Field::make( 'image', 'image', __( 'Image' ) )
-			                   ->set_value_type( 'url' )
-			                   ->set_width( 50 ),
-			              Field::make( 'text', 'link', __( 'Link' ) )
-			                   ->set_width( 50 ),
-		              ) )
-		              ->set_layout( 'tabbed-horizontal' )
-	         ) );
+		->add_tab( __( 'Slider' ), array(
+			Field::make( 'text', 'crb_slider_button_text_ro', __( 'Button text ro' ) )
+			     ->set_width( '50' ),
+			Field::make( 'text', 'crb_slider_button_text_ru', __( 'Button text ru' ) )
+			     ->set_width( '50' ),
+		) )
+		->add_tab( __( 'Partners' ), array(
+			 Field::make( 'complex', 'crb_parners', __( 'Fields' ) )
+				  ->add_fields( array(
+					  Field::make( 'image', 'image', __( 'Image' ) )
+						   ->set_value_type( 'url' )
+						   ->set_width( 50 ),
+					  Field::make( 'text', 'link', __( 'Link' ) )
+						   ->set_width( 50 ),
+				  ) )
+				  ->set_layout( 'tabbed-horizontal' )
+		 ) );
 }
 
 add_action( 'after_setup_theme', 'crb_load' );

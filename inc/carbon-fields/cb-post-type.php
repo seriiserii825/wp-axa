@@ -7,6 +7,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 use Carbon_Fields\Container;
 use Carbon_Fields\Field;
 
+add_action( 'carbon_fields_register_fields', 'crb_attach_slider_options' );
+function crb_attach_slider_options() {
+	Container::make( 'post_meta', __( 'Fields' ) )
+	         ->where( 'post_type', '=', 'slider' )
+	         ->add_tab( __( 'Linkul pentru pagina cu forma' ), array(
+		         Field::make( 'text', 'crb_slider_button_link', __( 'Link' ) )
+		              ->set_help_text( 'Id pentru pagina' )
+	         ) );
+}
 
 add_action( 'carbon_fields_register_fields', 'crb_attach_online_post_type_options' );
 function crb_attach_online_post_type_options() {
