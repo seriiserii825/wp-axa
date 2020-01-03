@@ -13,6 +13,11 @@ function crb_attach_page_finance_options() {
 	Container::make( 'post_meta', __( 'Fields' ) )
 	         ->where( 'post_id', '=', 25 )
 	         ->add_tab( __( 'Why choose us' ), array(
+		         Field::make( 'text', 'crb_why_choose_us_title_ro', __( 'Title ro' ) )
+		              ->set_width( 50 ),
+		         Field::make( 'text', 'crb_why_choose_us_title_ru', __( 'Title ru' ) )
+		              ->set_width( 50 ),
+
 		         Field::make( 'complex', 'crb_why_choose_us', __( 'Fields' ) )
 		              ->add_fields( array(
 			              Field::make( 'text', 'icon', __( 'Icon' ) ),

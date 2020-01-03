@@ -31,8 +31,10 @@ $slider = new WP_Query( [
                                 <h2 class="slide-title-classic animated6"><?php the_title(); ?></h2>
                                 <div class="slider-description lead animated3"><?php the_content(); ?></div>
                                 <p class="animated6">
-                                    <a href="<?php echo get_page_link( carbon_get_the_post_meta('crb_slider_button_link') ); ?>" class="slider btn btn-primary"><?php echo carbon_get_theme_option('crb_slider_button_text'.get_lang() ); ?></a>
-                                    <a href="<?php echo get_page_link( 14 ); ?>" class="slider btn btn-border"><?php echo get_the_title( 14 ); ?></a>
+                                    <a href="<?php echo get_page_link( carbon_get_the_post_meta( 'crb_slider_button_link' ) ); ?>"
+                                       class="slider btn btn-primary"><?php echo carbon_get_theme_option( 'crb_slider_button_text' . get_lang() ); ?></a>
+                                    <a href="<?php echo get_page_link( 14 ); ?>"
+                                       class="slider btn btn-border"><?php echo get_the_title( 14 ); ?></a>
                                 </p>
                             </div><!-- Col end -->
                         </div><!-- Slider content end -->
@@ -113,7 +115,7 @@ $slider = new WP_Query( [
 					<?php $juridic->the_post(); ?>
                     <div class="ts-service-overlay">
                         <div class="ts-image-wrapper">
-                            <img class="img-fluid" src="<?php echo kama_thumb_src( 'w=350 &h=310' ); ?>" alt="">
+                            <img class="img-fluid" src="<?php echo kama_thumb_src( 'w=350 &h=380' ); ?>" alt="">
                         </div>
                         <div class="service-content">
                             <h3 class="service-title">
@@ -156,7 +158,7 @@ $slider = new WP_Query( [
 					<?php $fizic->the_post(); ?>
                     <div class="ts-service-overlay">
                         <div class="ts-image-wrapper">
-                            <img class="img-fluid" src="<?php echo kama_thumb_src( 'w=350 &h=310' ); ?>" alt="">
+                            <img class="img-fluid" src="<?php echo kama_thumb_src( 'w=350 &h=380' ); ?>" alt="">
                         </div>
                         <div class="service-content">
                             <h3 class="service-title">
@@ -184,10 +186,15 @@ $slider = new WP_Query( [
     <div class="container">
         <div class="row">
             <div class="col text-center">
-                <h2 data-title="<?php echo esc_html__( 'De ce noi', 'bs-galadent' ); ?>"
-                    class="section-title-dash"> <?php echo esc_html__( 'De ce noi', 'bs-galadent' ); ?>
-                    <span class="dashborder">&nbsp;</span>
-                </h2>
+				<?php if ( have_posts() ): ?>
+					<?php the_post(); ?>
+
+                    <h2 data-title="<?php echo carbon_get_the_post_meta( 'crb_why_choose_us_title' . get_lang() ); ?>"
+                        class="section-title-dash"> <?php echo carbon_get_the_post_meta( 'crb_why_choose_us_title' . get_lang() ); ?>
+                        <span class="dashborder">&nbsp;</span>
+                    </h2>
+				<?php endif; ?>
+
             </div> <!-- Col End -->
         </div> <!-- Row End -->
         <div class="ts-choose-us-wrap">
@@ -195,13 +202,13 @@ $slider = new WP_Query( [
 			<?php foreach ( $choose as $item ): ?>
                 <div class="ts-feature-classic">
                     <div class="ts-feature-info icon-left icon-round">
-                     <span class="feature-icon">
-                        <i class="<?php echo $item['icon']; ?>"></i>
-                     </span>
                         <div class="feature-content">
                             <h3 class="ts-feature-title"><?php echo $item[ 'title' . get_lang() ]; ?></h3>
                             <p><?php echo $item[ 'text' . get_lang() ]; ?></p>
                         </div> <!-- Feature content end -->
+                        <span class="feature-icon">
+                        <i class="<?php echo $item['icon']; ?>"></i>
+                     </span>
                     </div> <!-- Feature Info End -->
                 </div> <!-- Features end -->
 			<?php endforeach; ?>
